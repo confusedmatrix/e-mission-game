@@ -100,7 +100,9 @@ var saveAs=saveAs||navigator.msSaveBlob&&navigator.msSaveBlob.bind(navigator)||f
 		<div id="init-lacking">Your browser lacks required capabilities. Please upgrade it or switch to another to continue.</div>
 		<div id="init-loading"><div>Loading&hellip;</div></div>
 	</div>
-	<tw-storydata name="Sustainability game" startnode="1" creator="Twine" creator-version="2.3.5" ifid="DAE05C96-0766-45D8-A62E-2F6FC31593AA" zoom="0.6" format="SugarCube" format-version="2.30.0" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">/***********************************************************************
+	<tw-storydata name="Sustainability game" startnode="1" creator="Twine" creator-version="2.3.5" ifid="DAE05C96-0766-45D8-A62E-2F6FC31593AA" zoom="0.6" format="SugarCube" format-version="2.30.0" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">@import url('https://fonts.googleapis.com/css?family=Liu+Jian+Mao+Cao|Special+Elite&display=swap');
+
+/***********************************************************************
 	BLEACHED - A largely white style for SugarCube ≥v2.25.0
 ***********************************************************************/
 body {
@@ -304,32 +306,27 @@ html[data-debug-view] .debug.hidden .debug {
 
 
 /* USER DEFINED STYLES */
-@import url('https://fonts.googleapis.com/css?family=Liu+Jian+Mao+Cao|Special+Elite&display=swap');
+body {
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 100%;
+  font-size: 1.3em;
+}
+a {
+  font-weight: bold;
+}
+a:hover {
+  text-decoration: underline;
+}
 
-#header-icons {
-  overflow: auto;
-  position: absolute;
-  top: 1em;
-}
-#header-icons a {
-  display: block;
-  float: left;
-  margin-right: 1em;
-}
-#header-icons a:last-child {
-  float: right;
-  margin: 0;
-}
-#header-icons img {
-  height: 64px;
-  width: 64px;
-}
-  
 .notice {
   background-color: #ff0000;
 }
 .handwriting {
   font-family: 'Liu Jian Mao Cao', cursive;
+  font-size: 1.5em;
 }
 .typewriting {
   font-family: 'Special Elite', cursive;
@@ -339,13 +336,31 @@ html[data-debug-view] .debug.hidden .debug {
   width: 150px;
 }
 
-body {
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  height: 100%;
+
+#header-icons {
+  position: absolute;
+  top: 1em;
 }
+#header-icons a {
+  display: block;
+  float: left;
+  margin-right: 1em;
+}
+#header-icons a:last-child {
+  margin-right: 0;
+  margin-left: 4em;
+}
+#header-icons img {
+  height: 64px;
+  width: 64px;
+}
+#header-icons a:hover img {
+  transform: scale(1.2);
+}
+  
+
+
+
 body.lobby {
   background-image: url('https://confusedmatrix.github.io/e-mission-game/assets/images/backgrounds/lobby.jpg');
 }
@@ -356,16 +371,20 @@ body.lobby {
 .passage {
   background-color: rgba(255,255,255,0.7);
   padding: 1em;
+}
+
+#letter {
+  transform: rotate(-1deg);
+  background-color: #fffef2;
+  padding: 1em;
+  box-shadow: -5px 5px 10px #ccc;
 }</style><script role="script" id="twine-user-script" type="text/twine-javascript">
 $(document).ready(function() {
 	
 	// As a boolean; always start stowed
 	Config.ui.stowBarInitially = true;
 
-})</script><tw-passagedata pid="1" name="Start" tags="" position="118,143" size="100,100">&lt;&lt;set $inventory to []&gt;&gt;
-&lt;&lt;set $progress to passage()&gt;&gt;
-
-It is 2050. 
+})</script><tw-passagedata pid="1" name="Start" tags="" position="118,143" size="100,100">&lt;&lt;set $inventory to []&gt;&gt;&lt;&lt;set $progress to passage()&gt;&gt;It is 2050. 
 
 You have recently started a new job as an archivist at a prominent museum.
 
@@ -404,19 +423,8 @@ Select your fourth option:
 Hooray!
 &lt;&lt;else&gt;&gt;
 Bummer!
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="4" name="Dig through boxes" tags="" position="118,293" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;
-
-&lt;&lt;if lastVisited(&quot;Look at the letter&quot;) is 1&gt;&gt;
-&lt;div class=&quot;notice&quot;&gt;
-The Researcher&#39;s letter has been added to your inventory
-&lt;/div&gt;
-&lt;&lt;elseif lastVisited(&quot;Look at the document&quot;) is 1&gt;&gt;
-&lt;div class=&quot;notice&quot;&gt;
-The &#39;United Nations Sustainable Development Goals&#39; document has been added to your inventory
-&lt;/div&gt;
-&lt;&lt;/if&gt;&gt;
-
-Buried deep at the bottom of the pile, you find a file box, stuffed full of assorted papers and what appears to be a journal. 
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="4" name="Dig through boxes" tags="" position="118,293" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;&lt;if lastVisited(&quot;Look at the letter&quot;) is 1&gt;&gt;&lt;div class=&quot;notice&quot;&gt;The Researcher&#39;s letter has been added to your inventory&lt;/div&gt;&lt;&lt;elseif lastVisited(&quot;Look at the document&quot;) is 1&gt;&gt;
+&lt;div class=&quot;notice&quot;&gt;The &#39;United Nations Sustainable Development Goals&#39; document has been added to your inventory&lt;/div&gt;&lt;&lt;/if&gt;&gt;Buried deep at the bottom of the pile, you find a file box, stuffed full of assorted papers and what appears to be a journal. 
 
 You dig out the previous archivist’s notes and look up the code for the file box.
 
@@ -424,19 +432,9 @@ Apparently the contents belonged to an environmental researcher who had willed h
 
 What do you want to look at?
 
-&lt;&lt;if not hasVisited(&quot;Look at the letter&quot;)&gt;&gt;
-[[Look at the letter]]
-&lt;&lt;/if&gt;&gt;
-
-&lt;&lt;if not hasVisited(&quot;Look at the document&quot;)&gt;&gt;
-[[Look at the document]]
-&lt;&lt;/if&gt;&gt;
-
-&lt;&lt;if hasVisited(&quot;Look at the letter&quot;, &quot;Look at the document&quot;)&gt;&gt;
-[[Look at the journal]]
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="5" name="Look at the letter" tags="" position="43,443" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;
-
-The handwriting on the letter is elegant but unsteady. 
+&lt;&lt;if not hasVisited(&quot;Look at the letter&quot;)&gt;&gt;[[Look at the letter]]&lt;&lt;/if&gt;&gt;
+&lt;&lt;if not hasVisited(&quot;Look at the document&quot;)&gt;&gt;[[Look at the document]]
+&lt;&lt;/if&gt;&gt;&lt;&lt;if hasVisited(&quot;Look at the letter&quot;, &quot;Look at the document&quot;)&gt;&gt;[[Look at the journal]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="5" name="Look at the letter" tags="" position="43,443" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;The handwriting on the letter is elegant but unsteady. 
 
 &lt;&lt;include [[Researcher&#39;s letter]]&gt;&gt;
 
@@ -444,15 +442,11 @@ You recognise the name of the researcher as someone who wrote a number of report
 
 At the bottom of the letter, someone has scribbled three symbols in pencil.
 
-&lt;&lt;link &quot;Store the letter&quot; &quot;Dig through boxes&quot;&gt;&gt;&lt;&lt;run $inventory.push(&quot;Researcher&#39;s letter&quot;)&gt;&gt;&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="6" name="Look at the document" tags="" position="193,443" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;
-
-The document is entitled ‘The United Nations Sustainable Development Goals’.
+&lt;&lt;link &quot;Store the letter&quot; &quot;Dig through boxes&quot;&gt;&gt;&lt;&lt;run $inventory.push(&quot;Researcher&#39;s letter&quot;)&gt;&gt;&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="6" name="Look at the document" tags="" position="193,443" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;The document is entitled ‘The United Nations Sustainable Development Goals’.
 
 &lt;&lt;include [[&#39;United Nations Sustainable Development Goals&#39; document]]&gt;&gt;
 
-&lt;&lt;link &quot;Store the document&quot; &quot;Dig through boxes&quot;&gt;&gt;&lt;&lt;run $inventory.push(&quot;&#39;United Nations Sustainable Development Goals&#39; document&quot;)&gt;&gt;&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="7" name="Look at the journal" tags="" position="116,564" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;
-
-Your attention turns to the journal. You pick it up.
+&lt;&lt;link &quot;Store the document&quot; &quot;Dig through boxes&quot;&gt;&gt;&lt;&lt;run $inventory.push(&quot;&#39;United Nations Sustainable Development Goals&#39; document&quot;)&gt;&gt;&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="7" name="Look at the journal" tags="" position="116,564" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;Your attention turns to the journal. You pick it up.
 
 TODO - image of the journal
 
@@ -463,29 +457,22 @@ Enter the code to the lock:
 &lt;&lt;textbox &quot;$journalCode&quot; &quot;XXXXX&quot; [[Check journal lock combination]]&gt;&gt;
 
 
-</tw-passagedata><tw-passagedata pid="8" name="Researcher&#39;s letter" tags="" position="353,306" size="100,100">&lt;div class=&quot;typewriting&quot;&gt;
-As discussed, please find enclosed my research notes and files. I know you said you weren’t interested in the journal but I enclose it anyway. I have no children to leave it to and, despite it not being as ‘factual’ as the notes, I think you and your visitors may find it interesting. 
+</tw-passagedata><tw-passagedata pid="8" name="Researcher&#39;s letter" tags="" position="353,306" size="100,100">&lt;div id=&quot;letter&quot; class=&quot;handwriting&quot;&gt;As discussed, please find enclosed my research notes and files. I know you said you weren’t interested in the journal but I enclose it anyway. I have no children to leave it to and, despite it not being as ‘factual’ as the notes, I think you and your visitors may find it interesting. 
 
 It has a combination - you of all people know I have always loved a puzzle - but I’m sure you’ll be able to figure it out. We both spent enough time in classes learning about the Sustainable Development Goals after all. 
 
 In the grand scheme of things, mine has only been a short life but it has, I think, been an interesting one. You’ll find my thoughts on many of the recent disasters that have befallen our planet. Maybe they will be of more use to you than they have been to me.
 
-&lt;img src=&quot;https://confusedmatrix.github.io/e-mission-game/assets/images/sdgs/icon-only/07.png&quot; class=&quot;sdg-icon&quot; /&gt; &lt;img src=&quot;https://confusedmatrix.github.io/e-mission-game/assets/images/sdgs/icon-only/11.png&quot; class=&quot;sdg-icon&quot; /&gt; &lt;img src=&quot;https://confusedmatrix.github.io/e-mission-game/assets/images/sdgs/icon-only/12.png&quot; class=&quot;sdg-icon&quot; /&gt;
-&lt;/div&gt;
-
-</tw-passagedata><tw-passagedata pid="9" name="&#39;United Nations Sustainable Development Goals&#39; document" tags="" position="351,431" size="100,100">TODO - content of this document</tw-passagedata><tw-passagedata pid="10" name="PassageHeader" tags="" position="699.6666666666666,28.33333333333333" size="200,100">&lt;div id=&quot;header-icons&quot;&gt;[img[Inventory|https://confusedmatrix.github.io/e-mission-game/assets/images/icons/archive.png][Inventory]] [img[Map|https://confusedmatrix.github.io/e-mission-game/assets/images/icons/map.png][Map]] &lt;&lt;if def $journal&gt;&gt;[img[Journal|https://confusedmatrix.github.io/e-mission-game/assets/images/icons/book.png][Researcher&#39;s journal]]&lt;&lt;/if&gt;&gt; [img[Your notes|https://confusedmatrix.github.io/e-mission-game/assets/images/icons/notebook.png][Notebook]]&lt;/div&gt;
+&lt;img src=&quot;https://confusedmatrix.github.io/e-mission-game/assets/images/sdgs/icon-only/07.png&quot; class=&quot;sdg-icon&quot; /&gt; &lt;img src=&quot;https://confusedmatrix.github.io/e-mission-game/assets/images/sdgs/icon-only/11.png&quot; class=&quot;sdg-icon&quot; /&gt; &lt;img src=&quot;https://confusedmatrix.github.io/e-mission-game/assets/images/sdgs/icon-only/12.png&quot; class=&quot;sdg-icon&quot; /&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="9" name="&#39;United Nations Sustainable Development Goals&#39; document" tags="" position="351,431" size="100,100">TODO - content of this document</tw-passagedata><tw-passagedata pid="10" name="PassageHeader" tags="" position="699.6666666666666,28.33333333333333" size="200,100">&lt;div id=&quot;header-icons&quot;&gt;[img[Inventory|https://confusedmatrix.github.io/e-mission-game/assets/images/icons/archive.png][Inventory]] [img[Map|https://confusedmatrix.github.io/e-mission-game/assets/images/icons/map.png][Map]] &lt;&lt;if def $journal&gt;&gt;[img[Journal|https://confusedmatrix.github.io/e-mission-game/assets/images/icons/book.png][Researcher&#39;s journal]]&lt;&lt;/if&gt;&gt; [img[Your notes|https://confusedmatrix.github.io/e-mission-game/assets/images/icons/notebook.png][Notebook]]&lt;/div&gt;
 </tw-passagedata><tw-passagedata pid="11" name="Inventory" tags="" position="536.3333333333333,141.66666666666666" size="100,100">&lt;&lt;if $inventory.length is 0&gt;&gt;You have no items in your inventory&lt;&lt;else&gt;&gt;Your inventory items:
 &lt;&lt;for _i, _item range $inventory&gt;&gt;
 &lt;&lt;= _i + 1&gt;&gt;. &lt;&lt;link _item _item&gt;&gt;&lt;&lt;/link&gt;&gt;
 &lt;&lt;/for&gt;&gt;
 &lt;&lt;/if&gt;&gt;
 
-&lt;&lt;link &quot;Return to story&quot;&gt;&gt;&lt;&lt;goto $progress&gt;&gt;&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="12" name="Check journal lock combination" tags="" position="116,714" size="100,100">&lt;&lt;if $journalCode isnot &quot;71112&quot;&gt;&gt;
-Hmm, that didn&#39;t work. Perhaps it has something to do with the researcher&#39;s letter and the &#39;United Nations Sustainable Development Goals&#39; document in the &lt;&lt;link &quot;inventory&quot; &quot;Inventory&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;?
+&lt;&lt;link &quot;Return to story&quot;&gt;&gt;&lt;&lt;goto $progress&gt;&gt;&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="12" name="Check journal lock combination" tags="" position="116,714" size="100,100">&lt;&lt;if $journalCode isnot &quot;71112&quot;&gt;&gt;Hmm, that didn&#39;t work. Perhaps it has something to do with the researcher&#39;s letter and the &#39;United Nations Sustainable Development Goals&#39; document in the &lt;&lt;link &quot;inventory&quot; &quot;Inventory&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;?
 
-[[Try again|Look at the journal]]
-&lt;&lt;else&gt;&gt;
-Success!!
+[[Try again|Look at the journal]]&lt;&lt;else&gt;&gt;Success!!
 
 &lt;&lt;include &quot;Open the journal&quot;&gt;&gt;
 &lt;&lt;/if&gt;&gt;
@@ -533,9 +520,7 @@ Photograph stored. [[Back to journal entry|Read the first journal entry]]
 &lt;&lt;/linkreplace&gt;&gt;
 &lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="18" name="Skip to journal entry 2" tags="" position="233,999.3333333333333" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;
 &lt;&lt;include &quot;Journal entry 2&quot;&gt;&gt;
-&lt;&lt;run $journal.pushUnique(&quot;Journal entry 2&quot;)&gt;&gt;</tw-passagedata><tw-passagedata pid="19" name="Photograph" tags="" position="752.6666666666665,253.33333333333334" size="100,100">TODO - add image of photograph</tw-passagedata><tw-passagedata pid="20" name="Open the journal" tags="" position="238,714.3333333333333" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;
-
-The journal appears to be full, pages covered with the same elegant handwriting, complete with many crossings out. 
+&lt;&lt;run $journal.pushUnique(&quot;Journal entry 2&quot;)&gt;&gt;</tw-passagedata><tw-passagedata pid="19" name="Photograph" tags="" position="752.6666666666665,253.33333333333334" size="100,100">TODO - add image of photograph</tw-passagedata><tw-passagedata pid="20" name="Open the journal" tags="" position="238,714.3333333333333" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;The journal appears to be full, pages covered with the same elegant handwriting, complete with many crossings out. 
 
 Some pages are filled with charts and statistics. Others contain pasted newspaper clippings and articles. There are also loose memos and notes. 
 
