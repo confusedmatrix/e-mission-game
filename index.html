@@ -588,7 +588,7 @@ The journal appears to be full, its pages covered with the same handwriting that
 Some pages are filled with charts and statistics. Others contain pasted newspaper clippings and journal articles. There are also loose memos and notes. 
 
 &lt;&lt;include [[Help 5]]&gt;&gt;
-[[Read the first journal entry]]</tw-passagedata><tw-passagedata pid="21" name="Notebook" tags="" position="961.6666666666667,139.99999999999997" size="100,100">You can use this notebook to make notes about puzzle solutions, record information, and make reflections on your progress.
+[[Read the first journal entry]]</tw-passagedata><tw-passagedata pid="21" name="Notebook" tags="notebook" position="961.6666666666667,139.99999999999997" size="100,100">You can use this notebook to make notes about puzzle solutions, record information, and make reflections on your progress.
 &lt;&lt;if def $note and $note isnot &quot;&quot;&gt;&gt;&lt;&lt;run $notebook.push($note)&gt;&gt;&lt;&lt;set $note to &quot;&quot;&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;if $notebook.length isnot 0&gt;&gt;
 &lt;&lt;for _i, _note range $notebook&gt;&gt;
 &lt;&lt;= _i + 1&gt;&gt;. _note
@@ -614,7 +614,7 @@ Now you need to figure out the code to unlock the journal.
 
 You sit in your chair and stare at the clutter for a few minutes then decide to go to the &lt;&lt;link [[staff room|Go to the staff room]]&gt;&gt;&lt;&lt;set $map to []&gt;&gt;&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="30" name="Go to the staff room" tags="lobby" position="226.33333333333331,1269.3333333333333" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;&lt;run $map.pushUnique(&#39;Staff room&#39;)&gt;&gt;You  check your map to find your way to the staff room.
 
-&lt;&lt;include [[Help 6]]&gt;&gt;</tw-passagedata><tw-passagedata pid="31" name="Help 6" tags="" position="511.33333333333337,955.9999999999999" size="100,100">&lt;div class=&quot;help&quot;&gt;To move around the museum, click on the &lt;img src=&quot;https://confusedmatrix.github.io/e-mission-game/assets/images/icons/map.png&quot; class=&quot;inline-icon&quot; /&gt;&lt;&lt;link &quot;Map&quot; &quot;Map&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;, then click on the room you want to go to.&lt;/div&gt;</tw-passagedata><tw-passagedata pid="32" name="Staff room" tags="" position="370.00000000000006,1265" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;&lt;if not hasVisited(&quot;Open the locker doors&quot;)&gt;&gt;The staff room smells slightly musty and the lingering smell of reheated food is in the air. 
+&lt;&lt;include [[Help 6]]&gt;&gt;</tw-passagedata><tw-passagedata pid="31" name="Help 6" tags="" position="511.33333333333337,955.9999999999999" size="100,100">&lt;div class=&quot;help&quot;&gt;To move around the museum, click on the &lt;img src=&quot;https://confusedmatrix.github.io/e-mission-game/assets/images/icons/map.png&quot; class=&quot;inline-icon&quot; /&gt;&lt;&lt;link &quot;Map&quot; &quot;Map&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;, then click on the room you want to go to.&lt;/div&gt;</tw-passagedata><tw-passagedata pid="32" name="Staff room" tags="staff-room" position="370.00000000000006,1265" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;&lt;if not hasVisited(&quot;Open the locker doors&quot;)&gt;&gt;The staff room smells slightly musty and the lingering smell of reheated food is in the air. 
 
 On the back wall, there are some old lockers. Maybe that’s what the researcher was talking about in their journal entry?
 
@@ -632,7 +632,7 @@ Which locker number do you want to try?
 
 What is the code for this locker?
 &lt;&lt;textbox &quot;$doorCode&quot; &quot;XXXX&quot; [[Check door number and code]]&gt;&gt;
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="33" name="Read the third journal entry" tags="" position="188.33333333333346,1383.333333333333" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;&lt;include &quot;Journal entry 3&quot;&gt;&gt;&lt;&lt;run $journal.pushUnique(&quot;Journal entry 3&quot;)&gt;&gt;&lt;&lt;run $map.pushUnique(&#39;Carbon Emissions Exhibition&#39;)&gt;&gt;
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="33" name="Read the third journal entry" tags="staff-room" position="188.33333333333346,1383.333333333333" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;&lt;include &quot;Journal entry 3&quot;&gt;&gt;&lt;&lt;run $journal.pushUnique(&quot;Journal entry 3&quot;)&gt;&gt;&lt;&lt;run $map.pushUnique(&#39;Carbon Emissions Exhibition&#39;)&gt;&gt;
 
 You pull out your map. There is a Carbon Emissions Exhibition marked on it. 
 
@@ -699,13 +699,13 @@ The exhibition&#39;s central focus is a Special Climate Change report produced i
 
 The report highlighted the significant increase in carbon emissions over the latter half of the twentieth century. It was produced to advise governments on the scenarios that could result from failure to take action to limit carbon emissions, and the costs of adaptation and mitigation against climate change impacts.
 
-[[Look at Exhibit 1]]</tw-passagedata><tw-passagedata pid="44" name="Open the locker doors" tags="" position="306.66666666666674,1384.9999999999998" size="100,100">Many of the doors swing open, some creak with age. Locker 265 is stuck but you tug the door and it opens. It&#39;s empty apart from an old shoe. 
+[[Look at Exhibit 1]]</tw-passagedata><tw-passagedata pid="44" name="Open the locker doors" tags="staff-room" position="306.66666666666674,1384.9999999999998" size="100,100">Many of the doors swing open, some creak with age. Locker 265 is stuck but you tug the door and it opens. It&#39;s empty apart from an old shoe. 
 
 The doors on lockers 200, 300 and 400 won’t move - they must be locked. Maybe one of these belonged to the researcher when they were an intern? There are digital keypads on the doors. What could the code be?
 
 Maybe the researcher’s journal will tell you the code?
 
-[[Read the third journal entry]]</tw-passagedata><tw-passagedata pid="45" name="Check door number and code" tags="" position="420.00000000000006,1414.9999999999998" size="100,100">&lt;&lt;if $doorNumber is &quot;300&quot; and $doorCode is &quot;1950&quot;&gt;&gt;The locker bleeps as you input the code, and the door swings open. Inside is a strange looking cog, with an exhibit label attached.
+[[Read the third journal entry]]</tw-passagedata><tw-passagedata pid="45" name="Check door number and code" tags="staff-room" position="420.00000000000006,1414.9999999999998" size="100,100">&lt;&lt;if $doorNumber is &quot;300&quot; and $doorCode is &quot;1950&quot;&gt;&gt;The locker bleeps as you input the code, and the door swings open. Inside is a strange looking cog, with an exhibit label attached.
 
 &lt;&lt;include &quot;Cog&quot;&gt;&gt;
 
@@ -719,7 +719,7 @@ Reading their journal entry, you’re looking for a year that was a ‘turning p
 
 Use your notebook to write down any information you find so you don’t forget it. 
 
-And don’t forget that you can check any reports and documents you have already found in your inventory.&lt;/div&gt;</tw-passagedata><tw-passagedata pid="47" name="Cog" tags="" position="758.3333333333333,474.9999999999998" size="100,100">TODO... image of a cog</tw-passagedata><tw-passagedata pid="48" name="Pick up the cog" tags="" position="425.00000000000006,1541.6666666666663" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;&lt;run $map.pushUnique(&quot;‘Exhibit 451. Inner Hallway’&quot;)&gt;&gt;The label reads ‘Exhibit 451. Inner Hallway’. 
+And don’t forget that you can check any reports and documents you have already found in your inventory.&lt;/div&gt;</tw-passagedata><tw-passagedata pid="47" name="Cog" tags="" position="758.3333333333333,474.9999999999998" size="100,100">TODO... image of a cog</tw-passagedata><tw-passagedata pid="48" name="Pick up the cog" tags="staff-room" position="425.00000000000006,1541.6666666666663" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;&lt;run $map.pushUnique(&quot;‘Exhibit 451. Inner Hallway’&quot;)&gt;&gt;The label reads ‘Exhibit 451. Inner Hallway’. 
 
 You’re pretty sure that this exhibit is just down the stairs from the office.
 
@@ -735,7 +735,7 @@ Apparently, the scientist’s notes indicated that the machine was ready for tes
 
 The machine has a seat in the middle, with a number of levers and buttons on a console in front of it. Around the base of the seat are a number of cogs. There is an obvious hole where one is missing.
 
-&lt;&lt;link [[Put in the cog]]&gt;&gt;&lt;&lt;run $inventory.delete(&quot;Cog&quot;)&gt;&gt;&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="50" name="Stay in the staff room" tags="" position="425.00000000000006,1663.333333333333" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;You take a look in the other lockers. You find a half-eaten packet of biscuits in one of them.
+&lt;&lt;link [[Put in the cog]]&gt;&gt;&lt;&lt;run $inventory.delete(&quot;Cog&quot;)&gt;&gt;&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="50" name="Stay in the staff room" tags="staff-room" position="425.00000000000006,1663.333333333333" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;You take a look in the other lockers. You find a half-eaten packet of biscuits in one of them.
 
 The biscuits are a year and a half out of date.
 
