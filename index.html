@@ -315,6 +315,7 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   font-size: 1.3em;
+  background-color: #4D3732;
 }
 a {
   font-weight: bold;
@@ -344,6 +345,10 @@ textarea {
 }
 .help {
   background-color: #82B8C4;
+}
+.help a, 
+.help a:hover {
+  color: #365D6B;
 }
 .handwriting {
   font-family: 'Liu Jian Mao Cao', cursive;
@@ -386,12 +391,17 @@ textarea {
   
 
 
-
+body.notebook {
+  background-image: url('https://confusedmatrix.github.io/e-mission-game/assets/images/backgrounds/notebook.jpg');
+}
 body.lobby {
   background-image: url('https://confusedmatrix.github.io/e-mission-game/assets/images/backgrounds/lobby.jpg');
 }
 body.office {
   background-image: url('https://confusedmatrix.github.io/e-mission-game/assets/images/backgrounds/office.jpg');
+}
+body.staff-room {
+  background-image: url('https://confusedmatrix.github.io/e-mission-game/assets/images/backgrounds/staff-room.jpg');
 }
 
 #ui-bar {
@@ -408,7 +418,7 @@ body.office {
   color: #FFFFFF;
 }
 #passages {
-  padding-top: 6em;
+  padding: 6em 0 3em;
 }
 .passage {
   padding: 1em;
@@ -587,7 +597,7 @@ Some pages are filled with charts and statistics. Others contain pasted newspape
 &lt;&lt;textarea &quot;$note&quot; &quot;&quot;&gt;&gt;
 &lt;&lt;link &quot;Add note&quot; &quot;Notebook&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
 
-&lt;&lt;link &quot;Return to story&quot;&gt;&gt;&lt;&lt;goto $progress&gt;&gt;&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="22" name="Map" tags="" position="645,139.99999999999997" size="100,100">TODO Map...
+&lt;&lt;link &quot;Return to story&quot;&gt;&gt;&lt;&lt;goto $progress&gt;&gt;&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="22" name="Map" tags="lobby" position="645,139.99999999999997" size="100,100">TODO Map...
 
 &lt;&lt;for _i, _location range $map&gt;&gt;
 &lt;&lt;= _i + 1&gt;&gt;. &lt;&lt;link _location _location&gt;&gt;&lt;&lt;/link&gt;&gt;
