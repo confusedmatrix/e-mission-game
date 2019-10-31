@@ -306,19 +306,27 @@ html[data-debug-view] .debug.hidden .debug {
 
 
 /* USER DEFINED STYLES */
+html, body {
+  min-height: 100vh;
+}
 body {
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  height: 100%;
   font-size: 1.3em;
 }
 a {
   font-weight: bold;
+  color: #C97965;
 }
 a:hover {
   text-decoration: underline;
+  color: #C98B65;
+}
+input[type="text"],
+textarea {
+  background-color: #FFF;
 }
 
 .passage {
@@ -390,12 +398,13 @@ body.office {
   display: none;
 }
 #story {
-  max-width: 60%;
-  height: 100vh;
+  max-width: 53%;
+  height: 100%;
+  min-height: 100vh;
   margin: 0 !important;
-  padding-right: 18%;
+  padding: 0 43% 0 2em;
   background: rgb(70,44,38);
-  background: linear-gradient(90deg, rgba(70,44,38,0.95) 0%, rgba(107,65,54,0.95) 78%, rgba(107,65,54,0) 100%);
+  background: linear-gradient(90deg, rgba(70,44,38,0.95) 0%, rgba(107,65,54,0.95) 50%, rgba(107,65,54,0) 100%);
   color: #FFFFFF;
 }
 #passages {
@@ -409,7 +418,8 @@ body.office {
   transform: rotate(-1deg);
   background-color: #fffef2;
   padding: 1em;
-  box-shadow: -5px 5px 10px #ccc;
+  box-shadow: -5px 5px 10px #333;
+  color: #333;
 }
 
 #journal-entry {
@@ -417,7 +427,7 @@ body.office {
   background-color: #D7E3EA;
   color: #333333;
   padding: 1em;
-  box-shadow: -5px 5px 10px #ccc;
+  box-shadow: -5px 5px 10px #333;
 }</style><script role="script" id="twine-user-script" type="text/twine-javascript">
 $(document).ready(function() {
 	
@@ -464,12 +474,12 @@ Select your fourth option:
 Hooray!
 &lt;&lt;else&gt;&gt;
 Bummer!
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="4" name="Sort through the boxes" tags="" position="273,61.33333333333334" size="100,100">The top box topples and falls to the floor scattering loose pages everywhere. You gather them up carefully, making sure the edges don’t get creased. 
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="4" name="Sort through the boxes" tags="office" position="273,61.33333333333334" size="100,100">The top box topples and falls to the floor scattering loose pages everywhere. You gather them up carefully, making sure the edges don’t get creased. 
 
 You think you found all the pages, but they’re out of order.
 
 [[Reorganise the pages]]
-</tw-passagedata><tw-passagedata pid="5" name="Look at the letter" tags="" position="31.333333333333332,443" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;&lt;include [[Researcher&#39;s letter]]&gt;&gt;
+</tw-passagedata><tw-passagedata pid="5" name="Look at the letter" tags="office" position="31.333333333333332,443" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;&lt;include [[Researcher&#39;s letter]]&gt;&gt;
 
 There is a signature at the bottom of the letter, although you cannot make out the name.
 
@@ -477,7 +487,7 @@ Clearly whoever wrote this was old friends with Alf.
 
 At the bottom of the letter, someone has scribbled three symbols in pencil. These could be a useful clue... but what for?
 
-&lt;&lt;link &quot;Add the letter to your inventory&quot; &quot;Retrieve the box with &#39;Our Future&#39; on it&quot;&gt;&gt;&lt;&lt;run $inventory.push(&quot;Researcher&#39;s letter&quot;)&gt;&gt;&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="6" name="Look at the document" tags="" position="274.6666666666667,371.3333333333333" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;The document is entitled ‘The United Nations Sustainable Development Goals’.
+&lt;&lt;link &quot;Add the letter to your inventory&quot; &quot;Retrieve the box with &#39;Our Future&#39; on it&quot;&gt;&gt;&lt;&lt;run $inventory.push(&quot;Researcher&#39;s letter&quot;)&gt;&gt;&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="6" name="Look at the document" tags="office" position="274.6666666666667,371.3333333333333" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;The document is entitled ‘The United Nations Sustainable Development Goals’.
 
 &lt;&lt;include [[&#39;United Nations Sustainable Development Goals&#39; document]]&gt;&gt;
 
@@ -485,7 +495,7 @@ You turn the document over. A note in the same handwriting as the letter says:
 
 &quot;The SDGs were introduced in 2015 and aimed to highlight key environmental, social and economic sustainability challenges that needed to be met by 2030. Governments around the world, universities, businesses, organisations and even individuals made commitments to help tackle these challenges. Maybe if we’d achieved them, or at least more of them, we’d have managed the achieve the sustainable future scientists, researchers and charities talked about…&quot;
 
-&lt;&lt;link &quot;Add the document to your inventory&quot; &quot;Retrieve the box with &#39;Our Future&#39; on it&quot;&gt;&gt;&lt;&lt;run $inventory.push(&quot;&#39;United Nations Sustainable Development Goals&#39; document&quot;)&gt;&gt;&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="7" name="Look at the journal" tags="" position="116,564" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;&lt;if lastVisited(&quot;Move some papers&quot;) is 1&gt;&gt;&lt;&lt;include [[Help 2.1]]&gt;&gt;
+&lt;&lt;link &quot;Add the document to your inventory&quot; &quot;Retrieve the box with &#39;Our Future&#39; on it&quot;&gt;&gt;&lt;&lt;run $inventory.push(&quot;&#39;United Nations Sustainable Development Goals&#39; document&quot;)&gt;&gt;&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="7" name="Look at the journal" tags="office" position="116,564" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;&lt;if lastVisited(&quot;Move some papers&quot;) is 1&gt;&gt;&lt;&lt;include [[Help 2.1]]&gt;&gt;
 &lt;&lt;/if&gt;&gt;You pick up the journal. The thick journal is made of soft red leather, with a small metal clasp. There is a combination lock on the side. You’ll need a &lt;strong&gt;five&lt;/strong&gt; digit code to open it.
 
 TODO - image of the journal
@@ -517,7 +527,7 @@ I do miss our chats and hope your latest intern is enjoying  being part of the m
 &lt;&lt;/for&gt;&gt;
 &lt;&lt;/if&gt;&gt;
 
-&lt;&lt;link &quot;Return to story&quot;&gt;&gt;&lt;&lt;goto $progress&gt;&gt;&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="12" name="Check journal lock combination" tags="" position="6.666666666666667,804" size="100,100">&lt;&lt;if $journalCode isnot &quot;71112&quot;&gt;&gt;Hmmm...that doesn’t seem to have worked. 
+&lt;&lt;link &quot;Return to story&quot;&gt;&gt;&lt;&lt;goto $progress&gt;&gt;&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="12" name="Check journal lock combination" tags="office" position="6.666666666666667,804" size="100,100">&lt;&lt;if $journalCode isnot &quot;71112&quot;&gt;&gt;Hmmm...that doesn’t seem to have worked. 
 
 &lt;&lt;include [[Help 3]]&gt;&gt;
 &lt;&lt;include [[Help 4]]&gt;&gt;
@@ -525,7 +535,7 @@ I do miss our chats and hope your latest intern is enjoying  being part of the m
 &lt;&lt;set $journal to []&gt;&gt;
 &lt;&lt;goto [[Open the journal]]&gt;&gt;
 &lt;&lt;/if&gt;&gt;
-</tw-passagedata><tw-passagedata pid="13" name="Read the first journal entry" tags="" position="151.33333333333331,969.3333333333333" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;&lt;if lastVisited(&quot;Photograph in journal&quot;) is 1&gt;&gt;&lt;div class=&quot;notice&quot;&gt;The photograph has been added to your inventory&lt;/div&gt;
+</tw-passagedata><tw-passagedata pid="13" name="Read the first journal entry" tags="office" position="151.33333333333331,969.3333333333333" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;&lt;if lastVisited(&quot;Photograph in journal&quot;) is 1&gt;&gt;&lt;div class=&quot;notice&quot;&gt;The photograph has been added to your inventory&lt;/div&gt;
 &lt;&lt;/if&gt;&gt;&lt;&lt;include &quot;Journal entry 1&quot;&gt;&gt;&lt;&lt;run $journal.pushUnique(&quot;Journal entry 1&quot;)&gt;&gt;&lt;&lt;if not $inventory.includes(&quot;Photograph&quot;)&gt;&gt;
 Paperclipped to the entry is a [[photograph|Photograph in journal]].
 &lt;&lt;else&gt;&gt;
@@ -551,17 +561,17 @@ Mum says I’ve been overdoing it. I have been busy since starting my work exper
 
 I do think I get ill more often since I started university though. Maybe I’m just not used to living in a city. All those cars and smoke and dust. I’m probably still getting used to it. 
 
-I don’t want to take time off from my work at the museum though. The head archivist is so friendly and they treat me like a proper member of staff - I even have my own locker. And I’m learning so much from working with the exhibitions. They’re even letting me develop my own exhibit on carbon emissions.&lt;/div&gt;</tw-passagedata><tw-passagedata pid="17" name="Photograph in journal" tags="" position="288,1037.3333333333333" size="100,100">&lt;&lt;include &quot;Photograph&quot;&gt;&gt;
+I don’t want to take time off from my work at the museum though. The head archivist is so friendly and they treat me like a proper member of staff - I even have my own locker. And I’m learning so much from working with the exhibitions. They’re even letting me develop my own exhibit on carbon emissions.&lt;/div&gt;</tw-passagedata><tw-passagedata pid="17" name="Photograph in journal" tags="office" position="288,1037.3333333333333" size="100,100">&lt;&lt;include &quot;Photograph&quot;&gt;&gt;
 &lt;&lt;if not $inventory.includes(&quot;Photograph&quot;)&gt;&gt;
 &lt;&lt;link [[Add the photograph to your inventory|Read the first journal entry]]&gt;&gt;&lt;&lt;run $inventory.push(&quot;Photograph&quot;)&gt;&gt;
-&lt;&lt;/link&gt;&gt;&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="18" name="Skip to journal entry 2" tags="" position="151.33333333333331,1119.3333333333333" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;&lt;include &quot;Journal entry 2&quot;&gt;&gt;&lt;&lt;run $journal.pushUnique(&quot;Journal entry 2&quot;)&gt;&gt;
+&lt;&lt;/link&gt;&gt;&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="18" name="Skip to journal entry 2" tags="office" position="151.33333333333331,1119.3333333333333" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;&lt;include &quot;Journal entry 2&quot;&gt;&gt;&lt;&lt;run $journal.pushUnique(&quot;Journal entry 2&quot;)&gt;&gt;
 So the researcher started working at the museum while they were a student! Perhaps they stayed in touch with Alf after they left and that’s why they donated their research. 
 
 You wonder whether the researcher’s locker is still in the staff room. There could be something interesting inside it..
 
 [[Stay in your office]]
 
-&lt;&lt;link [[Go to the staff room]]&gt;&gt;&lt;&lt;set $map to []&gt;&gt;&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="19" name="Photograph" tags="" position="752.6666666666665,253.33333333333334" size="100,100">&lt;img src=&quot;https://confusedmatrix.github.io/e-mission-game/assets/images/photograph.jpg&quot; class=&quot;passage-image&quot; /&gt;</tw-passagedata><tw-passagedata pid="20" name="Open the journal" tags="" position="156.33333333333331,834.3333333333333" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;&lt;if visited(passage()) is 1&gt;&gt;As you put in the final number, the clasp of the journal unlocks.&lt;&lt;/if&gt;&gt;
+&lt;&lt;link [[Go to the staff room]]&gt;&gt;&lt;&lt;set $map to []&gt;&gt;&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="19" name="Photograph" tags="" position="752.6666666666665,253.33333333333334" size="100,100">&lt;img src=&quot;https://confusedmatrix.github.io/e-mission-game/assets/images/photograph.jpg&quot; class=&quot;passage-image&quot; /&gt;</tw-passagedata><tw-passagedata pid="20" name="Open the journal" tags="office" position="156.33333333333331,834.3333333333333" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;&lt;if visited(passage()) is 1&gt;&gt;As you put in the final number, the clasp of the journal unlocks.&lt;&lt;/if&gt;&gt;
 
 The journal appears to be full, its pages covered with the same handwriting that appeared in the letter. This must be the journal that was mentioned in the letter to Alf.
 
@@ -587,12 +597,12 @@ Some pages are filled with charts and statistics. Others contain pasted newspape
 
 You can look at items in your Inventory to see if there are any clues to complete puzzles.&lt;/div&gt;</tw-passagedata><tw-passagedata pid="25" name="Help 2" tags="" position="511.33333333333337,505.66666666666663" size="100,100">&lt;div class=&quot;help&quot;&gt;When you find a puzzle, look through your &lt;img src=&quot;https://confusedmatrix.github.io/e-mission-game/assets/images/icons/archive.png&quot; class=&quot;inline-icon&quot; /&gt;&lt;&lt;link &quot;Inventory&quot; &quot;Inventory&quot;&gt;&gt;&lt;&lt;/link&gt;&gt; to see if you have the information to solve it, or explore to see if you missed something.
 
-When you look at items, it can be useful to make notes of information that could be used to unlock the puzzles. What could you use to write this down?&lt;/div&gt;</tw-passagedata><tw-passagedata pid="26" name="Move some papers" tags="" position="111,709" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;&lt;if ndef $notebook&gt;&gt;You find your &lt;img src=&quot;https://confusedmatrix.github.io/e-mission-game/assets/images/icons/notebook.png&quot; class=&quot;inline-icon&quot; /&gt;&lt;&lt;link &quot;Notebook&quot; &quot;Move some papers&quot;&gt;&gt;&lt;&lt;set $notebook to []&gt;&gt;&lt;&lt;/link&gt;&gt; buried beneath the papers.
+When you look at items, it can be useful to make notes of information that could be used to unlock the puzzles. What could you use to write this down?&lt;/div&gt;</tw-passagedata><tw-passagedata pid="26" name="Move some papers" tags="office" position="111,709" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;&lt;if ndef $notebook&gt;&gt;You find your &lt;img src=&quot;https://confusedmatrix.github.io/e-mission-game/assets/images/icons/notebook.png&quot; class=&quot;inline-icon&quot; /&gt;&lt;&lt;link &quot;Notebook&quot; &quot;Move some papers&quot;&gt;&gt;&lt;&lt;set $notebook to []&gt;&gt;&lt;&lt;/link&gt;&gt; buried beneath the papers.
 
 Now you need to figure out the code to unlock the journal.
-&lt;&lt;else&gt;&gt;&lt;&lt;goto [[Look at the journal]]&gt;&gt;&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="27" name="Help 3" tags="" position="511,617.3333333333333" size="100,100">&lt;div class=&quot;help&quot;&gt;Take a look at the letter again. Do those symbols at the bottom appear anywhere in the document you have picked up?&lt;/div&gt;</tw-passagedata><tw-passagedata pid="28" name="Help 4" tags="" position="511.66666666666674,732.3333333333333" size="100,100">&lt;div class=&quot;help&quot;&gt;HINT: You could use your notebook to write down the numbers.&lt;/div&gt;</tw-passagedata><tw-passagedata pid="29" name="Stay in your office" tags="" position="76.33333333333333,1269.3333333333333" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;There is nothing else to do in your office.
+&lt;&lt;else&gt;&gt;&lt;&lt;goto [[Look at the journal]]&gt;&gt;&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="27" name="Help 3" tags="" position="511,617.3333333333333" size="100,100">&lt;div class=&quot;help&quot;&gt;Take a look at the letter again. Do those symbols at the bottom appear anywhere in the document you have picked up?&lt;/div&gt;</tw-passagedata><tw-passagedata pid="28" name="Help 4" tags="" position="511.66666666666674,732.3333333333333" size="100,100">&lt;div class=&quot;help&quot;&gt;HINT: You could use your notebook to write down the numbers.&lt;/div&gt;</tw-passagedata><tw-passagedata pid="29" name="Stay in your office" tags="office" position="76.33333333333333,1269.3333333333333" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;There is nothing else to do in your office.
 
-You sit in your chair and stare at the clutter for a few minutes then decide to go to the &lt;&lt;link [[staff room|Go to the staff room]]&gt;&gt;&lt;&lt;set $map to []&gt;&gt;&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="30" name="Go to the staff room" tags="" position="226.33333333333331,1269.3333333333333" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;&lt;run $map.pushUnique(&#39;Staff room&#39;)&gt;&gt;You  check your map to find your way to the staff room.
+You sit in your chair and stare at the clutter for a few minutes then decide to go to the &lt;&lt;link [[staff room|Go to the staff room]]&gt;&gt;&lt;&lt;set $map to []&gt;&gt;&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="30" name="Go to the staff room" tags="lobby" position="226.33333333333331,1269.3333333333333" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;&lt;run $map.pushUnique(&#39;Staff room&#39;)&gt;&gt;You  check your map to find your way to the staff room.
 
 &lt;&lt;include [[Help 6]]&gt;&gt;</tw-passagedata><tw-passagedata pid="31" name="Help 6" tags="" position="511.33333333333337,955.9999999999999" size="100,100">&lt;div class=&quot;help&quot;&gt;To move around the museum, click on the &lt;img src=&quot;https://confusedmatrix.github.io/e-mission-game/assets/images/icons/map.png&quot; class=&quot;inline-icon&quot; /&gt;&lt;&lt;link &quot;Map&quot; &quot;Map&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;, then click on the room you want to go to.&lt;/div&gt;</tw-passagedata><tw-passagedata pid="32" name="Staff room" tags="" position="370.00000000000006,1265" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;&lt;if not hasVisited(&quot;Open the locker doors&quot;)&gt;&gt;The staff room smells slightly musty and the lingering smell of reheated food is in the air. 
 
@@ -623,7 +633,7 @@ I’m going to miss working at the museum. I’ve had an amazing time working on
 
 I wonder how long my exhibit will stay on display for. The Time Travel exhibit it replaced went into a side room, so my exhibit could just get moved if new exhibits come to the museum!. I remembered finding a cog when I was installing the carbon emissions exhibit. I put it back in the model and tried pressing some of the buttons but I think other parts must be missing; all it did was make the machine light up. The time machine has been here so long, the missing bits could be anywhere around the museum. I left the cog in my locker in case the other pieces turn up. 
 
-I gave my locker code to Alf, the Head Archivist. He laughed when I told him the code. He got that wistful look in his eye when I cheekily said, “if you forget the code, pop by my exhibit and remember the year when we broke the past records…&quot;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="35" name="Intro" tags="lobby" position="118.33333333333331,155" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;It is 2050.  You’ve been working in your new job as the Head Archivist at the Museum of Environmental History for a month now.
+I gave my locker code to Alf, the Head Archivist. He laughed when I told him the code. He got that wistful look in his eye when I cheekily said, “if you forget the code, pop by my exhibit and remember the year when we broke the past records…&quot;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="35" name="Intro" tags="office" position="118.33333333333331,155" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;It is 2050.  You’ve been working in your new job as the Head Archivist at the Museum of Environmental History for a month now.
 
 Your predecessor, Alfred Mitchell, retired after a 40-year career. You’ve inherited piles of boxes and files that Alf never got round to sorting through. 
 
@@ -635,7 +645,7 @@ Late one night, you decide it’s time to start tackling the mountain of documen
 
 You will unlock new journal entries as you progress through the game. 
 
-Use the journal icon to access unlocked journal entries at any time. If you get stuck, try re-reading the journal to see if it can help!&lt;/div&gt;</tw-passagedata><tw-passagedata pid="37" name="Retrieve the box with &#39;Our Future&#39; on it" tags="" position="118.00000000000006,289.66666666666663" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;&lt;if lastVisited(&quot;Look at the letter&quot;) is 1&gt;&gt;&lt;div class=&quot;notice&quot;&gt;The Researcher&#39;s letter has been added to your inventory&lt;/div&gt;
+Use the journal icon to access unlocked journal entries at any time. If you get stuck, try re-reading the journal to see if it can help!&lt;/div&gt;</tw-passagedata><tw-passagedata pid="37" name="Retrieve the box with &#39;Our Future&#39; on it" tags="office" position="118.00000000000006,289.66666666666663" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;&lt;if lastVisited(&quot;Look at the letter&quot;) is 1&gt;&gt;&lt;div class=&quot;notice&quot;&gt;The Researcher&#39;s letter has been added to your inventory&lt;/div&gt;
 &lt;&lt;elseif lastVisited(&quot;Look at the book&quot;) is 1&gt;&gt;
 &lt;div class=&quot;notice&quot;&gt;The &#39;How Bad Are Bananas&#39; book has been added to your inventory&lt;/div&gt;
 &lt;&lt;elseif lastVisited(&quot;Look at the document&quot;) is 1&gt;&gt;
@@ -652,11 +662,11 @@ What do you want to look at?
 &lt;&lt;if not hasVisited(&quot;Look at the document&quot;)&gt;&gt;[[Look at the document]]
 &lt;&lt;/if&gt;&gt;
 &lt;&lt;if not hasVisited(&quot;Look at the book&quot;)&gt;&gt;[[Look at the book]]
-&lt;&lt;/if&gt;&gt;&lt;&lt;if $inventory.includesAll(&quot;Researcher&#39;s letter&quot;, &quot;&#39;United Nations Sustainable Development Goals&#39; document&quot;, &quot;&#39;How Bad Are Bananas&#39; book&quot;)&gt;&gt;[[Look at the journal]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="38" name="Reorganise the pages" tags="" position="271.3333333333333,194.66666666666669" size="100,100">Reorganising the pages could take hours. 
+&lt;&lt;/if&gt;&gt;&lt;&lt;if $inventory.includesAll(&quot;Researcher&#39;s letter&quot;, &quot;&#39;United Nations Sustainable Development Goals&#39; document&quot;, &quot;&#39;How Bad Are Bananas&#39; book&quot;)&gt;&gt;[[Look at the journal]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="38" name="Reorganise the pages" tags="office" position="271.3333333333333,194.66666666666669" size="100,100">Reorganising the pages could take hours. 
 
 You’re too curious about what’s in the ‘Our future?’ box and will need to refer to some other documents to make sure the box contents are organised correctly. You decide the sorting can wait until morning.
 
-&lt;&lt;link [[Retrieve the box with &#39;Our Future&#39; on it]]&gt;&gt;&lt;&lt;set $inventory to []&gt;&gt;&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="39" name="Help 7" tags="" position="508.3333333333334,1071.6666666666665" size="100,100">&lt;div class=&quot;help&quot;&gt;Click on the Carbon Emissions Exhibition on the map to move there.&lt;/div&gt;</tw-passagedata><tw-passagedata pid="40" name="Look at the book" tags="" position="159.66666666666663,421.3333333333333" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;The book is a copy of &#39;How Bad Are Bananas&#39; by Mike Berners Lee.
+&lt;&lt;link [[Retrieve the box with &#39;Our Future&#39; on it]]&gt;&gt;&lt;&lt;set $inventory to []&gt;&gt;&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="39" name="Help 7" tags="" position="508.3333333333334,1071.6666666666665" size="100,100">&lt;div class=&quot;help&quot;&gt;Click on the Carbon Emissions Exhibition on the map to move there.&lt;/div&gt;</tw-passagedata><tw-passagedata pid="40" name="Look at the book" tags="office" position="159.66666666666663,421.3333333333333" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;The book is a copy of &#39;How Bad Are Bananas&#39; by Mike Berners Lee.
 
 &lt;&lt;include [[&#39;How Bad Are Bananas&#39; book]]&gt;&gt;
 
