@@ -100,7 +100,7 @@ var saveAs=saveAs||navigator.msSaveBlob&&navigator.msSaveBlob.bind(navigator)||f
 		<div id="init-lacking">Your browser lacks required capabilities. Please upgrade it or switch to another to continue.</div>
 		<div id="init-loading"><div>Loading&hellip;</div></div>
 	</div>
-	<tw-storydata name="Sustainability game" startnode="1" creator="Twine" creator-version="2.3.5" ifid="DAE05C96-0766-45D8-A62E-2F6FC31593AA" zoom="0.6" format="SugarCube" format-version="2.30.0" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">@import url('https://fonts.googleapis.com/css?family=Liu+Jian+Mao+Cao|Special+Elite&display=swap');
+	<tw-storydata name="Sustainability game" startnode="1" creator="Twine" creator-version="2.3.5" ifid="DAE05C96-0766-45D8-A62E-2F6FC31593AA" zoom="0.6" format="SugarCube" format-version="2.30.0" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">@import url('https://fonts.googleapis.com/css?family=Lora|Liu+Jian+Mao+Cao|Special+Elite&display=swap');
 
 /***********************************************************************
 	BLEACHED - A largely white style for SugarCube ≥v2.25.0
@@ -443,6 +443,22 @@ body.staff-room {
   color: #333333;
   padding: 1em;
   box-shadow: -5px 5px 10px #333;
+}
+.plaque {
+  background-color: #222222;
+  color: #FFFFFF;
+  padding: 1em;
+  box-shadow: -5px 5px 10px #333;
+  border: 10px groove #d7bb20;
+  font-family: Lora, serif;
+  text-align: center;
+}
+.plaque h2 {
+  color: #d7bb20;
+}
+.plaque blockquote {
+  font-style: italic;
+  color: #CCCCCC;
 }</style><script role="script" id="twine-user-script" type="text/twine-javascript">
 $(document).ready(function() {
 	
@@ -515,7 +531,7 @@ You turn the document over. A note in the same handwriting as the letter says:
 &lt;&lt;link &quot;Add the document to your inventory&quot; &quot;Retrieve the box with &#39;Our Future&#39; on it&quot;&gt;&gt;&lt;&lt;run $inventory.push(&quot;&#39;United Nations Sustainable Development Goals&#39; document&quot;)&gt;&gt;&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="7" name="Look at the journal" tags="office" position="116,564" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;&lt;if lastVisited(&quot;Move some papers&quot;) is 1&gt;&gt;&lt;&lt;include [[Help 2.1]]&gt;&gt;
 &lt;&lt;/if&gt;&gt;You pick up the journal. The thick journal is made of soft red leather, with a small metal clasp. There is a combination lock on the side. You’ll need a &lt;strong&gt;five&lt;/strong&gt; digit code to open it.
 
-TODO - image of the journal
+&lt;img src=&quot;https://confusedmatrix.github.io/e-mission-game/assets/images/journal.png&quot; class=&quot;passage-image&quot; /&gt;
 
 &lt;&lt;if ndef $notebook&gt;&gt;&lt;&lt;include [[Help 2]]&gt;&gt;
 
@@ -754,7 +770,7 @@ Reading their journal entry, you’re looking for a year that was a ‘turning p
 
 Use your notebook to write down any information you find so you don’t forget it. 
 
-And don’t forget that you can check any reports and documents you have already found in your inventory.&lt;/div&gt;</tw-passagedata><tw-passagedata pid="47" name="Cog" tags="" position="758.3333333333333,474.9999999999998" size="100,100">TODO... image of a cog</tw-passagedata><tw-passagedata pid="48" name="Pick up the cog" tags="staff-room" position="425.00000000000006,1541.6666666666663" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;&lt;run $map.pushUnique(&quot;‘Exhibit 451. Inner Hallway’&quot;)&gt;&gt;The label reads ‘Exhibit 451. Inner Hallway’. 
+And don’t forget that you can check any reports and documents you have already found in your inventory.&lt;/div&gt;</tw-passagedata><tw-passagedata pid="47" name="Cog" tags="" position="758.3333333333333,474.9999999999998" size="100,100">&lt;img src=&quot;https://confusedmatrix.github.io/e-mission-game/assets/images/cog.jpg&quot; class=&quot;passage-image&quot; /&gt;</tw-passagedata><tw-passagedata pid="48" name="Pick up the cog" tags="staff-room" position="425.00000000000006,1541.6666666666663" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;&lt;run $map.pushUnique(&quot;‘Exhibit 451. Inner Hallway’&quot;)&gt;&gt;The label reads ‘Exhibit 451. Inner Hallway’. 
 
 You’re pretty sure that this exhibit is just down the stairs from the office.
 
@@ -782,33 +798,24 @@ With a loud whirring sound, the time machine lights up!
 
 A number of buttons on the console start to flash red. Just like the researcher said, it looks as if other parts of the machine are missing as there are four gaps in the console. 
 
-As you move into the machine’s seat to take a closer look, you see a scrap of paper tucked down the side of the seat cushion.</tw-passagedata><tw-passagedata pid="52" name="Look at Exhibit 1" tags="" position="656.6666666666666,1521.6666666666672" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;Title: Intergovernmental Panel on Climate Change Special Report (2018)
-Text: The IPCC reports continued to warn of projected impacts from failure to make significant reductions in carbon emissions and to decarbonise global economies. The following quotes are from the IPCC Special Report issued in 2018.
+As you move into the machine’s seat to take a closer look, you see a scrap of paper tucked down the side of the seat cushion.</tw-passagedata><tw-passagedata pid="52" name="Look at Exhibit 1" tags="" position="656.6666666666666,1521.6666666666672" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;div class=&quot;plaque&quot;&gt;&lt;h2&gt;Intergovernmental Panel on Climate Change Special Report (2018)&lt;/h2&gt;
+The IPCC reports continued to warn of projected impacts from failure to make significant reductions in carbon emissions and to decarbonise global economies. The following quotes are from the IPCC Special Report issued in 2018.
+&lt;blockquote&gt;“Human activities are estimated to have caused approximately 1.0°C of global warming above pre-industrial levels, with a likely range of 0.8°C to 1.2°C. Global warming is likely to reach 1.5°C between 2030 and 2052 if it continues to increase at the current rate.“&lt;/blockquote&gt;&lt;blockquote&gt;“Warming from anthropogenic emissions from the pre-industrial period to the present will persist for centuries to millennia and will continue to cause further long-term changes in the climate system, such as sea level rise, with associated impacts, but these emissions alone are unlikely to cause global warming of 1.5°C.”&lt;/blockquote&gt;&lt;/div&gt;
 
-“Human activities are estimated to have caused approximately 1.0°C of global warming above pre-industrial levels, with a likely range of 0.8°C to 1.2°C. Global warming is likely to reach 1.5°C between 2030 and 2052 if it continues to increase at the current rate. “
-
-“Warming from anthropogenic emissions from the pre-industrial period to the present will persist for centuries to millennia and will continue to cause further long-term changes in the climate system, such as sea level rise, with associated impacts, but these emissions alone are unlikely to cause global warming of 1.5°C.”
-
-TODO... IPCC Special Report Image 1 (in folder)
+&lt;img src=&quot;https://confusedmatrix.github.io/e-mission-game/assets/images/ipcc-special-report.png&quot; class=&quot;passage-image&quot; /&gt;
 
 [[Look at Exhibit 2]]
-</tw-passagedata><tw-passagedata pid="53" name="Look at Exhibit 2" tags="" position="653.3333333333333,1643.333333333334" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;Title: Climate Change 2014 Synthesis Report Summary for Policy Makers
-Text: A previous IPCC report indicated the impact of previous industrial activities, particularly since 1950, and their contribution to climate change, sea level rise, and impacts on ecosystems and habitats. The following quotes are from the Climate Change Synthesis Report issued in 2014.
+</tw-passagedata><tw-passagedata pid="53" name="Look at Exhibit 2" tags="" position="653.3333333333333,1643.333333333334" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;div class=&quot;plaque&quot;&gt;&lt;h2&gt;Climate Change 2014 Synthesis Report Summary for Policy Makers&lt;/h2&gt;
+A previous IPCC report indicated the impact of previous industrial activities, particularly since 1950, and their contribution to climate change, sea level rise, and impacts on ecosystems and habitats. The following quotes are from the Climate Change Synthesis Report issued in 2014.
+&lt;blockquote&gt;“Warming of the climate system is unequivocal, and since the 1950s, many of the observed changes are unprecedented over decades to millennia. The atmosphere and ocean have warmed, the amounts of snow and ice have diminished, and sea level has risen.”&lt;/blockquote&gt;&lt;blockquote&gt;&quot;Changes in many extreme weather and climate events have been observed since about 1950. Some of these changes have been linked to human influences, including a decrease in cold temperature extremes, an increase in warm temperature extremes, an increase in extreme high sea levels and an increase in the number of heavy precipitation events in a number of regions.&quot;&lt;/blockquote&gt;&lt;/div&gt;
 
-“Warming of the climate system is unequivocal, and since the 1950s, many of the observed
-changes are unprecedented over decades to millennia. The atmosphere and ocean have
-warmed, the amounts of snow and ice have diminished, and sea level has risen.” 
+[[Look at Exhibit 3]]</tw-passagedata><tw-passagedata pid="54" name="Look at Exhibit 3" tags="" position="543.3333333333333,1639.9999999999995" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;div class=&quot;plaque&quot;&gt;&lt;h2&gt;Atmospheric CO&lt;sub&gt;2&lt;/sub&gt; and change ppm over time&lt;/h2&gt;
+Research by NASA - the National Aeronautics and Space Administration - has shown changing levels of atmospheric CO&lt;sub&gt;2&lt;/sub&gt; for the last 650,000 years.  The PPM (parts per million) of atmospheric CO&lt;sub&gt;2&lt;/sub&gt; hit record-breaking level in 1950, exceeding 300ppm for the first time in human history. 
 
-&quot;Changes in many extreme weather and climate events have been observed since about 1950.
-Some of these changes have been linked to human influences, including a decrease in cold temperature extremes, an increase in warm temperature extremes, an increase in extreme high sea levels and an increase in the number of heavy precipitation events in a number of regions.&quot;
+PPM levels continued to rise sharply into the 21st century breaking through the 400ppm barrier, and heading towards 420ppm in 2020.&lt;/div&gt;
+&lt;img src=&quot;https://confusedmatrix.github.io/e-mission-game/assets/images/co2-graph-1.jpg&quot; class=&quot;passage-image&quot; /&gt;
 
-[[Look at Exhibit 3]]</tw-passagedata><tw-passagedata pid="54" name="Look at Exhibit 3" tags="" position="543.3333333333333,1639.9999999999995" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;Title: Atmospheric CO2 and change ppm over time
-Text: Research by NASA - the National Aeronautics and Space Administration - has shown changing levels of atmospheric CO2 for the last 650,000 years.  The PPM (parts per million) of atmospheric CO2 hit record-breaking level in 1950, exceeding 300ppm for the first time in human history. 
-
-PPM levels continued to rise sharply into the 21st century breaking through the 400ppm barrier, and heading towards 420ppm in 2020.
-
-TODO graph 1
-TODO graph 2
+&lt;img src=&quot;https://confusedmatrix.github.io/e-mission-game/assets/images/co2-graph-2.png&quot; class=&quot;passage-image&quot; /&gt;
 
 [[Step back from the exhibits]]</tw-passagedata><tw-passagedata pid="55" name="Step back from the exhibits" tags="" position="545,1521.6666666666674" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;You look around the rest of the exhibition but the other exhibits are much newer and would have been added after your researcher finished working here. 
 
