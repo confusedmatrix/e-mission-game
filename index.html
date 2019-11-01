@@ -345,6 +345,7 @@ textarea {
 }
 .help {
   background-color: #82B8C4;
+  color: #253538;
 }
 .help a, 
 .help a:hover {
@@ -375,6 +376,7 @@ textarea {
   position: absolute;
   top: -5em;
   left: 1em;
+  width: 100%;
 }
 #header-icons a {
   display: block;
@@ -387,6 +389,9 @@ textarea {
 }
 #header-icons a:hover img {
   transform: scale(1.2);
+}
+#header-icons .ui-icons {
+  float: right;
 }
   
 
@@ -444,7 +449,9 @@ $(document).ready(function() {
 	// As a boolean; always start stowed
 	Config.ui.stowBarInitially = true;
 
-})</script><tw-passagedata pid="1" name="Start" tags="" position="119.66666666666667,19.666666666666664" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;div class=&quot;help&quot;&gt;Welcome to E-Mission, a game about environmental challenges and creating a sustainable future.  
+})
+
+</script><tw-passagedata pid="1" name="Start" tags="" position="119.66666666666667,19.666666666666664" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;div class=&quot;help&quot;&gt;Welcome to E-Mission, a game about environmental challenges and creating a sustainable future.  
 
 As you move through this game, you’ll need to solve puzzles to unlock clues and discover evidence. 
 
@@ -530,7 +537,35 @@ Sadly, mine has only been a short life but it has, I think, been an interesting 
 
 I do miss our chats and hope your latest intern is enjoying  being part of the museum team as much as I did! I hope the items I left in my locker inspired them as much as they inspired me!
 
-&lt;img src=&quot;https://confusedmatrix.github.io/e-mission-game/assets/images/sdgs/icon-only/07.png&quot; class=&quot;sdg-icon&quot; /&gt; &lt;img src=&quot;https://confusedmatrix.github.io/e-mission-game/assets/images/sdgs/icon-only/11.png&quot; class=&quot;sdg-icon&quot; /&gt; &lt;img src=&quot;https://confusedmatrix.github.io/e-mission-game/assets/images/sdgs/icon-only/12.png&quot; class=&quot;sdg-icon&quot; /&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="9" name="&#39;United Nations Sustainable Development Goals&#39; document" tags="" position="399.3333333333333,434.3333333333333" size="100,100">&lt;img src=&quot;https://confusedmatrix.github.io/e-mission-game/assets/images/sdg-document.png&quot; class=&quot;passage-image&quot; /&gt;</tw-passagedata><tw-passagedata pid="10" name="PassageHeader" tags="" position="699.6666666666666,28.33333333333333" size="200,100">&lt;div id=&quot;header-icons&quot;&gt;&lt;&lt;if def $inventory&gt;&gt;[img[Inventory|https://confusedmatrix.github.io/e-mission-game/assets/images/icons/archive.png][Inventory]]&lt;&lt;/if&gt;&gt; &lt;&lt;if def $map&gt;&gt;[img[Map|https://confusedmatrix.github.io/e-mission-game/assets/images/icons/map.png][Map]]&lt;&lt;/if&gt;&gt; &lt;&lt;if def $journal&gt;&gt;[img[Journal|https://confusedmatrix.github.io/e-mission-game/assets/images/icons/book.png][Researcher&#39;s journal]]&lt;&lt;/if&gt;&gt; &lt;&lt;if def $notebook&gt;&gt;[img[Your notes|https://confusedmatrix.github.io/e-mission-game/assets/images/icons/notebook.png][Notebook]]&lt;&lt;/if&gt;&gt;&lt;/div&gt;
+&lt;img src=&quot;https://confusedmatrix.github.io/e-mission-game/assets/images/sdgs/icon-only/07.png&quot; class=&quot;sdg-icon&quot; /&gt; &lt;img src=&quot;https://confusedmatrix.github.io/e-mission-game/assets/images/sdgs/icon-only/11.png&quot; class=&quot;sdg-icon&quot; /&gt; &lt;img src=&quot;https://confusedmatrix.github.io/e-mission-game/assets/images/sdgs/icon-only/12.png&quot; class=&quot;sdg-icon&quot; /&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="9" name="&#39;United Nations Sustainable Development Goals&#39; document" tags="" position="399.3333333333333,434.3333333333333" size="100,100">&lt;img src=&quot;https://confusedmatrix.github.io/e-mission-game/assets/images/sdg-document.png&quot; class=&quot;passage-image&quot; /&gt;</tw-passagedata><tw-passagedata pid="10" name="PassageHeader" tags="" position="699.6666666666666,28.33333333333333" size="200,100">&lt;div id=&quot;header-icons&quot;&gt;&lt;&lt;if def $inventory&gt;&gt;[img[Inventory|https://confusedmatrix.github.io/e-mission-game/assets/images/icons/archive.png][Inventory]]&lt;&lt;/if&gt;&gt; &lt;&lt;if def $map&gt;&gt;[img[Map|https://confusedmatrix.github.io/e-mission-game/assets/images/icons/map.png][Map]]&lt;&lt;/if&gt;&gt; &lt;&lt;if def $journal&gt;&gt;[img[Journal|https://confusedmatrix.github.io/e-mission-game/assets/images/icons/book.png][Researcher&#39;s journal]]&lt;&lt;/if&gt;&gt; &lt;&lt;if def $notebook&gt;&gt;[img[Your notes|https://confusedmatrix.github.io/e-mission-game/assets/images/icons/notebook.png][Notebook]]&lt;&lt;/if&gt;&gt;&lt;div class=&quot;ui-icons&quot;&gt;&lt;&lt;if ndef $fullscreen&gt;&gt;&lt;&lt;set $fullscreen to false&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;if $fullscreen is false&gt;&gt;&lt;&lt;link [img[Full screen mode|https://confusedmatrix.github.io/e-mission-game/assets/images/icons/full-screen.png]]&gt;&gt;&lt;&lt;set $fullscreen to true&gt;&gt;&lt;&lt;script&gt;&gt;
+var elem = document.documentElement;
+if (elem.requestFullscreen) {
+	elem.requestFullscreen();
+} else if (elem.mozRequestFullScreen) { /* Firefox */
+	elem.mozRequestFullScreen();
+} else if (elem.webkitRequestFullscreen) { /* Chrome, Safari and Opera */
+	elem.webkitRequestFullscreen();
+} else if (elem.msRequestFullscreen) { /* IE/Edge */
+	elem.msRequestFullscreen();
+}
+Engine.play(passage(), true)
+&lt;&lt;/script&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;&lt;else&gt;&gt;&lt;&lt;link [img[Close full screen mode|https://confusedmatrix.github.io/e-mission-game/assets/images/icons/exit-full-screen.png]]&gt;&gt;&lt;&lt;set $fullscreen to false&gt;&gt;&lt;&lt;script&gt;&gt;
+var elem = document.documentElement;
+if (document.exitFullscreen) {
+	document.exitFullscreen();
+} else if (document.mozCancelFullScreen) { /* Firefox */
+	document.mozCancelFullScreen();
+} else if (document.webkitExitFullscreen) { /* Chrome, Safari and Opera */
+	document.webkitExitFullscreen();
+} else if (document.msExitFullscreen) { /* IE/Edge */
+	document.msExitFullscreen();
+}
+Engine.play(passage(), true)
+&lt;&lt;/script&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;&lt;/if&gt;&gt; &lt;&lt;link [img[Restart game|https://confusedmatrix.github.io/e-mission-game/assets/images/icons/restart.png]]&gt;&gt;&lt;&lt;script&gt;&gt;
+Dialog.setup(&quot;Restart dialog&quot;)
+Dialog.wiki(&quot;Are you sure you want to restart? All progress within the game will be lost&lt;br/&gt;&lt;br/&gt;&lt;&lt;button &#39;Yes&#39;&gt;&gt;&lt;&lt;script&gt;&gt;Engine.restart()&lt;&lt;/script&gt;&gt;&lt;&lt;/button&gt;&gt; &lt;&lt;button &#39;No, take me back to the story&#39;&gt;&gt;&lt;&lt;script&gt;&gt;Dialog.close()&lt;&lt;/script&gt;&gt;&lt;&lt;/button&gt;&gt;&quot;)
+Dialog.open()
+&lt;&lt;/script&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/div&gt;&lt;/div&gt;
 </tw-passagedata><tw-passagedata pid="11" name="Inventory" tags="" position="536.3333333333333,141.66666666666666" size="100,100">&lt;&lt;if $inventory.length is 0&gt;&gt;You have no items in your inventory&lt;&lt;else&gt;&gt;Your inventory items:
 &lt;&lt;for _i, _item range $inventory&gt;&gt;
 &lt;&lt;= _i + 1&gt;&gt;. &lt;&lt;link _item _item&gt;&gt;&lt;&lt;/link&gt;&gt;
