@@ -772,7 +772,7 @@ The book was written in 2010 and includes the equivalent carbon emissions (CO2e)
 
 &lt;&lt;link &quot;Add the book to your inventory&quot; &quot;Retrieve the box with &#39;Our Future&#39; on it&quot;&gt;&gt;&lt;&lt;run $inventory.push(&quot;&#39;How Bad Are Bananas&#39; book&quot;)&gt;&gt;&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="38" name="&#39;How Bad Are Bananas&#39; book" tags="inventory" position="638,253" size="100,100">&lt;img src=&quot;https://confusedmatrix.github.io/e-mission-game/assets/images/book.jpg&quot; class=&quot;passage-image&quot; /&gt;&lt;&lt;if def $releaseBananasBook&gt;&gt;
 
-[[Open the book]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="39" name="Carbon Emissions Exhibition" tags="carbon-emission-exhibit" position="606,1371" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;&lt;if $completed.includes(passage())&gt;&gt;There is nothing left to do in the &lt;&lt;= passage()&gt;&gt;.&lt;&lt;else&gt;&gt;The Carbon Emissions Exhibition is one of the older exhibitions in the museum. You remember your training with Alf when you started as a junior archivist. He told you about how the exhibition developed as the environmental crisis worsened, and events became reality and then history, rather than just projections. 
+[[Open the book]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="39" name="Carbon Emissions Exhibition" tags="carbon-emission-exhibit" position="632.6666666666666,1284.3333333333335" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;&lt;if $completed.includes(passage())&gt;&gt;There is nothing left to do in the &lt;&lt;= passage()&gt;&gt;.&lt;&lt;else&gt;&gt;The Carbon Emissions Exhibition is one of the older exhibitions in the museum. You remember your training with Alf when you started as a junior archivist. He told you about how the exhibition developed as the environmental crisis worsened, and events became reality and then history, rather than just projections. 
 
 The exhibition is laid out as a timeline, with the oldest part to the far left hand side. It was was put together in the early 2020s. This must have been the part that the researcher worked on as an intern. 
 
@@ -782,7 +782,7 @@ The exhibition is laid out as a timeline, with the oldest part to the far left h
 
 [[Look at Exhibit 3]]
 &lt;&lt;/if&gt;&gt;
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="40" name="Look at the exhibition" tags="carbon-emission-exhibit" position="604,1507" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;You walk over to the display. 
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="40" name="Look at the exhibition" tags="carbon-emission-exhibit" position="630.6666666666666,1420.3333333333335" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;You walk over to the display. 
 
 The exhibition&#39;s central focus is a Special Climate Change report produced in 2018 by the Intergovernmental Panel on Climate Change (IPCC). 
 
@@ -800,7 +800,11 @@ Maybe the researcher’s journal will tell you the code?
 
 &lt;&lt;include &quot;Cog&quot;&gt;&gt;
 
-&lt;&lt;link [[Pick up the cog]]&gt;&gt;&lt;&lt;run $inventory.pushUnique(&#39;Cog&#39;)&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;&lt;else&gt;&gt;Hmmm...that doesn’t seem to have worked.
+Beneath the cog is a report with a letter paperclipped to it. There is also a green wooden block with the number 13 on it, the words &#39;Climate Action&#39;, and a symbol.
+
+&lt;&lt;if not $sdgs.includes(&quot;SDG 13 - climate action&quot;)&gt;&gt;&lt;&lt;linkreplace &quot;Collect the block&quot;&gt;&gt;&lt;&lt;run $sdgs.pushUnique(&quot;SDG 13 - climate action&quot;)&gt;&gt;&lt;div class=&quot;notice&quot;&gt;Congratulations! You’ve found your first SDG! As you explore the museum and complete the minigames, you’ll discover more SDGs. Collect them all and uncover the links between environmental and social challenges and these 17 global goals for a sustainable future.&lt;/div&gt;&lt;&lt;/linkreplace&gt;&gt;&lt;&lt;/if&gt;&gt;
+
+[[Pick up the report|Pick up &#39;carbon emissions&#39; report]]&lt;&lt;else&gt;&gt;Hmmm...that doesn’t seem to have worked.
 
 &lt;&lt;include [[Help 8]]&gt;&gt;
 [[Try again?|Staff room]]
@@ -810,11 +814,9 @@ Reading their journal entry, you’re looking for a year that was a ‘turning p
 
 Use your notebook to write down any information you find so you don’t forget it. 
 
-And don’t forget that you can check any reports and documents you have already found in your inventory.&lt;/div&gt;</tw-passagedata><tw-passagedata pid="44" name="Cog" tags="inventory" position="753,475" size="100,100">&lt;img src=&quot;https://confusedmatrix.github.io/e-mission-game/assets/images/cog.jpg&quot; class=&quot;passage-image&quot; /&gt;</tw-passagedata><tw-passagedata pid="45" name="Pick up the cog" tags="staff-room" position="425,1682" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;&lt;run $map.pushUnique(&quot;&#39;Futures Exhibit. Inner Hallway. Exhibit 12&#39;&quot;)&gt;&gt;The label reads &#39;Futures Exhibit. Inner Hallway. Exhibit 12&#39;. 
+And don’t forget that you can check any reports and documents you have already found in your inventory.&lt;/div&gt;</tw-passagedata><tw-passagedata pid="44" name="Cog" tags="inventory" position="753,475" size="100,100">&lt;img src=&quot;https://confusedmatrix.github.io/e-mission-game/assets/images/cog.jpg&quot; class=&quot;passage-image&quot; /&gt;</tw-passagedata><tw-passagedata pid="45" name="Pick up the cog" tags="staff-room" position="425,1682" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;&lt;run $map.pushUnique(&quot;&#39;Futures Exhibit. Inner Hallway. Exhibit 12&#39;&quot;)&gt;&gt;A label attached to the cog reads ‘Futures Exhibit. Inner Hallway. Exhibit 12’. 
 
-You’re pretty sure that this exhibit is just down the stairs from the office.
-
-Maybe you should go and take a look at it?
+Could that be the exhibit along the corridor from your office? It might be worth taking a look at it. 
 
 &lt;&lt;link &quot;Check the map&quot; &quot;Map&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
 
@@ -848,18 +850,18 @@ As you move into the machine’s seat to take a closer look, you see a scrap of 
 
 It is a copy of the museum map. Four of the exhibits have been circled.
 
-[[Update your map]]</tw-passagedata><tw-passagedata pid="49" name="Look at Exhibit 1" tags="carbon-emission-exhibit" position="741,1355" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;div class=&quot;plaque&quot;&gt;&lt;h2&gt;Intergovernmental Panel on Climate Change Special Report (2018)&lt;/h2&gt;
+[[Update your map]]</tw-passagedata><tw-passagedata pid="49" name="Look at Exhibit 1" tags="carbon-emission-exhibit" position="767.6666666666666,1268.3333333333335" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;div class=&quot;plaque&quot;&gt;&lt;h2&gt;Intergovernmental Panel on Climate Change Special Report (2018)&lt;/h2&gt;
 The IPCC reports continued to warn of projected impacts from failure to make significant reductions in carbon emissions and to decarbonise global economies. The following quotes are from the IPCC Special Report issued in 2018.
 &lt;blockquote&gt;“Human activities are estimated to have caused approximately 1.0°C of global warming above pre-industrial levels, with a likely range of 0.8°C to 1.2°C. Global warming is likely to reach 1.5°C between 2030 and 2052 if it continues to increase at the current rate.“&lt;/blockquote&gt;&lt;blockquote&gt;“Warming from anthropogenic emissions from the pre-industrial period to the present will persist for centuries to millennia and will continue to cause further long-term changes in the climate system, such as sea level rise, with associated impacts, but these emissions alone are unlikely to cause global warming of 1.5°C.”&lt;/blockquote&gt;&lt;/div&gt;
 
 &lt;img src=&quot;https://confusedmatrix.github.io/e-mission-game/assets/images/ipcc-special-report.png&quot; class=&quot;passage-image&quot; /&gt;
 
 [[Look at Exhibit 2]]
-</tw-passagedata><tw-passagedata pid="50" name="Look at Exhibit 2" tags="carbon-emission-exhibit" position="739,1479" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;div class=&quot;plaque&quot;&gt;&lt;h2&gt;Climate Change 2014 Synthesis Report Summary for Policy Makers&lt;/h2&gt;
+</tw-passagedata><tw-passagedata pid="50" name="Look at Exhibit 2" tags="carbon-emission-exhibit" position="765.6666666666666,1392.3333333333335" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;div class=&quot;plaque&quot;&gt;&lt;h2&gt;Climate Change 2014 Synthesis Report Summary for Policy Makers&lt;/h2&gt;
 A previous IPCC report indicated the impact of previous industrial activities, particularly since 1950, and their contribution to climate change, sea level rise, and impacts on ecosystems and habitats. The following quotes are from the Climate Change Synthesis Report issued in 2014.
 &lt;blockquote&gt;“Warming of the climate system is unequivocal, and since the 1950s, many of the observed changes are unprecedented over decades to millennia. The atmosphere and ocean have warmed, the amounts of snow and ice have diminished, and sea level has risen.”&lt;/blockquote&gt;&lt;blockquote&gt;&quot;Changes in many extreme weather and climate events have been observed since about 1950. Some of these changes have been linked to human influences, including a decrease in cold temperature extremes, an increase in warm temperature extremes, an increase in extreme high sea levels and an increase in the number of heavy precipitation events in a number of regions.&quot;&lt;/blockquote&gt;&lt;/div&gt;
 
-[[Look at Exhibit 3]]</tw-passagedata><tw-passagedata pid="51" name="Look at Exhibit 3" tags="carbon-emission-exhibit" position="736,1612" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;div class=&quot;plaque&quot;&gt;&lt;h2&gt;Atmospheric CO&lt;sub&gt;2&lt;/sub&gt; and change ppm over time&lt;/h2&gt;
+[[Look at Exhibit 3]]</tw-passagedata><tw-passagedata pid="51" name="Look at Exhibit 3" tags="carbon-emission-exhibit" position="762.6666666666666,1525.3333333333335" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;div class=&quot;plaque&quot;&gt;&lt;h2&gt;Atmospheric CO&lt;sub&gt;2&lt;/sub&gt; and change ppm over time&lt;/h2&gt;
 Research by NASA - the National Aeronautics and Space Administration - has shown changing levels of atmospheric CO&lt;sub&gt;2&lt;/sub&gt; for the last 650,000 years.  The PPM (parts per million) of atmospheric CO&lt;sub&gt;2&lt;/sub&gt; hit record-breaking level in 1950, exceeding 300ppm for the first time in human history. 
 
 PPM levels continued to rise sharply into the 21st century breaking through the 400ppm barrier, and heading towards 420ppm in 2020.&lt;/div&gt;
@@ -867,7 +869,7 @@ PPM levels continued to rise sharply into the 21st century breaking through the 
 
 &lt;img src=&quot;https://confusedmatrix.github.io/e-mission-game/assets/images/co2-graph-2.png&quot; class=&quot;passage-image&quot; /&gt;
 
-[[Step back from the exhibits]]</tw-passagedata><tw-passagedata pid="52" name="Step back from the exhibits" tags="carbon-emission-exhibit" position="879,1455" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;You look around the rest of the exhibition but the other exhibits are much newer and would have been added after your researcher finished working here. 
+[[Step back from the exhibits]]</tw-passagedata><tw-passagedata pid="52" name="Step back from the exhibits" tags="carbon-emission-exhibit" position="905.6666666666666,1368.3333333333335" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;You look around the rest of the exhibition but the other exhibits are much newer and would have been added after your researcher finished working here. 
 
 The answer to unlocking the digital keypad on the researcher’s locker in the staff room must be here somewhere.
 
@@ -877,8 +879,9 @@ The answer to unlocking the digital keypad on the researcher’s locker in the s
 
 [[Look at exhibit 2 again|Look at Exhibit 2]]
 
-[[Look at exhibit 3 again|Look at Exhibit 3]]</tw-passagedata><tw-passagedata pid="53" name="Help 9" tags="" position="898,1324" size="100,100">&lt;div class=&quot;help&quot;&gt;HINT: You may want to note down useful facts in your notebook.&lt;/div&gt;</tw-passagedata><tw-passagedata pid="54" name="Help 2.1" tags="" position="623,701" size="100,100">&lt;div class=&quot;help&quot;&gt;You&#39;ve successfully located your Notebook! This now appears in your navigation bar. Click the Notebook icon at any time to add notes and record useful information.&lt;/div&gt;</tw-passagedata><tw-passagedata pid="55" name="StoryInit" tags="" position="8,21" size="100,100">&lt;&lt;set $dataPermissionGranted to false&gt;&gt;
+[[Look at exhibit 3 again|Look at Exhibit 3]]</tw-passagedata><tw-passagedata pid="53" name="Help 9" tags="" position="924.6666666666666,1237.3333333333335" size="100,100">&lt;div class=&quot;help&quot;&gt;HINT: You may want to note down useful facts in your notebook.&lt;/div&gt;</tw-passagedata><tw-passagedata pid="54" name="Help 2.1" tags="" position="623,701" size="100,100">&lt;div class=&quot;help&quot;&gt;You&#39;ve successfully located your Notebook! This now appears in your navigation bar. Click the Notebook icon at any time to add notes and record useful information.&lt;/div&gt;</tw-passagedata><tw-passagedata pid="55" name="StoryInit" tags="" position="8,21" size="100,100">&lt;&lt;set $dataPermissionGranted to false&gt;&gt;
 &lt;&lt;set $fullscreen to false&gt;&gt;
+&lt;&lt;set $sdgs to []&gt;&gt;
 &lt;&lt;set $completed to []&gt;&gt;
 &lt;&lt;script&gt;&gt;
 var elem = document.documentElement;
@@ -934,7 +937,7 @@ importScripts(
 
 Where do you want to go first?
 
-&lt;&lt;include [[Help 10]]&gt;&gt;</tw-passagedata><tw-passagedata pid="57" name="Help 10" tags="" position="1461,580" size="100,100">&lt;div class=&quot;help&quot;&gt;Use your updated map to choose an exhibition&lt;/div&gt;</tw-passagedata><tw-passagedata pid="58" name="PassageFooter" tags="" position="906,28" size="200,100">&lt;&lt;if $dataPermissionGranted is true&gt;&gt;
+&lt;&lt;include [[Help 10]]&gt;&gt;</tw-passagedata><tw-passagedata pid="57" name="Help 10" tags="" position="1457.6666666666667,590" size="100,100">&lt;div class=&quot;help&quot;&gt;Use your updated map to choose an exhibition&lt;/div&gt;</tw-passagedata><tw-passagedata pid="58" name="PassageFooter" tags="" position="906,28" size="200,100">&lt;&lt;if $dataPermissionGranted is true&gt;&gt;
 &lt;&lt;script&gt;&gt;
 
 passageHistory.push({ &quot;title&quot;: State.passage, &quot;time&quot;: Date.now() })
@@ -961,7 +964,7 @@ You wonder why previous generations didn’t act while they could. So many thing
 
 [[Read the fourth journal entry]]
 &lt;&lt;/if&gt;&gt;
-</tw-passagedata><tw-passagedata pid="62" name="&#39;How Carbon Intensive Is Your Diet?&#39; Exhibit" tags="carbon-intensive-diet-exhibit" position="1283,535" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;&lt;if $completed.includes(passage())&gt;&gt;There is nothing left to do in the &lt;&lt;= passage()&gt;&gt;.&lt;&lt;else&gt;&gt;This exhibition is all about the carbon footprint of food, with displays and information about food production and transportation, as well as tips for making your own diet less carbon intensive. 
+</tw-passagedata><tw-passagedata pid="62" name="&#39;How Carbon Intensive Is Your Diet?&#39; Exhibit" tags="carbon-intensive-diet-exhibit" position="1478.0000000000002,798.3333333333334" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;&lt;if $completed.includes(passage())&gt;&gt;There is nothing left to do in the &lt;&lt;= passage()&gt;&gt;.&lt;&lt;else&gt;&gt;This exhibition is all about the carbon footprint of food, with displays and information about food production and transportation, as well as tips for making your own diet less carbon intensive. 
 
 You notice a colourful display with different food items including an explanation of whether bananas have a high carbon footprint.  
 
@@ -1115,11 +1118,11 @@ Poaching and Drought: &lt;strong&gt;Northern White Rhino - Ceratotherium simum s
 
 Species Introduction and Exploitation: &lt;&lt;cycle &quot;$animal5&quot; autoselect&gt;&gt;&lt;&lt;optionsfrom $animals&gt;&gt;&lt;&lt;/cycle&gt;&gt;
 
-[[&quot;I&#39;m done&quot;|Check Sixth mass extinction minigame]]</tw-passagedata><tw-passagedata pid="89" name="Check Sixth mass extinction minigame" tags="sixth-mass-extinction-exhibit" position="1429,1745" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;&lt;if $animal1 == &quot;Tiger - Panthera tigris&quot; and $animal2 == &quot;Koala - Phascolarctos cinereus&quot; and $animal3 == &quot;Blue Whale - Balaenoptera musculus&quot; and $animal4 == &quot;Spix&#39;s Macaw - Cyanopsitta spixii&quot; and $animal5 == &quot;Pinta Giant Tortoise - Chelonoidis abingdonii&quot;&gt;&gt;&lt;&lt;run $completed.pushUnique(&quot;&#39;The Sixth Mass Extinction&#39; Exhibit&quot;)&gt;&gt;As you put the last model into its correct position in the display, you hear a loud click. 
+[[&quot;I&#39;m done&quot;|Check Sixth mass extinction minigame]]</tw-passagedata><tw-passagedata pid="89" name="Check Sixth mass extinction minigame" tags="sixth-mass-extinction-exhibit" position="1429,1745" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;&lt;if $animal1 == &quot;Tiger - Panthera tigris&quot; and $animal2 == &quot;Koala - Phascolarctos cinereus&quot; and $animal3 == &quot;Blue Whale - Balaenoptera musculus&quot; and $animal4 == &quot;Spix&#39;s Macaw - Cyanopsitta spixii&quot; and $animal5 == &quot;Pinta Giant Tortoise - Chelonoidis abingdonii&quot;&gt;&gt;As you put the last model into its correct position in the display, you hear a loud click. 
 
 The models all lock into place and appear to drop down. A hidden panel beneath the display slides to one side, revealing a hollow space inside the display table!
 
-You reach into the dark space. You expect to find dust and cobwebs but the space is clean. Inside you find a small bag containing three round items with numbers on. There is also a glossy report, and two wooden blocks with coloured squares on them, a number and some text.
+You reach into the dark space. You expect to find dust and cobwebs but the space is clean. Inside you find a small bag containing three round items with numbers on. There is also a glossy report with a note clipped to it, and two wooden blocks with coloured squares on them, a number and some text.
 
 [[Look at the report]]
 &lt;&lt;else&gt;&gt;
@@ -1134,22 +1137,23 @@ If you’re not sure what the causes are, perhaps the exhibits could enable you 
 &lt;&lt;include [[Help 11]]&gt;&gt;
 [[Try again?|Step back from the animal exhibits]]
 &lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="90" name="Help 11" tags="" position="1547,1746" size="100,100">&lt;div class=&quot;help&quot;&gt;Use your notebook to write down any information you find so you don’t forget it.&lt;/div&gt;
-</tw-passagedata><tw-passagedata pid="91" name="Look at the report" tags="sixth-mass-extinction-exhibit" position="1428,1865" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;The report is a copy of the WWF 2018 Living Planet Report.
+</tw-passagedata><tw-passagedata pid="91" name="Look at the report" tags="sixth-mass-extinction-exhibit" position="1428,1865" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;It is a copy of the WWF Wildlife in a Warming World report. The note attached to the front cover is another letter in the familiar handwriting of the researcher.
 
-&lt;&lt;include &quot;WWF report&quot;&gt;&gt;
-[[Look at the wooden blocks]]</tw-passagedata><tw-passagedata pid="92" name="Look at the wooden blocks" tags="sixth-mass-extinction-exhibit" position="1429,1988" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;One says 15 Life on Land and the other says 14 Life Below Water. These icons look familiar...
+&lt;&lt;include &quot;WWF Wildlife in a Warming World report&quot;&gt;&gt;
+&lt;&lt;link [[Store the report and look at the letter|Look at the species letter]]&gt;&gt;&lt;&lt;run $inventory.pushUnique(&quot;WWF Wildlife in a Warming World report&quot;)&gt;&gt;&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="92" name="Look at the species wooden blocks" tags="sixth-mass-extinction-exhibit" position="1429,1988" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;div class=&quot;notice&quot;&gt;The letter has been added to your inventory&lt;/div&gt;
+One says ‘15 Life on Land’ on a green background, and the other says ‘14 Life Below Water’ on a blue background.
 
-TODO image of blocks?...
+&lt;&lt;if not $sdgs.includes(&quot;SDG 14 - life below water&quot;, &quot;SDG 15 - life on land&quot;)&gt;&gt;&lt;&lt;linkreplace &quot;Collect the blocks&quot;&gt;&gt;&lt;&lt;run $sdgs.pushUnique(&quot;SDG 14 - life below water&quot;, &quot;SDG 15 - life on land&quot;)&gt;&gt;&lt;div class=&quot;notice&quot;&gt;Great work! You found some more SDGs!&lt;/div&gt;&lt;&lt;/linkreplace&gt;&gt;&lt;&lt;/if&gt;&gt;
 
-[[Pick up the bag]]</tw-passagedata><tw-passagedata pid="93" name="Pick up the bag" tags="sixth-mass-extinction-exhibit" position="1428,2111" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;&lt;run $inventory.pushUnique(&quot;Bag of buttons&quot;)&gt;&gt;The items look like buttons. You wonder what they could be for...
+[[Pick up the bag]]</tw-passagedata><tw-passagedata pid="93" name="Pick up the bag" tags="sixth-mass-extinction-exhibit" position="1428,2111" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;&lt;run $inventory.pushUnique(&quot;Bag of buttons&quot;)&gt;&gt;The items look like buttons. Curious! What they could be for?
 
-&lt;&lt;include &quot;Bag of buttons&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="94" name="Look at the console" tags="futures-exhibit" position="1703,564" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;You can see a series of buttons but three are missing their numbers. The bag of buttons must be for the console!
+&lt;&lt;include &quot;Bag of buttons&quot;&gt;&gt;
+
+&lt;&lt;run $completed.pushUnique(&quot;&#39;The Sixth Mass Extinction&#39; Exhibit&quot;)&gt;&gt;</tw-passagedata><tw-passagedata pid="94" name="Look at the console" tags="futures-exhibit" position="1703,564" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;You can see a series of buttons but three are missing their numbers. The bag of buttons must be for the console!
 
 &lt;&lt;link [[Put the buttons in place]]&gt;&gt;&lt;&lt;run $inventory.delete(&quot;Bag of buttons&quot;)&gt;&gt;&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="95" name="Put the buttons in place" tags="futures-exhibit" position="1820,564" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;The buttons click into place on the console. The numbers make up a keypad. You notice a gauge on the console start to light up. A dim red light is turning orange. 
 
-You try pressing a couple of buttons on the console. Although you seem to have given the machine more power, there must still be too many parts missing for it to work. If it can work...
-
-&lt;&lt;if $inventory.includes(&quot;Fuse&quot;)&gt;&gt;Maybe I can [[do something with the fuse|&#39;Futures Exhibit. Inner Hallway. Exhibit 12&#39;]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="96" name="Read the sixth journal entry" tags="carbon-intensive-diet-exhibit" position="1283,660" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;&lt;include &quot;Journal entry 6&quot;&gt;&gt;&lt;&lt;run $journal.pushUnique(&quot;Journal entry 6&quot;)&gt;&gt;
+[[Give the machine a kick]]</tw-passagedata><tw-passagedata pid="96" name="Read the sixth journal entry" tags="carbon-intensive-diet-exhibit" position="1478.0000000000002,918.3333333333334" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;&lt;include &quot;Journal entry 6&quot;&gt;&gt;&lt;&lt;run $journal.pushUnique(&quot;Journal entry 6&quot;)&gt;&gt;
 It is strange to you to think of a time when everyone ate meat. You grew up eating a plant-based diet - meat was just far too expensive. 
 
 Farmland was affected by flooding in so many parts of the country which traditionally raised animals. In other areas, land use has been switched away from animal agriculture leaving red meat off the menu for all but the wealthiest in society and subsistence farmers in developing countries. 
@@ -1176,17 +1180,17 @@ I just hope future generations can learn from our mistakes. Maybe one day somebo
 
 If only we could travel back in time and undo the actions that pushed our climate to breaking point. I said as much to Alf - asked if he’d ever managed to get that weird old exhibit that I found that cog for up and running. He went a bit quiet when I mentioned it.
 
-I’m tired now, time to turn in I think. I’ll bundle up my journal tomorrow and send everything to Alf. Hopefully they’ll do some good, even after I’m no longer able too.&lt;/div&gt;</tw-passagedata><tw-passagedata pid="99" name="Turn your attention back to the exhibit" tags="carbon-intensive-diet-exhibit" position="1280,785" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;There are various fake examples of food that has been available over the past hundred years. Roast dinner, fruit, sandwiches, cheese, vegetables…
+I’m tired now, time to turn in I think. I’ll bundle up my journal tomorrow and send everything to Alf. Hopefully they’ll do some good, even after I’m no longer able too.&lt;/div&gt;</tw-passagedata><tw-passagedata pid="99" name="Turn your attention back to the exhibit" tags="carbon-intensive-diet-exhibit" position="1475.0000000000002,1043.3333333333335" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;There are various fake examples of food that has been available over the past hundred years. Roast dinner, fruit, sandwiches, cheese, vegetables…
 
 In the center of the room there is a set of weighing scales with a digital display. Beside the scales are baskets of models of food. You pick up an apple.
 
 [[Eat the apple]]
 
-[[Place the apple on the scales]]</tw-passagedata><tw-passagedata pid="100" name="Place the apple on the scales" tags="carbon-intensive-diet-exhibit" position="1428,865" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;The weight shows &#39;80g&#39;... Odd, you don’t remember an apple ever weighing that much!
+[[Place the apple on the scales]]</tw-passagedata><tw-passagedata pid="100" name="Place the apple on the scales" tags="carbon-intensive-diet-exhibit" position="1621.3333333333335,1198.3333333333333" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;The weight shows &#39;80g&#39;... Odd, you don’t remember an apple ever weighing that much!
 
-[[Remove the apple from the scales]]</tw-passagedata><tw-passagedata pid="101" name="Remove the apple from the scales" tags="carbon-intensive-diet-exhibit" position="1275,913" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;You notice a model loaf of bread is obscuring a sign on the front of the exhibit.
+[[Remove the apple from the scales]]</tw-passagedata><tw-passagedata pid="101" name="Remove the apple from the scales" tags="carbon-intensive-diet-exhibit" position="1470.0000000000002,1171.3333333333333" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;You notice a model loaf of bread is obscuring a sign on the front of the exhibit.
 
-[[Move the bread]]</tw-passagedata><tw-passagedata pid="102" name="Check carbon intensive diet minigame" tags="carbon-intensive-diet-exhibit" position="1585,1016" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;&lt;if $compareItemNames[0] is &quot;Strawberries (1kg, locally sourced)&quot; and $compareItemNames[2] is &quot;Tomatoes (1kg, average)&quot; and $compareItemNames[4] is &quot;Lamb leg joint (2kg with supermarket packaging)&quot; and $compareItemNames[6] is &quot;Cheese (1kg, hard cheese)&quot; and $compareItemNames[8] is &quot;Eggs (box of 6)&quot; and $compareItemNames[10] is &quot;Cheeseburger (4oz)&quot; and $compareItemNames[12] is &quot;Bottled wine (1ltr)&quot;&gt;&gt;&lt;&lt;run $completed.pushUnique(&quot;&#39;How Carbon Intensive Is Your Diet?&#39; Exhibit&quot;)&gt;&gt;A green light appears above the wooden slots. A small door opens to the side of the wooden slots and a shiny item drops to the floor.
+[[Move the bread]]</tw-passagedata><tw-passagedata pid="102" name="Check carbon intensive diet minigame" tags="carbon-intensive-diet-exhibit" position="1781.6666666666667,1339.3333333333333" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;&lt;if $compareItemNames[0] is &quot;Strawberries (1kg, locally sourced)&quot; and $compareItemNames[2] is &quot;Tomatoes (1kg, average)&quot; and $compareItemNames[4] is &quot;Lamb leg joint (2kg with supermarket packaging)&quot; and $compareItemNames[6] is &quot;Cheese (1kg, hard cheese)&quot; and $compareItemNames[8] is &quot;Eggs (box of 6)&quot; and $compareItemNames[10] is &quot;Cheeseburger (4oz)&quot; and $compareItemNames[12] is &quot;Bottled wine (1ltr)&quot;&gt;&gt;A green light appears above the wooden slots. A small door opens to the side of the wooden slots and a shiny item drops to the floor.
 
 [[Pick up the item]]
 &lt;&lt;else&gt;&gt;A red light shows above the wooden slots. At least one of the foods must be in the wrong place.
@@ -1194,13 +1198,7 @@ In the center of the room there is a set of weighing scales with a digital displ
 [[Try again?|Rearrange the items on the shelves]]
 &lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="103" name="Put in the fuse" tags="futures-exhibit" position="1961,524" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;As you put in the fuse, more buttons on the console light up and the humming noise gets louder.
 
-You notice that the some more of the squares light up. There is a bar above which also increases to 50% and a green light appears on the dash.
-
-Almost as if the machine is ready...
-
-As you stare at the green light, a small click opens a compartment at the side of the console. Inside are some pages, written in a familiar hand...
-
-[[Read the first page]]</tw-passagedata><tw-passagedata pid="104" name="Read the first page" tags="futures-exhibit" position="1963,637" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;&lt;include &quot;Journal entry 7&quot;&gt;&gt;&lt;&lt;run $journal.pushUnique(&quot;Journal entry 7&quot;)&gt;&gt;
+[[Press buttons]]</tw-passagedata><tw-passagedata pid="104" name="Read the first page" tags="futures-exhibit" position="1963,637" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;&lt;include &quot;Journal entry 7&quot;&gt;&gt;&lt;&lt;run $journal.pushUnique(&quot;Journal entry 7&quot;)&gt;&gt;
 The second page is written in another familiar hand - you&#39;d recognise Alf’s scrawl anywhere. And, strangely, the letter is addressed to you...
 
 [[Read the second page]]</tw-passagedata><tw-passagedata pid="105" name="Read the second page" tags="futures-exhibit" position="1962.6666666666667,762" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;&lt;include &quot;Alf&#39;s letter&quot;&gt;&gt;&lt;&lt;run $inventory.pushUnique(&quot;Alf&#39;s letter&quot;)&gt;&gt;
@@ -1212,7 +1210,7 @@ And the researcher was right - so many tipping points in just the last thirty ye
 
 You look again at the machine. It certainly seems capable of working.
 
-[[Press the big green button]]</tw-passagedata><tw-passagedata pid="106" name="Alf&#39;s letter" tags="" position="2079.6666666666665,764" size="100,100">&lt;div id=&quot;letter&quot; class=&quot;handwriting&quot;&gt;I know everyone&#39;s probably told you it was time to put an old man out to pasture and pack him off into retirement, bring in some new blood and new ideas.
+[[Press the big green button]]</tw-passagedata><tw-passagedata pid="106" name="Alf&#39;s letter" tags="" position="2078,832.3333333333334" size="100,100">&lt;div id=&quot;letter&quot; class=&quot;handwriting&quot;&gt;I know everyone&#39;s probably told you it was time to put an old man out to pasture and pack him off into retirement, bring in some new blood and new ideas.
 
 But when an old friend of mine passed away far too young, something they said struck a chord with me - what if this old time machine really did work?
 
@@ -1224,9 +1222,9 @@ So I hid the parts for you to find. Hopefully you’ve learnt enough about the c
 
 Good Luck.&lt;/div&gt;</tw-passagedata><tw-passagedata pid="107" name="Press the big green button" tags="futures-exhibit" position="1959.6666666666667,880" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;The screen in the centre of the console lights up and a dialogue box opens. The cursor is flashing.
 
-[[Press enter]]</tw-passagedata><tw-passagedata pid="108" name="Place item on the scales" tags="carbon-intensive-diet-exhibit" position="1588,903" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;&lt;if $itemToWeigh is &quot;Bananas (1kg)&quot;&gt;&gt;&lt;&lt;set $releaseBananasBook to true&gt;&gt;An error appeared when weighing the bananas. Strange. Maybe something in your inventory can help?&lt;&lt;else&gt;&gt;The &lt;&lt;= $itemToWeigh&gt;&gt; takes &lt;&lt;= $balanceItems[$itemToWeigh]&gt;&gt;kg of CO&lt;sub&gt;2&lt;/sub&gt;e to produce.&lt;&lt;/if&gt;&gt;
+[[Press enter]]</tw-passagedata><tw-passagedata pid="108" name="Place item on the scales" tags="carbon-intensive-diet-exhibit" position="1784.6666666666667,1226.3333333333333" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;&lt;if $itemToWeigh is &quot;Bananas (1kg)&quot;&gt;&gt;&lt;&lt;set $releaseBananasBook to true&gt;&gt;An error appeared when weighing the bananas. Strange. Maybe something in your inventory can help?&lt;&lt;else&gt;&gt;The &lt;&lt;= $itemToWeigh&gt;&gt; takes &lt;&lt;= $balanceItems[$itemToWeigh]&gt;&gt;kg of CO&lt;sub&gt;2&lt;/sub&gt;e to produce.&lt;&lt;/if&gt;&gt;
 
-[[Back to the shelves|Rearrange the items on the shelves]]</tw-passagedata><tw-passagedata pid="109" name="Rearrange the items on the shelves" tags="carbon-intensive-diet-exhibit" position="1428,1118" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;Place some of the food onto the higher or lower shelves and see if you can figure out which ones are higher or lower.
+[[Back to the shelves|Rearrange the items on the shelves]]</tw-passagedata><tw-passagedata pid="109" name="Rearrange the items on the shelves" tags="carbon-intensive-diet-exhibit" position="1624.6666666666667,1441.3333333333333" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;Place some of the food onto the higher or lower shelves and see if you can figure out which ones are higher or lower.
 
 The weight scales will tell you the amount of carbon emissions, then place the item on the balancing scales.
 &lt;&lt;silently&gt;&gt;
@@ -1279,9 +1277,9 @@ Select item: &lt;&lt;cycle &quot;$itemToWeigh&quot; autoselect&gt;&gt;&lt;&lt;op
 &lt;td&gt;&lt;div&gt;&lt;&lt;= $compareItemNames[10]&gt;&gt;&lt;/div&gt;&lt;/td&gt;&lt;td&gt;&lt;&lt;link &quot;🔄&quot; &quot;Rearrange the items on the shelves&quot;&gt;&gt;&lt;&lt;set _tmpItem to $compareItemNames[10]&gt;&gt;&lt;&lt;set $compareItemNames[10] to $compareItemNames[11]&gt;&gt;&lt;&lt;set $compareItemNames[11] to _tmpItem&gt;&gt;&lt;&lt;unset _tmpItem&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/td&gt;&lt;td&gt;&lt;div&gt;&lt;&lt;= $compareItemNames[11]&gt;&gt;&lt;/div&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;&lt;div&gt;&lt;&lt;= $compareItemNames[12]&gt;&gt;&lt;/div&gt;&lt;/td&gt;&lt;td&gt;&lt;&lt;link &quot;🔄&quot; &quot;Rearrange the items on the shelves&quot;&gt;&gt;&lt;&lt;set _tmpItem to $compareItemNames[12]&gt;&gt;&lt;&lt;set $compareItemNames[12] to $compareItemNames[13]&gt;&gt;&lt;&lt;set $compareItemNames[13] to _tmpItem&gt;&gt;&lt;&lt;unset _tmpItem&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/td&gt;&lt;td&gt;&lt;div&gt;&lt;&lt;= $compareItemNames[13]&gt;&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;[[I think this right...|Check carbon intensive diet minigame]] </tw-passagedata><tw-passagedata pid="110" name="Eat the apple" tags="carbon-intensive-diet-exhibit" position="1426,740" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;The apple is made of plastic… not that appetising. You must have to do something else with it.
+&lt;td&gt;&lt;div&gt;&lt;&lt;= $compareItemNames[12]&gt;&gt;&lt;/div&gt;&lt;/td&gt;&lt;td&gt;&lt;&lt;link &quot;🔄&quot; &quot;Rearrange the items on the shelves&quot;&gt;&gt;&lt;&lt;set _tmpItem to $compareItemNames[12]&gt;&gt;&lt;&lt;set $compareItemNames[12] to $compareItemNames[13]&gt;&gt;&lt;&lt;set $compareItemNames[13] to _tmpItem&gt;&gt;&lt;&lt;unset _tmpItem&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/td&gt;&lt;td&gt;&lt;div&gt;&lt;&lt;= $compareItemNames[13]&gt;&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;[[I think this right...|Check carbon intensive diet minigame]] </tw-passagedata><tw-passagedata pid="110" name="Eat the apple" tags="carbon-intensive-diet-exhibit" position="1619.3333333333335,1073.3333333333335" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;The apple is made of plastic… not that appetising. You must have to do something else with it.
 
-[[Place the apple on the scales]]</tw-passagedata><tw-passagedata pid="111" name="Move the bread" tags="carbon-intensive-diet-exhibit" position="1310,1035" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;You can now see a sign saying ‘Equivalent Carbon Dioxide Emissions’. The scales weren’t showing the weight of the food afterall!
+[[Place the apple on the scales]]</tw-passagedata><tw-passagedata pid="111" name="Move the bread" tags="carbon-intensive-diet-exhibit" position="1505.0000000000002,1293.3333333333333" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;You can now see a sign saying ‘Equivalent Carbon Dioxide Emissions’. The scales weren’t showing the weight of the food afterall!
 
 A sign above the food baskets asks ‘how balanced is your diet?’ You like the clever play on words - Alf must have been proud of that pun. He obviously meant balancing carbon emissions embedded in the foot we eat!
 
@@ -1289,14 +1287,15 @@ Beside the food baskets, a display board has slots to slide in the names of food
 
 You pick up the carrots and place them on the scales. The digital display shows 0.3kg of CO&lt;sub&gt;2&lt;/sub&gt;e.
 
-[[Weigh the tomatoes]]</tw-passagedata><tw-passagedata pid="112" name="Pick up the item" tags="carbon-intensive-diet-exhibit" position="1549,1158" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;&lt;run $inventory.pushUnique(&quot;Fuse&quot;)&gt;&gt;It appears to be a fuse.
+[[Weigh the tomatoes]]</tw-passagedata><tw-passagedata pid="112" name="Pick up the item" tags="carbon-intensive-diet-exhibit" position="1745.6666666666667,1481.3333333333333" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;&lt;run $inventory.pushUnique(&quot;Fuse&quot;)&gt;&gt;It appears to be a fuse.
 
 &lt;&lt;include &quot;Fuse&quot;&gt;&gt;
-You think about the food items and the wide range of carbon emissions associated with the different types of food. The fruit and vegetables had a much lower carbon footprint than meat and dairy. Clearly a plant based diet is the way forward if we want to cut our carbon emissions, just like the researcher said.
 
-You look back at the fuse in your hand and decide to go back to the Futures exhibit. Maybe it’s another missing piece of the machine?</tw-passagedata><tw-passagedata pid="113" name="Press enter" tags="futures-exhibit" position="1956.6666666666667,1000" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;Nothing happens. You try typing in &#39;Alfred&#39;... maybe that is the password. 
+Something else seems to have caught in the opening.
 
-[[Try password]]</tw-passagedata><tw-passagedata pid="114" name="Try password" tags="futures-exhibit" position="1956.6666666666667,1125" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;The screen changes and shows a new message: 
+[[Inspect the opening in the display]]</tw-passagedata><tw-passagedata pid="113" name="Press enter" tags="futures-exhibit" position="1956.6666666666667,1000" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;Nothing happens. Maybe it needs a password... There are six dots in the dialogue box - Alf wouldn’t have changed it to his own name would he? 
+
+[[Type in &#39;ALFRED&#39;|Try password]]</tw-passagedata><tw-passagedata pid="114" name="Try password" tags="futures-exhibit" position="1956.6666666666667,1125" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;The screen changes and shows a new message: 
 
 Error. No connection.
 Input required.
@@ -1373,18 +1372,18 @@ To get the machine working
 
 [[Read the &#39;COP30 Report&#39; document]]</tw-passagedata><tw-passagedata pid="127" name="Read the &#39;COP30 Report&#39; document" tags="office" position="2116,168" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;It is password protected. What could the password be?
 
-You think back to the resources you found in the office before. Is there anything in your inventory you haven&#39;t yet used?
+Is there anything in your inventory you haven&#39;t yet used that could be a clue?
 
 &lt;&lt;include [[Help 12]]&gt;&gt;
-Type in the password: &lt;&lt;textbox &quot;$copPassword&quot; &quot;XXXXX&quot; [[Check COP password]]&gt;&gt;</tw-passagedata><tw-passagedata pid="128" name="Help 12" tags="" position="2235,168" size="100,100">&lt;div class=&quot;help&quot;&gt;HINT: The password is a five letter word&lt;/div&gt;</tw-passagedata><tw-passagedata pid="129" name="Check COP password" tags="office" position="2114,299" size="100,100">&lt;&lt;if $copPassword is &quot;TRUTH&quot; or $copPassword is &quot;Truth&quot; or $copPassword is &quot;truth&quot;&gt;&gt;You open the document and see Alf’s report that he presented at the COP30 event in 2024. This must be the report that he wished he’d had more evidence for. He said he didn’t have time to collate everything. This could be your chance to share what you’ve learned from the exhibits and reports to enable Alf to convince the world leaders that stronger action is (was?) needed!
+Type in the password: &lt;&lt;textbox &quot;$copPassword&quot; &quot;XXXXX&quot; [[Check COP password]]&gt;&gt;</tw-passagedata><tw-passagedata pid="128" name="Help 12" tags="" position="2235,168" size="100,100">&lt;div class=&quot;help&quot;&gt;HINT: The password is a five letter word&lt;/div&gt;</tw-passagedata><tw-passagedata pid="129" name="Check COP password" tags="office" position="2114,299" size="100,100">&lt;&lt;if $copPassword is &quot;TRUTH&quot; or $copPassword is &quot;Truth&quot; or $copPassword is &quot;truth&quot;&gt;&gt;You cracked Alf’s password! The document opens. It’s the report that Alf presented at the COP30 event in 2024. This must be the report that Alf wished he’d had more evidence for. He said he didn’t have time to collate everything. Maybe you could share what you’ve learned from the exhibits and reports and help Alf to convince the world leaders that stronger action is (was?) needed!
 
 [[Scroll down the page]]&lt;&lt;else&gt;&gt;The password is incorrect.
 
-[[Try again?|Read the &#39;COP30 Report&#39; document]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="130" name="Scroll down the page" tags="office" position="2111,413" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;You scroll past the cover of the report and find the contents page. The report is split into sections covering key sustainability challenges and aspects of human life/activity. You notice that the sections match the exhibits around the museum. This must have been Alf’s inspiration for the layout of the museum and the story he was telling.
+[[Try again?|Read the &#39;COP30 Report&#39; document]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="130" name="Scroll down the page" tags="office" position="2111,413" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;The screen moves past the cover of the report and find the contents page. The report is split into sections covering key sustainability challenges and aspects of human life/activity. The sections match the exhibits around the museum. This must have been Alf’s inspiration for the layout of the museum and the story he was telling.
 
 [[Continue scrolling through the document]]</tw-passagedata><tw-passagedata pid="131" name="Continue scrolling through the document" tags="office" position="2229,409" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;You reach the first section which outlines Carbon Emissions. The page has a summary with a comment annotated in the margin. It says &#39;add key recommendation for policy makers&#39;. 
 
-You think back to the journal entries, exhibits and reports that the researcher had sent to Alf over the years. Could they hold the answers to the report and changing what Alf was able to report on at COP30?
+Noticing the box file by your desk, it is now full of the reports and letters that the researcher had sent to Alf over the years. Could they hold the answers to the report and changing what Alf was able to report on at COP30?
 
 Select your first recommendation for curbing carbon emissions:
 &lt;&lt;silently&gt;&gt;
@@ -1433,7 +1432,7 @@ State.setVar(&quot;$recommendationOptions[&#39;carbon emissions&#39;]&quot;, ran
 &lt;&lt;/for&gt;&gt;
 
 [[Select first choice]]
-</tw-passagedata><tw-passagedata pid="132" name="Fuse" tags="inventory" position="749,591" size="100,100">&lt;img src=&quot;https://confusedmatrix.github.io/e-mission-game/assets/images/fuse.jpg&quot; class=&quot;passage-image&quot; /&gt;</tw-passagedata><tw-passagedata pid="133" name="WWF report" tags="inventory" position="749,706" size="100,100">TODO image of WWF 2018 Living Planet Report...</tw-passagedata><tw-passagedata pid="134" name="Bag of buttons" tags="inventory" position="748,821" size="100,100">TODO image of bag of buttons?...</tw-passagedata><tw-passagedata pid="135" name="Weigh the tomatoes" tags="carbon-intensive-diet-exhibit" position="1426,984" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;You see the reading for the tomatoes and compare it to the carrots. You swap the food items so the food with the highest embedded carbon is on the left-hand side. You then continue to check and sort the rest of the food items.
+</tw-passagedata><tw-passagedata pid="132" name="Fuse" tags="inventory" position="749,591" size="100,100">&lt;img src=&quot;https://confusedmatrix.github.io/e-mission-game/assets/images/fuse.jpg&quot; class=&quot;passage-image&quot; /&gt;</tw-passagedata><tw-passagedata pid="133" name="WWF Wildlife in a Warming World report" tags="inventory" position="749,706" size="100,100">&lt;img src=&quot;https://confusedmatrix.github.io/e-mission-game/assets/images/reports/species.png&quot; class=&quot;passage-image&quot; /&gt;</tw-passagedata><tw-passagedata pid="134" name="Bag of buttons" tags="inventory" position="748,821" size="100,100">TODO image of bag of buttons?...</tw-passagedata><tw-passagedata pid="135" name="Weigh the tomatoes" tags="carbon-intensive-diet-exhibit" position="1619.3333333333335,1317.3333333333333" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;You see the reading for the tomatoes and compare it to the carrots. You swap the food items so the food with the highest embedded carbon is on the left-hand side. You then continue to check and sort the rest of the food items.
 
 [[Rearrange the items on the shelves]]</tw-passagedata><tw-passagedata pid="136" name="Show report" tags="office" position="2708.3333333333335,409.66666666666674" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;&lt;if $recommendationReasons[&#39;carbon emissions&#39;][1] == &quot;&quot;&gt;&gt;Oops, you didn&#39;t give a reason for your choice.
 
@@ -1690,6 +1689,110 @@ Why did you choose this option?
 &lt;/div&gt;
 
 [[Send the report to Alf]]
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="154" name="Pick up &#39;carbon emissions&#39; report" tags="staff-room" position="546.6666666666666,1570.3333333333333" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;The report is by the IPCC. It’s a copy of their &#39;Special Report on Global Warming of 1.5&amp;deg;C&#39; that was issued in October 2018.
+
+&lt;&lt;include &quot;IPCC &#39;Special Report on Global Warming of 1.5&amp;deg;C&#39; report&quot;&gt;&gt;
+
+&lt;&lt;link [[Store the report in your inventory|Read &#39;carbon emissions&#39; letter]]&gt;&gt;&lt;&lt;run $inventory.pushUnique(&quot;IPCC &#39;Special Report on Global Warming of 1.5&amp;deg;C&#39; report&quot;)&gt;&gt;&lt;&lt;/link&gt;&gt;
+
+</tw-passagedata><tw-passagedata pid="155" name="Read &#39;carbon emissions&#39; letter" tags="staff-room" position="548.3333333333333,1695.3333333333333" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;div class=&quot;notice&quot;&gt;The report has been added to your inventory&lt;/div&gt;
+A letter is paperclipped to the front cover.
+
+The letter appears to be from the researcher...
+
+&lt;&lt;include &quot;&#39;Carbon emissions&#39; letter&quot;&gt;&gt;
+
+&lt;&lt;if not $inventory.includes(&quot;&#39;Carbon emissions&#39; letter&quot;)&gt;&gt;&lt;&lt;linkreplace &quot;Add the letter to your inventory&quot;&gt;&gt;&lt;&lt;run $inventory.pushUnique(&quot;&#39;Carbon emissions&#39; letter&quot;)&gt;&gt;&lt;div class=&quot;notice&quot;&gt;The letter has been added to your inventory&lt;/div&gt;
+
+Now &lt;&lt;link [[pick up the cog|Pick up the cog]]&gt;&gt;&lt;&lt;run $inventory.pushUnique(&#39;Cog&#39;)&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;&lt;/linkreplace&gt;&gt;&lt;&lt;else&gt;&gt;Now &lt;&lt;link [[pick up the cog|Pick up the cog]]&gt;&gt;&lt;&lt;run $inventory.pushUnique(&#39;Cog&#39;)&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="156" name="&#39;Carbon emissions&#39; letter" tags="" position="1179,55" size="100,100">&lt;div id=&quot;letter&quot; class=&quot;typewriting&quot;&gt;Hi Alf
+
+Have you seen the latest IPCC report? I thought there were some shocking statistics and projections in it, but there were some solutions that should be achievable... 
+
+I wasn’t surprised to read that human activities are estimated to have caused approximately 1.0&amp;deg;C of global warming above pre-industrial levels, with a likely range of 0.8&amp;deg;C to 1.2&amp;deg;C. It is scary to think that global warming is likely to reach 1.5°C between 2030 and 2052 if we continue at the current rate though.
+
+The report suggests that sustainable development and eradicating poverty through system transitions could limit the risks from 1.5&amp;deg;C global warming. This will enable an increase in adaptation and mitigation investments, policy instruments, acceleration of technological innovation and behaviour changes.
+
+A key recommendation I saw was that improvements to education, information and community approaches are needed to accelerate wide-scale behaviour change to allow adaptation to global warming of 1.5&amp;deg;C.
+
+Environmental action alone is not enough - social justice and equity are key in creating climate-resilient development. We also need to help to widen opportunities and ensure values are considered between countries and communities without making the poor and disadvantaged worse off.
+
+One thing that is certain is that international cooperation is critically important. We really do need system change - we can’t carry on as business as usual!
+
+Some other resources you might be interested in to feed into the exhibit &lt;ul&gt;&lt;li&gt;IPCC, 2018: Summary for Policymakers. In: Global Warming of 1.5&amp;deg;C. An IPCC Special Report on the impacts of global warming of 1.5&amp;deg;C above pre-industrial levels and related global greenhouse gas emission pathways, in the context of strengthening the global response to the threat of climate change, sustainable development, and efforts to eradicate poverty https://www.ipcc.ch/sr15/
+&lt;/li&gt;
+&lt;li&gt;https://www.ipcc.ch/ 
+&lt;/li&gt;
+&lt;li&gt;https://www.ipcc.ch/report/sixth-assessment-report-cycle/
+&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="157" name="IPCC &#39;Special Report on Global Warming of 1.5&amp;deg;C&#39; report" tags="" position="855,587.4999999999999" size="100,100">&lt;img src=&quot;https://confusedmatrix.github.io/e-mission-game/assets/images/reports/carbon-emission.jpg&quot; class=&quot;passage-image&quot; /&gt;</tw-passagedata><tw-passagedata pid="158" name="WWF ‘How Low Can We Go?’ report" tags="" position="856.6666666666667,706" size="100,100">&lt;img src=&quot;https://confusedmatrix.github.io/e-mission-game/assets/images/reports/food.png&quot; class=&quot;passage-image&quot; /&gt;</tw-passagedata><tw-passagedata pid="159" name="Look at the species letter" tags="sixth-mass-extinction-exhibit" position="1309,1992.6666666666667" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;div class=&quot;notice&quot;&gt;The report has been added to your inventory&lt;/div&gt;
+&lt;&lt;include &quot;&#39;Species extinction&#39; letter&quot;&gt;&gt;
+&lt;&lt;link [[Store the letter|Look at the species wooden blocks]]&gt;&gt;&lt;&lt;run $inventory.pushUnique(&quot;&#39;Species extinction&#39; letter&quot;)&gt;&gt;&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="160" name="&#39;Species extinction&#39; letter" tags="" position="1178.3333333333335,166" size="100,100">&lt;div id=&quot;letter&quot; class=&quot;typewriting&quot;&gt;Hi Alf,
+
+I hope you are well? There was a recent update to the IUCN Red List which really shocked me so I thought I’d share it with you and get your thoughts on where we could be headed in terms of potential species extinctions...
+
+The rate of species loss today is up to 10,000 times higher than the natural ‘background’ extinction rate - I can’t believe we’ve reached these sorts of numbers and people aren’t doing more to stop this happening! Previous mass extinction events seem to be incomparable to the current sixth mass extinction crisis, and we seem to have a lot to answer for...
+
+The number of species listed as ‘threatened’ are on their way to reaching 17,000, including iconic species such as polar bears, sharks, hippopotamus, and many more. Over the past 500 years, alone humans have led to 869 species becoming extinct and extinct in the wild. Services provided by our planet’s ecosystems are estimated to be responsible for around 33 trillion dollars per year… can you believe that!
+
+There was also a really interesting report on ‘Wildlife in a Warming World’ which suggests that we’ll need stronger climate mitigation efforts if we’re to avoid severe loss of biodiversity. 
+
+Following the Paris Agreement aim to limit temperature rise to 2&amp;deg;C (aiming for 1.5&amp;deg;C) it was discussed that ‘business as usual’ would cause a rise of 4.5&amp;deg;C. With this 4.5&amp;deg;C, around 50% of species found in WWF ‘priority places’ are at risk of extinction! 
+
+More than 50% of plants could be lost in some areas with higher temperature rises, which would have damaging effects for so many other species. Plant and animal survival is dependent on adaptation and migration. This movement is being impacted by land-use change as the suitable areas for habitats are disappearing. At a 2&amp;deg;C global temperature rise, the risk of local extinction decreases from around 25% with no dispersal to 20% if species can move freely. What can we do to stop this?
+
+Other resources you may be interested in
+&lt;ul&gt;&lt;li&gt;Living Planet, WWF Report&lt;/li&gt;
+&lt;li&gt;Wildlife in a Warming World, WWF Report&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;
+</tw-passagedata><tw-passagedata pid="161" name="Inspect the opening in the display" tags="carbon-intensive-diet-exhibit" position="1745.6666666666667,1603" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;There&#39;s a copy of another report. It was caught by two more of the wooden blocks. Once again, a letter from the researcher is paperclipped to the front cover.
+
+This report is titled ‘How Low Can We Go?’ It was written by research scientists from the UK and Germany in partnership with the Food Climate Research Network and WWF.
+
+&lt;&lt;include &quot;WWF ‘How Low Can We Go?’ report&quot;&gt;&gt;
+&lt;&lt;link [[Store the report and look at the letter|Look at the food letter]]&gt;&gt;&lt;&lt;run $inventory.pushUnique(&quot;WWF ‘How Low Can We Go?’ report&quot;)&gt;&gt;&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="162" name="Look at the food letter" tags="carbon-intensive-diet-exhibit" position="1744,1739.6666666666667" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;div class=&quot;notice&quot;&gt;The report has been added to your inventory&lt;/div&gt;
+&lt;&lt;include &quot;&#39;Diets and food&#39; letter&quot;&gt;&gt;
+
+&lt;&lt;link [[Store the letter and look at the blocks|Look at the food wooden blocks]]&gt;&gt;&lt;&lt;run $inventory.pushUnique(&quot;&#39;Species extinction&#39; letter&quot;)&gt;&gt;&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="163" name="&#39;Diets and food&#39; letter" tags="" position="1288.3333333333335,110.83333333333331" size="100,100">&lt;div id=&quot;letter&quot; class=&quot;typewriting&quot;&gt;Hi Alf
+
+How are things going at the museum? I was thinking back to when you created the Balanced Diet exhibit after finding this report. I’m sorry it’s taken me so long to send it back to you! It was really thought provoking, so I thought I’d share some of my reflections after reading it.
+
+They highlight that one of our biggest current challenges is land-use change driven by rapid urbanisation and agricultural growth. Agriculture is creating 25% of all our greenhouse gas emissions - 60% of that is from animal agriculture! 
+
+If we all turned vegetarian it could reduce supply chain emissions by 20% and cause a 66% livestock product consumption reduction. Advances in technology would also decrease emissions. BUT - these changes must be carried out with caution as changing completely to tofu and Quorn may need more arable land (Audsley, et al. 2009).   
+
+Did you know that 75% of the global food supply is also from just 12 plants and 5 animal species! It reminds me of a book called ‘Death of Grass’ by John Christopher. If you’ve not read it, it depicts a dystopian future which I hope to never come true, where grass species go extinct. 
+
+We rely on such a small range of food. Foods that our diets could be increased to include more of include beans, pulses, cereals, grains, fruit, vegetables, mushrooms, nuts, seeds, sprouts and tubers (Drewnoski, et al. 2019). Maybe the museum menu could be revamped to set an example?
+
+We need to promote change in the human diet by encouraging people to eat more plants and a variety of foods, whilst also tackling food waste.
+
+Some other resources you might be interested in
+&lt;ul&gt;&lt;li&gt;Audsley et al (2009) How low can we go? An assessment of greenhouse gas emissions from the UK food system and the scope to reduce them by 2050.&lt;/li&gt;
+&lt;li&gt;Drewnoski et al (2019) Future 50 Foods report
+Eating for 2 Degrees - New and Updated Livewell Plates - Summary Report WWF 2017&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="164" name="Look at the food wooden blocks" tags="carbon-intensive-diet-exhibit" position="1742.3333333333333,1868" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;div class=&quot;notice&quot;&gt;The letter has been added to your inventory&lt;/div&gt;
+The blocks are different colours - one is an orange/yellow colour with the number 12 and text saying ‘Responsible Consumption and Production’. The other one looks familiar - it has a green background with ‘13 Climate Action’ on it.
+
+&lt;&lt;if not $sdgs.includes(&quot;SDG 12 - responsible consumption and production&quot;, &quot;SDG 13 - climate action&quot;)&gt;&gt;&lt;&lt;linkreplace &quot;Collect the blocks&quot;&gt;&gt;&lt;&lt;run $sdgs.pushUnique(&quot;SDG 12 - responsible consumption and production&quot;, &quot;SDG 13 - climate action&quot;)&gt;&gt;&lt;div class=&quot;notice&quot;&gt;Great work! You found some more SDGs!&lt;/div&gt;&lt;&lt;/linkreplace&gt;&gt;&lt;&lt;/if&gt;&gt;
+You think about the food items and the wide range of carbon emissions associated with the different types of food. The fruit and vegetables had a much lower carbon footprint than meat and dairy. Clearly a plant based diet is the way forward if we want to cut our carbon emissions, just like the researcher said.
+
+You look back at the fuse in your hand and decide to go back to the Futures exhibit. Maybe it’s another missing piece of the machine?
+
+&lt;&lt;run $completed.pushUnique(&quot;&#39;How Carbon Intensive Is Your Diet?&#39; Exhibit&quot;)&gt;&gt;</tw-passagedata><tw-passagedata pid="165" name="Press buttons" tags="futures-exhibit" position="2074.3333333333335,588.6666666666666" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;&lt;if not $completed.includes(&quot;&#39;The Sixth Mass Extinction&#39; Exhibit&quot;)&gt;&gt;You try to press the buttons but nothing registers.
+
+[[Look closely at the buttons]]&lt;&lt;else&gt;&gt;You notice that some more of the squares light up. There is a bar above which also increases to 50% and a green light appears on the dash.
+
+Almost as if the machine is ready...
+
+As you stare at the green light, a small click opens a compartment at the side of the console. Inside are some pages, written in a familiar hand...
+
+[[Read the first page]]
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="166" name="Look closely at the buttons" tags="futures-exhibit" position="2084.3333333333335,700.3333333333333" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;There are no numbers on three of the buttons! There must more missing parts elsewhere in the museum.</tw-passagedata><tw-passagedata pid="167" name="Give the machine a kick" tags="futures-exhibit" position="1767.6666666666667,697.3333333333333" size="100,100">&lt;&lt;if not $completed.includes(&quot;&#39;How Carbon Intensive Is Your Diet?&#39; Exhibit&quot;)&gt;&gt;Although the machine seems to have more power now, there must still be too many parts missing for it to work. If it can work...
+
+&lt;&lt;if $inventory.includes(&quot;Fuse&quot;)&gt;&gt;Maybe I can [[do something with the fuse|&#39;Futures Exhibit. Inner Hallway. Exhibit 12&#39;]]&lt;&lt;/if&gt;&gt;&lt;&lt;else&gt;&gt;You notice that some more of the squares begin to light up. There is a bar above which also increases to 50% and a green light appears on the dash.
+
+Almost as if the machine is ready...
+
+As you stare at the green light, a small click opens a compartment at the side of the console. Inside are some pages, written in a familiar hand...
+
+[[Read the first page]]
 &lt;&lt;/if&gt;&gt;</tw-passagedata></tw-storydata>
 	<script id="script-sugarcube" type="text/javascript">
 	/*! SugarCube JS */
