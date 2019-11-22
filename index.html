@@ -329,6 +329,12 @@ input[type="text"],
 textarea {
   background-color: #FFF;
 }
+input[type="radio"] {
+  position: relative;
+  top: -3px;
+  transform: scale(1.2);
+  margin-right: 3px;
+}
 
 .passage {
   position: relative 
@@ -768,7 +774,7 @@ Maybe you should go and take a look at it?
 
 &lt;&lt;link &quot;Check the map&quot; &quot;Map&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
 
-[[Stay in the staff room]]</tw-passagedata><tw-passagedata pid="46" name="&#39;Futures Exhibit. Inner Hallway. Exhibit 12&#39;" tags="futures-exhibit" position="1921,484" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;&lt;if $inventory.includes(&quot;Cog&quot;)&gt;&gt;You have walked past the inner hallway many times on the way to your office but haven’t stopped to really look at the Futures Exhibition before.
+[[Stay in the staff room]]</tw-passagedata><tw-passagedata pid="46" name="&#39;Futures Exhibit. Inner Hallway. Exhibit 12&#39;" tags="futures-exhibit" position="1791,394" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;&lt;if $inventory.includes(&quot;Cog&quot;)&gt;&gt;You have walked past the inner hallway many times on the way to your office but haven’t stopped to really look at the Futures Exhibition before.
 
 You find Exhibit 12. The label tells you that you’re looking at a prototype time machine, donated to the museum by a theoretical physicist. 
 
@@ -788,7 +794,7 @@ Almost as if it is warming up…
 
 The biscuits are a year and a half out of date.
 
-[[Crush up the biscuits]]</tw-passagedata><tw-passagedata pid="48" name="Put in the cog" tags="futures-exhibit" position="1710,549" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;As the cog slides into place, you hear a grinding noise as it rotates and begins to turn the surrounding machinery. 
+[[Crush up the biscuits]]</tw-passagedata><tw-passagedata pid="48" name="Put in the cog" tags="futures-exhibit" position="1580,459" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;As the cog slides into place, you hear a grinding noise as it rotates and begins to turn the surrounding machinery. 
 
 With a loud whirring sound, the time machine lights up! 
 
@@ -880,11 +886,11 @@ importScripts(
   window.database = firebase.database();
   
 })
-&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="56" name="Update your map" tags="futures-exhibit" position="1706,672" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;&lt;run $map.pushUnique(&quot;&#39;The Sixth Mass Extinction&#39; Exhibit&quot;, &quot;&#39;How Carbon Intensive Is Your Diet?&#39; Exhibit&quot;)&gt;&gt;Maybe these circled exhibits are where you will find the missing parts of the machine?
+&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="56" name="Update your map" tags="futures-exhibit" position="1576,582" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;&lt;run $map.pushUnique(&quot;&#39;The Sixth Mass Extinction&#39; Exhibit&quot;, &quot;&#39;How Carbon Intensive Is Your Diet?&#39; Exhibit&quot;)&gt;&gt;Maybe these circled exhibits are where you will find the missing parts of the machine?
 
 Where do you want to go first?
 
-&lt;&lt;include [[Help 10]]&gt;&gt;</tw-passagedata><tw-passagedata pid="57" name="Help 10" tags="" position="1591,670" size="100,100">&lt;div class=&quot;help&quot;&gt;Use your updated map to choose an exhibition&lt;/div&gt;</tw-passagedata><tw-passagedata pid="58" name="PassageFooter" tags="" position="906,28" size="200,100">&lt;&lt;if $dataPermissionGranted is true&gt;&gt;
+&lt;&lt;include [[Help 10]]&gt;&gt;</tw-passagedata><tw-passagedata pid="57" name="Help 10" tags="" position="1461,580" size="100,100">&lt;div class=&quot;help&quot;&gt;Use your updated map to choose an exhibition&lt;/div&gt;</tw-passagedata><tw-passagedata pid="58" name="PassageFooter" tags="" position="906,28" size="200,100">&lt;&lt;if $dataPermissionGranted is true&gt;&gt;
 &lt;&lt;script&gt;&gt;
 
 passageHistory.push({ &quot;title&quot;: State.passage, &quot;time&quot;: Date.now() })
@@ -897,7 +903,7 @@ if (State.turns % 1 == 0) {
 }
 
 &lt;&lt;/script&gt;&gt;
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="59" name="End" tags="" position="2757,846.3333333333333" size="200,200">&lt;&lt;set $progress to passage()&gt;&gt;Congratulations! You have successfully completed E-Mission and have helped Alf and Naomi to prevent irreversible climate damage. 
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="59" name="End" tags="" position="2505.333333333333,1079.6666666666665" size="200,200">&lt;&lt;set $progress to passage()&gt;&gt;Congratulations! You have successfully completed E-Mission and have helped Alf and Naomi to prevent irreversible climate damage. 
 
 Whilst E-Mission is a game, many of the climate challenges mentioned are very real and are faced by the world today.</tw-passagedata><tw-passagedata pid="60" name="Crush up the biscuits" tags="staff-room" position="425,1930" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;You push open the window and sprinkle the crumbs out onto the brick path outside. The birds won’t mind if the biscuits are a bit soft! 
 
@@ -1003,8 +1009,8 @@ Their main food of source is predicted to decline during the 21st century due bo
 &lt;dt&gt;Current population&lt;/dt&gt;&lt;dd&gt;5,000-15,000&lt;/dd&gt;
 &lt;dt&gt;Population Trend&lt;/dt&gt;&lt;dd&gt;Increasing&lt;/dd&gt;
 &lt;/dl&gt;
-TODO image of animal
-TODO image of geographic range
+&lt;img src=&quot;https://confusedmatrix.github.io/e-mission-game/assets/images/exhibitions/species/blue-whale.jpg&quot; class=&quot;passage-image&quot; /&gt;
+&lt;img src=&quot;https://confusedmatrix.github.io/e-mission-game/assets/images/exhibitions/species/range/blue-whale.png&quot; class=&quot;passage-image&quot; /&gt;
 &lt;/div&gt;</tw-passagedata><tw-passagedata pid="83" name="Koala" tags="" position="1076,1283" size="100,100">&lt;div class=&quot;plaque&quot;&gt;&lt;h2&gt;Koala - &lt;em&gt;Phascolarctos cinereus&lt;/em&gt;&lt;/h2&gt;
 Threatened by climate change due to a specialised diet. Global warming is causing reduced nutrient level in Eucalyptus leaves one of the main sources of food. Longer droughts increase bushfires, and they are forced to go to ground to find water thus at risk of predators and traffic. They are vulnerable. In the 1920’s hundreds of thousands of them were killed for the fur trade and now they are combating the ongoing tree-clearing for agricultural and urban development. They support many other species in the bush including possums, wombats, birds and reptiles. They are also a significant aboriginal Australian animal.
 &lt;dl&gt;
@@ -1012,8 +1018,8 @@ Threatened by climate change due to a specialised diet. Global warming is causin
 &lt;dt&gt;Current population&lt;/dt&gt;&lt;dd&gt;5,000-15,000&lt;/dd&gt;
 &lt;dt&gt;Population Trend&lt;/dt&gt;&lt;dd&gt;Decreasing&lt;/dd&gt;
 &lt;/dl&gt;
-TODO image of animal
-TODO image of geographic range
+&lt;img src=&quot;https://confusedmatrix.github.io/e-mission-game/assets/images/exhibitions/species/koala.jpg&quot; class=&quot;passage-image&quot; /&gt;
+&lt;img src=&quot;https://confusedmatrix.github.io/e-mission-game/assets/images/exhibitions/species/range/koala.png&quot; class=&quot;passage-image&quot; /&gt;
 &lt;/div&gt;</tw-passagedata><tw-passagedata pid="84" name="Spix&#39;s macaw" tags="" position="1073,1400" size="100,100">&lt;div class=&quot;plaque&quot;&gt;&lt;h2&gt;Spix&#39;s Macaw - &lt;em&gt;Cyanopsitta spixii&lt;/em&gt;&lt;/h2&gt;
 Extinct in the wild due to invasive diseases and species, hunting, renewable energy, non-timber crops. It has become extinct in the wild particularly due to deforestation through unsustainable agriculture and logging causing habitat loss and degradation. These are critically endangered. Populations still exist in captivity, although it is believed that one was sighted outside of captivity in 2016.
 &lt;dl&gt;
@@ -1021,8 +1027,8 @@ Extinct in the wild due to invasive diseases and species, hunting, renewable ene
 &lt;dt&gt;Current population&lt;/dt&gt;&lt;dd&gt;1-49&lt;/dd&gt;
 &lt;dt&gt;Population Trend&lt;/dt&gt;&lt;dd&gt;Decreasing&lt;/dd&gt;
 &lt;/dl&gt;
-TODO image of animal
-TODO image of geographic range
+&lt;img src=&quot;https://confusedmatrix.github.io/e-mission-game/assets/images/exhibitions/species/macaw.jpg&quot; class=&quot;passage-image&quot; /&gt;
+&lt;img src=&quot;https://confusedmatrix.github.io/e-mission-game/assets/images/exhibitions/species/range/macaw.png&quot; class=&quot;passage-image&quot; /&gt;
 &lt;/div&gt;</tw-passagedata><tw-passagedata pid="85" name="Tiger" tags="" position="1070,1511" size="100,100">&lt;div class=&quot;plaque&quot;&gt;&lt;h2&gt;Tiger - &lt;em&gt;Panthera tigris&lt;/em&gt;&lt;/h2&gt;
 They are mainly found in Asia where the main threat is poaching for their skins, bones, meat and tonics. Problems in their habitats occur from native species and human development cause deforestation and human settlement close to their habitats leading to increasing human-animal conflict. They are regionally extinct with a population of around 2,154-3,159.
 &lt;dl&gt;
@@ -1030,8 +1036,8 @@ They are mainly found in Asia where the main threat is poaching for their skins,
 &lt;dt&gt;Current population&lt;/dt&gt;&lt;dd&gt;2,154-3,159&lt;/dd&gt;
 &lt;dt&gt;Population Trend&lt;/dt&gt;&lt;dd&gt;Unspecifed&lt;/dd&gt;
 &lt;/dl&gt;
-TODO image of animal
-TODO image of geographic range
+&lt;img src=&quot;https://confusedmatrix.github.io/e-mission-game/assets/images/exhibitions/species/tiger.jpg&quot; class=&quot;passage-image&quot; /&gt;
+&lt;img src=&quot;https://confusedmatrix.github.io/e-mission-game/assets/images/exhibitions/species/range/tiger.png&quot; class=&quot;passage-image&quot; /&gt;
 &lt;/div&gt;</tw-passagedata><tw-passagedata pid="86" name="Pinta giant tortoise" tags="" position="1070,1628" size="100,100">&lt;div class=&quot;plaque&quot;&gt;&lt;h2&gt;Pinta Giant Tortoise - &lt;em&gt;Chelonoidis abingdonii&lt;/em&gt;&lt;/h2&gt;
 It was heavily exploited by whalers and other mariners in the 19th century as on-board food supplies, which severely depleted the population. By the 20th century, few remain and some exploitation continued by local fishermen. In addition, extensive deforestation by goats, introduced to the Galapagos Islands in 1959, destroyed their habitat. Declared extinct in 2012.
 &lt;dl&gt;
@@ -1039,8 +1045,7 @@ It was heavily exploited by whalers and other mariners in the 19th century as on
 &lt;dt&gt;Current population&lt;/dt&gt;&lt;dd&gt;0&lt;/dd&gt;
 &lt;dt&gt;Population Trend&lt;/dt&gt;&lt;dd&gt;Decreasing&lt;/dd&gt;
 &lt;/dl&gt;
-TODO image of animal
-TODO image of geographic range
+&lt;img src=&quot;https://confusedmatrix.github.io/e-mission-game/assets/images/exhibitions/species/tortoise.png&quot; class=&quot;passage-image&quot; /&gt;
 &lt;/div&gt;</tw-passagedata><tw-passagedata pid="87" name="Animal exhibit" tags="sixth-mass-extinction-exhibit" position="1183,1738" size="100,100">&lt;&lt;include $_currentAnimal&gt;&gt;
 
 [[Step back from the animal exhibits]]</tw-passagedata><tw-passagedata pid="88" name="Sixth mass extinction minigame" tags="sixth-mass-extinction-exhibit" position="1426,1625" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;&lt;set $animals to [
@@ -1094,9 +1099,9 @@ TODO image of blocks?...
 
 [[Pick up the bag]]</tw-passagedata><tw-passagedata pid="93" name="Pick up the bag" tags="sixth-mass-extinction-exhibit" position="1428,2111" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;&lt;run $inventory.pushUnique(&quot;Bag of buttons&quot;)&gt;&gt;The items look like buttons. You wonder what they could be for...
 
-&lt;&lt;include &quot;Bag of buttons&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="94" name="Look at the console" tags="futures-exhibit" position="1833,654" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;You can see a series of buttons but three are missing their numbers. The bag of buttons must be for the console!
+&lt;&lt;include &quot;Bag of buttons&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="94" name="Look at the console" tags="futures-exhibit" position="1703,564" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;You can see a series of buttons but three are missing their numbers. The bag of buttons must be for the console!
 
-&lt;&lt;link [[Put the buttons in place]]&gt;&gt;&lt;&lt;run $inventory.delete(&quot;Bag of buttons&quot;)&gt;&gt;&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="95" name="Put the buttons in place" tags="futures-exhibit" position="1950,654" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;The buttons click into place on the console. The numbers make up a keypad. You notice a gauge on the console start to light up. A dim red light is turning orange. 
+&lt;&lt;link [[Put the buttons in place]]&gt;&gt;&lt;&lt;run $inventory.delete(&quot;Bag of buttons&quot;)&gt;&gt;&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="95" name="Put the buttons in place" tags="futures-exhibit" position="1820,564" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;The buttons click into place on the console. The numbers make up a keypad. You notice a gauge on the console start to light up. A dim red light is turning orange. 
 
 You try pressing a couple of buttons on the console. Although you seem to have given the machine more power, there must still be too many parts missing for it to work. If it can work...
 
@@ -1143,7 +1148,7 @@ In the center of the room there is a set of weighing scales with a digital displ
 &lt;&lt;else&gt;&gt;A red light shows above the wooden slots. At least one of the foods must be in the wrong place.
 
 [[Try again?|Rearrange the items on the shelves]]
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="103" name="Put in the fuse" tags="futures-exhibit" position="2091,614" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;As you put in the fuse, more buttons on the console light up and the humming noise gets louder.
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="103" name="Put in the fuse" tags="futures-exhibit" position="1961,524" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;As you put in the fuse, more buttons on the console light up and the humming noise gets louder.
 
 You notice that the some more of the squares light up. There is a bar above which also increases to 50% and a green light appears on the dash.
 
@@ -1151,10 +1156,10 @@ Almost as if the machine is ready...
 
 As you stare at the green light, a small click opens a compartment at the side of the console. Inside are some pages, written in a familiar hand...
 
-[[Read the first page]]</tw-passagedata><tw-passagedata pid="104" name="Read the first page" tags="futures-exhibit" position="2093,727" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;&lt;include &quot;Journal entry 7&quot;&gt;&gt;&lt;&lt;run $journal.pushUnique(&quot;Journal entry 7&quot;)&gt;&gt;
+[[Read the first page]]</tw-passagedata><tw-passagedata pid="104" name="Read the first page" tags="futures-exhibit" position="1963,637" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;&lt;include &quot;Journal entry 7&quot;&gt;&gt;&lt;&lt;run $journal.pushUnique(&quot;Journal entry 7&quot;)&gt;&gt;
 The second page is written in another familiar hand - you&#39;d recognise Alf’s scrawl anywhere. And, strangely, the letter is addressed to you...
 
-[[Read the second page]]</tw-passagedata><tw-passagedata pid="105" name="Read the second page" tags="futures-exhibit" position="2096,842" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;&lt;include &quot;Alf&#39;s letter&quot;&gt;&gt;&lt;&lt;run $inventory.pushUnique(&quot;Alf&#39;s letter&quot;)&gt;&gt;
+[[Read the second page]]</tw-passagedata><tw-passagedata pid="105" name="Read the second page" tags="futures-exhibit" position="1962.6666666666667,762" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;&lt;include &quot;Alf&#39;s letter&quot;&gt;&gt;&lt;&lt;run $inventory.pushUnique(&quot;Alf&#39;s letter&quot;)&gt;&gt;
 Your rational mind says that this is like something from science fiction. Time travel isn’t possible.
 
 But clearly Alf felt that this machine might just work. And he was a rational person with a distinguished scientific career. Why else would he have hidden the parts around the museum? Left you this researcher&#39;s journal? And all the reports?
@@ -1163,7 +1168,7 @@ And the researcher was right - so many tipping points in just the last thirty ye
 
 You look again at the machine. It certainly seems capable of working.
 
-[[Press the big green button]]</tw-passagedata><tw-passagedata pid="106" name="Alf&#39;s letter" tags="" position="2213,844" size="100,100">&lt;div id=&quot;letter&quot; class=&quot;handwriting&quot;&gt;I know everyone&#39;s probably told you it was time to put an old man out to pasture and pack him off into retirement, bring in some new blood and new ideas.
+[[Press the big green button]]</tw-passagedata><tw-passagedata pid="106" name="Alf&#39;s letter" tags="" position="2079.6666666666665,764" size="100,100">&lt;div id=&quot;letter&quot; class=&quot;handwriting&quot;&gt;I know everyone&#39;s probably told you it was time to put an old man out to pasture and pack him off into retirement, bring in some new blood and new ideas.
 
 But when an old friend of mine passed away far too young, something they said struck a chord with me - what if this old time machine really did work?
 
@@ -1173,7 +1178,7 @@ But I’m an old man. It wouldn&#39;t be right for me to use this. And I couldn�
 
 So I hid the parts for you to find. Hopefully you’ve learnt enough about the choices we made - about where we went wrong - to go back and make that difference. It’s up to you what you do next but, whatever you choose...
 
-Good Luck.&lt;/div&gt;</tw-passagedata><tw-passagedata pid="107" name="Press the big green button" tags="futures-exhibit" position="2093,960" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;The screen in the centre of the console lights up and a dialogue box opens. The cursor is flashing.
+Good Luck.&lt;/div&gt;</tw-passagedata><tw-passagedata pid="107" name="Press the big green button" tags="futures-exhibit" position="1959.6666666666667,880" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;The screen in the centre of the console lights up and a dialogue box opens. The cursor is flashing.
 
 [[Press enter]]</tw-passagedata><tw-passagedata pid="108" name="Place item on the scales" tags="carbon-intensive-diet-exhibit" position="1588,903" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;&lt;if $itemToWeigh is &quot;Bananas (1kg)&quot;&gt;&gt;&lt;&lt;set $releaseBananasBook to true&gt;&gt;An error appeared when weighing the bananas. Strange. Maybe something in your inventory can help?&lt;&lt;else&gt;&gt;The &lt;&lt;= $itemToWeigh&gt;&gt; takes &lt;&lt;= $balanceItems[$itemToWeigh]&gt;&gt;kg of CO&lt;sub&gt;2&lt;/sub&gt;e to produce.&lt;&lt;/if&gt;&gt;
 
@@ -1245,9 +1250,9 @@ You pick up the carrots and place them on the scales. The digital display shows 
 &lt;&lt;include &quot;Fuse&quot;&gt;&gt;
 You think about the food items and the wide range of carbon emissions associated with the different types of food. The fruit and vegetables had a much lower carbon footprint than meat and dairy. Clearly a plant based diet is the way forward if we want to cut our carbon emissions, just like the researcher said.
 
-You look back at the fuse in your hand and decide to go back to the Futures exhibit. Maybe it’s another missing piece of the machine?</tw-passagedata><tw-passagedata pid="113" name="Press enter" tags="futures-exhibit" position="2090,1080" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;Nothing happens. You try typing in &#39;Alfred&#39;... maybe that is the password. 
+You look back at the fuse in your hand and decide to go back to the Futures exhibit. Maybe it’s another missing piece of the machine?</tw-passagedata><tw-passagedata pid="113" name="Press enter" tags="futures-exhibit" position="1956.6666666666667,1000" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;Nothing happens. You try typing in &#39;Alfred&#39;... maybe that is the password. 
 
-[[Try password]]</tw-passagedata><tw-passagedata pid="114" name="Try password" tags="futures-exhibit" position="2090,1205" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;The screen changes and shows a new message: 
+[[Try password]]</tw-passagedata><tw-passagedata pid="114" name="Try password" tags="futures-exhibit" position="1956.6666666666667,1125" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;The screen changes and shows a new message: 
 
 Error. No connection.
 Input required.
@@ -1337,10 +1342,12 @@ Type in the password: &lt;&lt;textbox &quot;$copPassword&quot; &quot;XXXXX&quot;
 
 You think back to the journal entries, exhibits and reports that the researcher had sent to Alf over the years. Could they hold the answers to the report and changing what Alf was able to report on at COP30?
 
-TODO recommendations table...
+Select your first recommendation for curbing carbon emissions:
 &lt;&lt;silently&gt;&gt;
 &lt;&lt;set $recommendations to []&gt;&gt;
 &lt;&lt;set $recommendations[&#39;carbon emissions&#39;] to []&gt;&gt;
+&lt;&lt;set $recommendationReasons to []&gt;&gt;
+&lt;&lt;set $recommendationReasons[&#39;carbon emissions&#39;] to []&gt;&gt;
 &lt;&lt;set $recommendationOptions to []&gt;&gt;
 &lt;&lt;set $allRecommendationOptions to []&gt;&gt;
 &lt;&lt;set $allRecommendationOptions[&quot;carbon emissions&quot;] to [
@@ -1366,7 +1373,7 @@ TODO recommendations table...
 ],
 [
 	5,
-	&quot;Create climate refugee policy including international aid and provision of housing&quot;,
+	&quot;Create climate refugee policy including international aid and provision of housing.&quot;,
 	&quot;This policy was opposed by communities concerned about impacts of immigration in their communities and strain on infrastructure. International aid fund enabled support for communities to develop infrastructure and resilience in countries where impacts will be moderate but nations hit most by rising sea levels, drought causing water shortages and crop failures, and disease epidemics seek asylum. Through international cooperation, land provision for relocation of some citizens is made possible. Although offering a place to relocate away from rising ties, some areas offered lack productivity or resources leaving communities struggling to be self-sufficient and create a new sustainable economy.&quot;
 ]
 ]&gt;&gt;
@@ -1378,61 +1385,80 @@ State.setVar(&quot;$recommendationOptions[&#39;carbon emissions&#39;]&quot;, ran
 &lt;&lt;/script&gt;&gt;
 &lt;&lt;/silently&gt;&gt;
 &lt;&lt;for _i, _recOpt range $recommendationOptions[&#39;carbon emissions&#39;]&gt;&gt;
-&lt;&lt;radiobutton &quot;$recommendations[&#39;carbon emissions&#39;][0]&quot; _recOpt[0]&gt;&gt; &lt;&lt;= _recOpt[1]&gt;&gt;
+&lt;&lt;radiobutton &quot;$recommendations[&#39;carbon emissions&#39;][0]&quot; _recOpt[1]&gt;&gt; &lt;&lt;= _recOpt[1]&gt;&gt;
 &lt;&lt;/for&gt;&gt;
 
-[[Select first choice]]</tw-passagedata><tw-passagedata pid="132" name="Fuse" tags="inventory" position="749,591" size="100,100">TODO image of fuse...</tw-passagedata><tw-passagedata pid="133" name="WWF report" tags="inventory" position="749,706" size="100,100">TODO image of WWF 2018 Living Planet Report...</tw-passagedata><tw-passagedata pid="134" name="Bag of buttons" tags="inventory" position="748,821" size="100,100">TODO image of bag of buttons?...</tw-passagedata><tw-passagedata pid="135" name="Weigh the tomatoes" tags="carbon-intensive-diet-exhibit" position="1426,984" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;You see the reading for the tomatoes and compare it to the carrots. You swap the food items so the food with the highest embedded carbon is on the left-hand side. You then continue to check and sort the rest of the food items.
+[[Select first choice]]
+</tw-passagedata><tw-passagedata pid="132" name="Fuse" tags="inventory" position="749,591" size="100,100">TODO image of fuse...</tw-passagedata><tw-passagedata pid="133" name="WWF report" tags="inventory" position="749,706" size="100,100">TODO image of WWF 2018 Living Planet Report...</tw-passagedata><tw-passagedata pid="134" name="Bag of buttons" tags="inventory" position="748,821" size="100,100">TODO image of bag of buttons?...</tw-passagedata><tw-passagedata pid="135" name="Weigh the tomatoes" tags="carbon-intensive-diet-exhibit" position="1426,984" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;You see the reading for the tomatoes and compare it to the carrots. You swap the food items so the food with the highest embedded carbon is on the left-hand side. You then continue to check and sort the rest of the food items.
 
-[[Rearrange the items on the shelves]]</tw-passagedata><tw-passagedata pid="136" name="Select first choice" tags="" position="2228,529" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;&lt;if ndef $recommendations[&#39;carbon emissions&#39;][0]&gt;&gt;Oops, you didn&#39;t select your first recommendation.
+[[Rearrange the items on the shelves]]</tw-passagedata><tw-passagedata pid="136" name="Show report" tags="" position="2708.3333333333335,409.66666666666674" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;&lt;if $recommendationReasons[&#39;carbon emissions&#39;][1] == &quot;&quot;&gt;&gt;Oops, you didn&#39;t give a reason for your choice.
 
-[[Go back and select a recommendation|Continue scrolling through the document]]&lt;&lt;else&gt;&gt;Choose your second recommendation to reduce carbon emissions
-&lt;&lt;silently&gt;&gt;
-&lt;&lt;script&gt;&gt;
-// remove selected first choice from recommendation options
-var recOpts = State.getVar(&quot;$recommendationOptions[&#39;carbon emissions&#39;]&quot;)
-var selectedOpt = State.getVar(&quot;$recommendations[&#39;carbon emissions&#39;][0]&quot;)
-var filteredRecOpts = recOpts.filter(function(opt) { return opt[0] != selectedOpt })
-State.setVar(&quot;$recommendationOptions[&#39;carbon emissions&#39;]&quot;, filteredRecOpts)
-&lt;&lt;/script&gt;&gt;
-&lt;&lt;/silently&gt;&gt;
-&lt;&lt;for _i, _recOpt range $recommendationOptions[&#39;carbon emissions&#39;]&gt;&gt;
-&lt;&lt;radiobutton &quot;$recommendations[&#39;carbon emissions&#39;][1]&quot; _recOpt[0]&gt;&gt; &lt;&lt;= _recOpt[1]&gt;&gt;
-&lt;&lt;/for&gt;&gt;
-
-[[Select second choice]]
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="137" name="Select second choice" tags="" position="2230,653" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;&lt;if ndef $recommendations[&#39;carbon emissions&#39;][1]&gt;&gt;Oops, you didn&#39;t select your second recommendation.
-
-[[Go back and select a recommendation|Select first choice]]&lt;&lt;else&gt;&gt;&lt;&lt;silently&gt;&gt;
-&lt;&lt;set _carbonEmisssionRecs to []&gt;&gt;
-&lt;&lt;script&gt;&gt;
-var allRecOpts = State.getVar(&quot;$allRecommendationOptions[&#39;carbon emissions&#39;]&quot;)
-var recs = State.getVar(&quot;$recommendations[&#39;carbon emissions&#39;]&quot;)
-var recPolicies = recs.map(function(rec) { return (allRecOpts.find(function(opt) { return opt[0] == rec }))[1] })
-State.setVar(&quot;_carbonEmisssionRecs&quot;, recPolicies)
-&lt;&lt;/script&gt;&gt;
-&lt;&lt;/silently&gt;&gt;&lt;div id=&quot;letter&quot; class=&quot;typewriting&quot;&gt;
+[[Go back and select a recommendation|Select second choice]]&lt;&lt;else&gt;&gt;&lt;div id=&quot;letter&quot; class=&quot;typewriting&quot;&gt;
 &lt;h2&gt;Recommendations report&lt;/h2&gt;
 &lt;h3&gt;Your &quot;carbon emissions&quot; recommendations&lt;/h3&gt;
-&lt;ul&gt;&lt;li&gt;&lt;&lt;= _carbonEmisssionRecs[0]&gt;&gt;&lt;/li&gt;&lt;li&gt;&lt;&lt;= _carbonEmisssionRecs[1]&gt;&gt;&lt;/li&gt;&lt;/ul&gt;
+&lt;ul&gt;&lt;li&gt;&lt;&lt;= $recommendations[&#39;carbon emissions&#39;][0]&gt;&gt;&lt;/li&gt;&lt;li&gt;&lt;&lt;= $recommendations[&#39;carbon emissions&#39;][1]&gt;&gt;&lt;/li&gt;&lt;/ul&gt;
 &lt;/div&gt;
 
 [[Make your recommendations for diets and food]]
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="138" name="Make your recommendations for diets and food" tags="" position="2353,534" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="139" name="Finish report" tags="" position="2608.3333333333335,430" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;[[Send the report to Alf]]</tw-passagedata><tw-passagedata pid="140" name="Send the report to Alf" tags="" position="2606.666666666667,561.6666666666666" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;You attach the now completed report to an email and type in the address Alf left in his notes. With a trembling hand, you click ‘send’...
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="137" name="Make your recommendations for diets and food" tags="" position="2226.333333333333,527.3333333333334" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;Select your first recommendation for diets and foods:
+&lt;&lt;silently&gt;&gt;
+&lt;&lt;set $recommendations[&#39;diets and foods&#39;] to []&gt;&gt;
+&lt;&lt;set $recommendationReasons[&#39;diets and foods&#39;] to []&gt;&gt;
+&lt;&lt;set $allRecommendationOptions[&quot;diets and foods&quot;] to [
+[
+	1,
+	&quot;Ban meat production and sales in supermarkets, shops and restaurants.&quot;,
+	&quot;Introduction of this policy led to public backlash, particularly from farming communities who did not have sufficient time to switch to other crop types. Some communities that relied on animal agriculture have no alternative economy to rely on leading to unemployment in large parts of rural communities. Although crops used to feed animals can be fed directly to humans, and water consumption from meat production has dropped, supply chains are not set up to distribute plant based foods to global communities. Some communities around the world relied on meat and fish for their main source of protein leading to malnutrition and warnings of health epidemics.&quot;
+],
+[
+	2,
+	&quot;Launch public awareness campaigns accompanied by food literacy training about carbon embedded in food.&quot;,
+	&quot;This campaign was effective at educating people about the impacts of their diets and the food choices they made, both for their own health and for the planet. The campaign enabled many myths around vegetarian, carnivorous and vegan diets to be countered, and led to a 50% reduction in meat consumption overall. This drove the market to respond with greater choice in vegetarian and vegan products, making it easier and more cost effective for citizens to reduce meat in their diets which remaining healthy.&quot;
+],
+[
+	3,
+	&quot;Invest in research programme into genetically modifying crops to increase crop yields and resistance to climate change-related problems.&quot;,
+	&quot;The general public was extremely sceptical about this policy, whilst international communities expressed concern about privatisation of crops by agrobusiness that could significantly impact on subsistence farmers and communities. Developing crops that were resistant to diseases, were more drought resistant, or could cope with more water logged soil did help reduce crop failures, however continuing to plant monoculture crops did not reduce food waste, contributed to pest resistance to fertiliser use, and crops still washed away or were affected by extreme drought in severe weather.&quot;
+],
+[
+	4,
+	&quot;Introduce policies to develop and use more diverse crop species for food sources.&quot;,
+	&quot;This policy enabled farmers and community growers to diversify their crops, which enabled global food security to be increased. The number of farms growing monocrops reduced, helping boost biodiversity around farmland. There was also increased resilience to extreme weather events, pests, drought and flooding caused by climate change as the policy encouraged farmers to grow varieties of grains, pulses, vegetables and fruits which thrived in local and changing weather conditions.&quot;
+],
+[
+	5,
+	&quot;Introduce a meat tax to fund subsidies to reduce meat consumption and promote sustainable, organic plant-based agriculture.&quot;,
+	&quot;The introduction of this policy concerned supermarkets and low-income families who were already relying on food banks to feed their families. The reinvestment of tax raised into funding transition to sustainable agricultural practices, land use and plant-based farming helped support farmers to change from meat production to organic plant agriculture where their land permitted. The policy also led to more people being encouraged to shop local and support local suppliers, reducing transportation costs and food miles within the food supply chain.&quot;
+]
+]&gt;&gt;
+&lt;&lt;script&gt;&gt;
+// randomise the recommendation options
+var randRecOpts = State.getVar(&quot;$allRecommendationOptions[&#39;diets and foods&#39;]&quot;)
+randRecOpts.sort(function() { return Math.random() - 0.5 })
+State.setVar(&quot;$recommendationOptions[&#39;diets and foods&#39;]&quot;, randRecOpts)
+&lt;&lt;/script&gt;&gt;
+&lt;&lt;/silently&gt;&gt;
+&lt;&lt;for _i, _recOpt range $recommendationOptions[&#39;diets and foods&#39;]&gt;&gt;
+&lt;&lt;radiobutton &quot;$recommendations[&#39;diets and foods&#39;][0]&quot; _recOpt[1]&gt;&gt; &lt;&lt;= _recOpt[1]&gt;&gt;
+&lt;&lt;/for&gt;&gt;
+
+[[Select first choice|Select third choice]]
+</tw-passagedata><tw-passagedata pid="138" name="Send the report to Alf" tags="" position="2355,795" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;You attach the now completed report to an email and type in the address Alf left in his notes. With a trembling hand, you click ‘send’...
 
 Nothing happens. The email sends like normal, and a few of the lights on the ‘time machine’ light up but, as far as you can tell, reality stays the same. You are still sitting in your office, long after hours, surrounded by piles of paperwork and half-finished exhibition notes. 
 
 How can you tell if it worked?
 
 [[Leave the office]]
-</tw-passagedata><tw-passagedata pid="141" name="Leave the office" tags="" position="2605.0000000000005,683.3333333333333" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;You go out of your office. On the wall opposite is a poster you’re fairly sure wasn’t there before.
+</tw-passagedata><tw-passagedata pid="139" name="Leave the office" tags="" position="2353.3333333333335,916.6666666666666" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;You go out of your office. On the wall opposite is a poster you’re fairly sure wasn’t there before.
 
 The poster is advertising the &#39;Inaugural Alfred Mitchell Lecture&#39;. Apparently eminent climate researcher and governmental policy advisor Prof. Naomi Emyra-Fossey will be speaking on the subject of ‘The Continuing Climate Challenge: Moving past the Climate Crisis in a Carbon Neutral age. The lecture is due to take place to coincide with the grand re-opening of the Museum in a few days time. 
 
 You have no idea who Prof. Naomi Emyra-Fossey is - and you certainly didn’t organise a lecture series or a grand re-opening! The budget you were working with barely stretched to a drinks reception! 
 
-[[Walk around the Museum]]</tw-passagedata><tw-passagedata pid="142" name="Walk around the Museum" tags="" position="2601.666666666667,818.3333333333333" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;Walking around the Museum, you can’t help but notice how much shinier everything seems. The floors are polished, the paintwork is fresh - and is that a state of the art solar array on the roof?
+[[Walk around the Museum]]</tw-passagedata><tw-passagedata pid="140" name="Walk around the Museum" tags="" position="2350,1051.6666666666665" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;Walking around the Museum, you can’t help but notice how much shinier everything seems. The floors are polished, the paintwork is fresh - and is that a state of the art solar array on the roof?
 
-[[Head back to your Office]]</tw-passagedata><tw-passagedata pid="143" name="Head back to your Office" tags="" position="2600.0000000000005,954.9999999999999" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;You stumble back into your office in a daze. Clearly things are not the same as they were before you hit send on that email.
+[[Head back to your Office]]</tw-passagedata><tw-passagedata pid="141" name="Head back to your Office" tags="" position="2348.3333333333335,1188.3333333333333" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;You stumble back into your office in a daze. Clearly things are not the same as they were before you hit send on that email.
 
 As sit down at your desk, a letter catches your eye. The writing is very familiar but you don’t recognise the name. The letter is dated a couple of months ago. 
 
@@ -1442,7 +1468,7 @@ As you are aware, I don’t generally do much public speaking - my research keep
 
 However Prof. Alfred Mitchell, who I believe is a mutual friend, has spoken to me many times about your qualifications and enthusiasm. I know he feels that you are ideally placed to continue his work and take the Museum of Environmental History to new heights - and, given what I have read about your tenure to date, the changes made to the exhibits, and your planning of a lecture series, I am inclined to agree with him! 
 
-And I do appreciate how hard it is to maintain momentum when an issue that was once so pressing appears to have been resolved. We might not be starting into an environmental abyss any longer, but it would be all too easy to slip back into bad habits just as we’ve reached a turning point. 
+And I do appreciate how hard it is to maintain momentum when an issue that was once so pressing appears to have been resolved. We might not be staring into an environmental abyss any longer, but it would be all too easy to slip back into bad habits just as we’ve reached a turning point. 
 
 I would, therefore, be delighted to accept your invitation to give the Inaugural Alfred Mitchell Lecture at the newly reopened Museum of Environmental History. I am visiting the city in a few weeks - perhaps we could meet for coffee to discuss? I am eager to see what you’ve done with the place.
 
@@ -1454,7 +1480,173 @@ With a flash of realisation, it comes to you! You’ve been reading this writing
 
 Things have changed and you did make a difference. Opening up your web browser, you search Professor Emyra-Fossey’s name. The professor has had an extremely distinguished career and made a number of breakthroughs in tackling climate change. 
 
-[[End]]</tw-passagedata></tw-storydata>
+[[End]]</tw-passagedata><tw-passagedata pid="142" name="Select first choice" tags="" position="2347.9999999999995,410" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;&lt;if ndef $recommendations[&#39;carbon emissions&#39;][0]&gt;&gt;Oops, you didn&#39;t select your first recommendation.
+
+[[Go back and select a recommendation|Continue scrolling through the document]]&lt;&lt;else&gt;&gt;You selected &quot;&lt;&lt;= $recommendations[&#39;carbon emissions&#39;][0]&gt;&gt;&quot;
+
+Why did you choose this option?
+&lt;&lt;textarea &quot;$recommendationReasons[&#39;carbon emissions&#39;][0]&quot; &quot;&quot;&gt;&gt;
+
+[[Continue|Show second options]]
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="143" name="Show second options" tags="" position="2468.333333333333,409.00000000000006" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;&lt;if $recommendationReasons[&#39;carbon emissions&#39;][0] == &quot;&quot;&gt;&gt;Oops, you didn&#39;t give a reason for your choice.
+
+[[Go back|Select first choice]]&lt;&lt;else&gt;&gt;Choose your second recommendation to reduce carbon emissions
+&lt;&lt;silently&gt;&gt;
+&lt;&lt;script&gt;&gt;
+// remove selected first choice from recommendation options
+var recOpts = State.getVar(&quot;$recommendationOptions[&#39;carbon emissions&#39;]&quot;)
+var selectedOpt = State.getVar(&quot;$recommendations[&#39;carbon emissions&#39;][0]&quot;)
+var filteredRecOpts = recOpts.filter(function(opt) { return opt[1] != selectedOpt })
+State.setVar(&quot;$recommendationOptions[&#39;carbon emissions&#39;]&quot;, filteredRecOpts)
+&lt;&lt;/script&gt;&gt;
+&lt;&lt;/silently&gt;&gt;
+&lt;&lt;for _i, _recOpt range $recommendationOptions[&#39;carbon emissions&#39;]&gt;&gt;
+&lt;&lt;radiobutton &quot;$recommendations[&#39;carbon emissions&#39;][1]&quot; _recOpt[1]&gt;&gt; &lt;&lt;= _recOpt[1]&gt;&gt;
+&lt;&lt;/for&gt;&gt;
+
+[[Select second choice]]
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="144" name="Select second choice" tags="" position="2588.333333333333,415.66666666666663" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;&lt;if ndef $recommendations[&#39;carbon emissions&#39;][1]&gt;&gt;Oops, you didn&#39;t select your second recommendation.
+
+[[Go back and select a recommendation|Show second options]]&lt;&lt;else&gt;&gt;You selected &quot;&lt;&lt;= $recommendations[&#39;carbon emissions&#39;][1]&gt;&gt;&quot;
+
+Why did you choose this option?
+&lt;&lt;textarea &quot;$recommendationReasons[&#39;carbon emissions&#39;][1]&quot; &quot;&quot;&gt;&gt;
+
+[[Continue|Show report]]
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="145" name="Select third choice" tags="" position="2347.9999999999995,529" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;&lt;if ndef $recommendations[&#39;diets and foods&#39;][0]&gt;&gt;Oops, you didn&#39;t select your first recommendation.
+
+[[Go back and select a recommendation|Make your recommendations for diets and food]]&lt;&lt;else&gt;&gt;You selected &quot;&lt;&lt;= $recommendations[&#39;diets and foods&#39;][0]&gt;&gt;&quot;
+
+Why did you choose this option?
+&lt;&lt;textarea &quot;$recommendationReasons[&#39;diets and foods&#39;][0]&quot; &quot;&quot;&gt;&gt;
+
+[[Continue|Show fourth options]]
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="146" name="Show fourth options" tags="" position="2466.333333333333,530.6666666666666" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;&lt;if $recommendationReasons[&#39;diets and foods&#39;][0] == &quot;&quot;&gt;&gt;Oops, you didn&#39;t give a reason for your choice.
+
+[[Go back|Select third choice]]&lt;&lt;else&gt;&gt;Choose your second recommendation for diets and foods:
+&lt;&lt;silently&gt;&gt;
+&lt;&lt;script&gt;&gt;
+// remove selected first choice from recommendation options
+var recOpts = State.getVar(&quot;$recommendationOptions[&#39;diets and foods&#39;]&quot;)
+var selectedOpt = State.getVar(&quot;$recommendations[&#39;diets and foods&#39;][0]&quot;)
+var filteredRecOpts = recOpts.filter(function(opt) { return opt[1] != selectedOpt })
+State.setVar(&quot;$recommendationOptions[&#39;diets and foods&#39;]&quot;, filteredRecOpts)
+&lt;&lt;/script&gt;&gt;
+&lt;&lt;/silently&gt;&gt;
+&lt;&lt;for _i, _recOpt range $recommendationOptions[&#39;diets and foods&#39;]&gt;&gt;
+&lt;&lt;radiobutton &quot;$recommendations[&#39;diets and foods&#39;][1]&quot; _recOpt[1]&gt;&gt; &lt;&lt;= _recOpt[1]&gt;&gt;
+&lt;&lt;/for&gt;&gt;
+
+[[Select second choice|Select fourth choice]]
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="147" name="Select fourth choice" tags="" position="2589.6666666666665,534" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;&lt;if ndef $recommendations[&#39;diets and foods&#39;][1]&gt;&gt;Oops, you didn&#39;t select your second recommendation.
+
+[[Go back and select a recommendation|Show fourth options]]&lt;&lt;else&gt;&gt;You selected &quot;&lt;&lt;= $recommendations[&#39;diets and foods&#39;][1]&gt;&gt;&quot;
+
+Why did you choose this option?
+&lt;&lt;textarea &quot;$recommendationReasons[&#39;diets and foods&#39;][1]&quot; &quot;&quot;&gt;&gt;
+
+[[Continue|Show report again]]
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="148" name="Show report again" tags="" position="2708,537.3333333333333" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;&lt;if $recommendationReasons[&#39;diets and foods&#39;][1] == &quot;&quot;&gt;&gt;Oops, you didn&#39;t give a reason for your choice.
+
+[[Go back and select a recommendation|Select fourth choice]]&lt;&lt;else&gt;&gt;&lt;div id=&quot;letter&quot; class=&quot;typewriting&quot;&gt;
+&lt;h2&gt;Recommendations report&lt;/h2&gt;
+&lt;h3&gt;Your &quot;carbon emissions&quot; recommendations&lt;/h3&gt;
+&lt;ul&gt;&lt;li&gt;&lt;&lt;= $recommendations[&#39;carbon emissions&#39;][0]&gt;&gt;&lt;/li&gt;&lt;li&gt;&lt;&lt;= $recommendations[&#39;carbon emissions&#39;][1]&gt;&gt;&lt;/li&gt;&lt;/ul&gt;
+&lt;h3&gt;Your &quot;diets and foods&quot; recommendations&lt;/h3&gt;
+&lt;ul&gt;&lt;li&gt;&lt;&lt;= $recommendations[&#39;diets and foods&#39;][0]&gt;&gt;&lt;/li&gt;&lt;li&gt;&lt;&lt;= $recommendations[&#39;diets and foods&#39;][1]&gt;&gt;&lt;/li&gt;&lt;/ul&gt;
+&lt;/div&gt;
+
+[[Make your recommendations for avoiding species extinciton]]
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="149" name="Make your recommendations for avoiding species extinciton" tags="" position="2221.3333333333335,643.9999999999999" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;Select your first recommendation for avoiding species extinction:
+&lt;&lt;silently&gt;&gt;
+&lt;&lt;set $recommendations[&#39;species extinction&#39;] to []&gt;&gt;
+&lt;&lt;set $recommendationReasons[&#39;species extinction&#39;] to []&gt;&gt;
+&lt;&lt;set $allRecommendationOptions[&quot;species extinction&quot;] to [
+[
+	1,
+	&quot;1&quot;,
+	&quot;1&quot;
+],
+[
+	2,
+	&quot;2&quot;,
+	&quot;2&quot;
+],
+[
+	3,
+	&quot;3&quot;,
+	&quot;3&quot;
+],
+[
+	4,
+	&quot;4&quot;,
+	&quot;4&quot;
+],
+[
+	5,
+	&quot;5&quot;,
+	&quot;5&quot;
+]
+]&gt;&gt;
+&lt;&lt;script&gt;&gt;
+// randomise the recommendation options
+var randRecOpts = State.getVar(&quot;$allRecommendationOptions[&#39;species extinction&#39;]&quot;)
+randRecOpts.sort(function() { return Math.random() - 0.5 })
+State.setVar(&quot;$recommendationOptions[&#39;species extinction&#39;]&quot;, randRecOpts)
+&lt;&lt;/script&gt;&gt;
+&lt;&lt;/silently&gt;&gt;
+&lt;&lt;for _i, _recOpt range $recommendationOptions[&#39;species extinction&#39;]&gt;&gt;
+&lt;&lt;radiobutton &quot;$recommendations[&#39;species extinction&#39;][0]&quot; _recOpt[1]&gt;&gt; &lt;&lt;= _recOpt[1]&gt;&gt;
+&lt;&lt;/for&gt;&gt;
+
+[[Select first choice|Select fifth choice]]
+</tw-passagedata><tw-passagedata pid="150" name="Select fifth choice" tags="" position="2344.666666666667,643.9999999999999" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;&lt;if ndef $recommendations[&#39;species extinction&#39;][0]&gt;&gt;Oops, you didn&#39;t select your first recommendation.
+
+[[Go back and select a recommendation|Make your recommendations for avoiding species extinciton]]&lt;&lt;else&gt;&gt;You selected &quot;&lt;&lt;= $recommendations[&#39;species extinction&#39;][0]&gt;&gt;&quot;
+
+Why did you choose this option?
+&lt;&lt;textarea &quot;$recommendationReasons[&#39;species extinction&#39;][0]&quot; &quot;&quot;&gt;&gt;
+
+[[Continue|Show sixth options]]
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="151" name="Show sixth options" tags="" position="2464.666666666667,647.3333333333333" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;&lt;if $recommendationReasons[&#39;species extinction&#39;][0] == &quot;&quot;&gt;&gt;Oops, you didn&#39;t give a reason for your choice.
+
+[[Go back|Select fifth choice]]&lt;&lt;else&gt;&gt;Choose your second recommendation for avoiding species extinction:
+&lt;&lt;silently&gt;&gt;
+&lt;&lt;script&gt;&gt;
+// remove selected first choice from recommendation options
+var recOpts = State.getVar(&quot;$recommendationOptions[&#39;species extinction&#39;]&quot;)
+var selectedOpt = State.getVar(&quot;$recommendations[&#39;species extinction&#39;][0]&quot;)
+var filteredRecOpts = recOpts.filter(function(opt) { return opt[1] != selectedOpt })
+State.setVar(&quot;$recommendationOptions[&#39;species extinction&#39;]&quot;, filteredRecOpts)
+&lt;&lt;/script&gt;&gt;
+&lt;&lt;/silently&gt;&gt;
+&lt;&lt;for _i, _recOpt range $recommendationOptions[&#39;species extinction&#39;]&gt;&gt;
+&lt;&lt;radiobutton &quot;$recommendations[&#39;species extinction&#39;][1]&quot; _recOpt[1]&gt;&gt; &lt;&lt;= _recOpt[1]&gt;&gt;
+&lt;&lt;/for&gt;&gt;
+
+[[Select second choice|Select sixth choice]]
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="152" name="Select sixth choice" tags="" position="2589.666666666667,652.3333333333333" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;&lt;if ndef $recommendations[&#39;species extinction&#39;][1]&gt;&gt;Oops, you didn&#39;t select your second recommendation.
+
+[[Go back and select a recommendation|Show sixth options]]&lt;&lt;else&gt;&gt;You selected &quot;&lt;&lt;= $recommendations[&#39;species extinction&#39;][1]&gt;&gt;&quot;
+
+Why did you choose this option?
+&lt;&lt;textarea &quot;$recommendationReasons[&#39;species extinction&#39;][1]&quot; &quot;&quot;&gt;&gt;
+
+[[Continue|Show final report]]
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="153" name="Show final report" tags="" position="2709.666666666667,653.9999999999999" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;&lt;if $recommendationReasons[&#39;species extinction&#39;][1] == &quot;&quot;&gt;&gt;Oops, you didn&#39;t give a reason for your choice.
+
+[[Go back and select a recommendation|Select sixth choice]]&lt;&lt;else&gt;&gt;&lt;div id=&quot;letter&quot; class=&quot;typewriting&quot;&gt;
+&lt;h2&gt;Recommendations report&lt;/h2&gt;
+&lt;h3&gt;Your &quot;carbon emissions&quot; recommendations&lt;/h3&gt;
+&lt;ul&gt;&lt;li&gt;&lt;&lt;= $recommendations[&#39;carbon emissions&#39;][0]&gt;&gt;&lt;/li&gt;&lt;li&gt;&lt;&lt;= $recommendations[&#39;carbon emissions&#39;][1]&gt;&gt;&lt;/li&gt;&lt;/ul&gt;
+&lt;h3&gt;Your &quot;diets and foods&quot; recommendations&lt;/h3&gt;
+&lt;ul&gt;&lt;li&gt;&lt;&lt;= $recommendations[&#39;diets and foods&#39;][0]&gt;&gt;&lt;/li&gt;&lt;li&gt;&lt;&lt;= $recommendations[&#39;diets and foods&#39;][1]&gt;&gt;&lt;/li&gt;&lt;/ul&gt;
+&lt;h3&gt;Your &quot;species extinction&quot; recommendations&lt;/h3&gt;
+&lt;ul&gt;&lt;li&gt;&lt;&lt;= $recommendations[&#39;species extinction&#39;][0]&gt;&gt;&lt;/li&gt;&lt;li&gt;&lt;&lt;= $recommendations[&#39;species extinction&#39;][1]&gt;&gt;&lt;/li&gt;&lt;/ul&gt;
+&lt;/div&gt;
+
+[[Send the report to Alf]]
+&lt;&lt;/if&gt;&gt;</tw-passagedata></tw-storydata>
 	<script id="script-sugarcube" type="text/javascript">
 	/*! SugarCube JS */
 	if(document.documentElement.getAttribute("data-init")==="loading"){!function(window,document,jQuery,undefined){"use strict";function _classCallCheck(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,r=Array(e.length);t<e.length;t++)r[t]=e[t];return r}return Array.from(e)}var _createClass=function(){function e(e,t){for(var r=0;r<t.length;r++){var n=t[r];n.enumerable=n.enumerable||!1,n.configurable=!0,"value"in n&&(n.writable=!0),Object.defineProperty(e,n.key,n)}}return function(t,r,n){return r&&e(t.prototype,r),n&&e(t,n),t}}(),_slicedToArray=function(){function e(e,t){var r=[],n=!0,a=!1,i=undefined;try{for(var o,s=e[Symbol.iterator]();!(n=(o=s.next()).done)&&(r.push(o.value),!t||r.length!==t);n=!0);}catch(e){a=!0,i=e}finally{try{!n&&s.return&&s.return()}finally{if(a)throw i}}return r}return function(t,r){if(Array.isArray(t))return t;if(Symbol.iterator in Object(t))return e(t,r);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e},errorPrologRegExp=/^(?:(?:uncaught\s+(?:exception:\s+)?)?\w*(?:error|exception|_err):\s+)+/i,Alert=function(){function e(e,t,r,n){var a="fatal"===e,i="Apologies! "+(a?"A fatal":"An")+" error has occurred.";i+=a?" Aborting.":" You may be able to continue, but some parts may not work properly.",null==t&&null==r||(i+="\n\nError",null!=t&&(i+=" ["+t+"]"),i+=null!=r?": "+r.replace(errorPrologRegExp,"")+".":": unknown error."),"object"===(void 0===n?"undefined":_typeof(n))&&n.stack&&(i+="\n\nStack Trace:\n"+n.stack),window.alert(i)}function t(t,r,n){e(null,t,r,n)}function r(t,r,n){e("fatal",t,r,n)}return function(e){window.onerror=function(n,a,i,o,s){"complete"===document.readyState?t(null,n,s):(r(null,n,s),window.onerror=e,"function"==typeof window.onerror&&window.onerror.apply(this,arguments))}}(window.onerror),Object.freeze(Object.defineProperties({},{error:{value:t},fatal:{value:r}}))}(),Patterns=function(){var e=function(){var e=new Map([[" ","\\u0020"],["\f","\\f"],["\n","\\n"],["\r","\\r"],["\t","\\t"],["\v","\\v"],[" ","\\u00a0"],[" ","\\u1680"],["᠎","\\u180e"],[" ","\\u2000"],[" ","\\u2001"],[" ","\\u2002"],[" ","\\u2003"],[" ","\\u2004"],[" ","\\u2005"],[" ","\\u2006"],[" ","\\u2007"],[" ","\\u2008"],[" ","\\u2009"],[" ","\\u200a"],["\u2028","\\u2028"],["\u2029","\\u2029"],[" ","\\u202f"],[" ","\\u205f"],["　","\\u3000"],["\ufeff","\\ufeff"]]),t=/^\s$/,r="";return e.forEach(function(e,n){t.test(n)||(r+=e)}),r?"[\\s"+r+"]":"\\s"}(),t="\\s"===e?"\\S":e.replace(/^\[/,"[^"),r="[0-9A-Z_a-z\\-\\u00c0-\\u00d6\\u00d8-\\u00f6\\u00f8-\\u00ff\\u0150\\u0170\\u0151\\u0171]",n=r.replace("\\-",""),a=function(){return"("+r+"+)\\(([^\\)\\|\\n]+)\\):|("+r+"+):([^;\\|\\n]+);|((?:\\."+r+"+)+);|((?:#"+r+"+)+);"}();return Object.freeze({space:e,spaceNoTerminator:"[\\u0020\\f\\t\\v\\u00a0\\u1680\\u180e\\u2000-\\u200a\\u202f\\u205f\\u3000\\ufeff]",lineTerminator:"[\\n\\r\\u2028\\u2029]",notSpace:t,anyChar:"(?:.|[\\n\\r\\u2028\\u2029])",anyLetter:r,anyLetterStrict:n,identifierFirstChar:"[$A-Z_a-z]",identifierNextChar:"[$0-9A-Z_a-z]",identifier:"[$A-Z_a-z][$0-9A-Z_a-z]*",variableSigil:"[$_]",variable:"[$_][$A-Z_a-z][$0-9A-Z_a-z]*",macroName:"[A-Za-z][\\w-]*|[=-]",templateName:"[A-Za-z][\\w-]*",cssImage:"\\[[<>]?[Ii][Mm][Gg]\\[(?:\\s|\\S)*?\\]\\]+",inlineCss:a,url:"(?:file|https?|mailto|ftp|javascript|irc|news|data):[^\\s'\"]+"})}();!function(){!function(e){if(e&&e.prototype&&null==e.prototype.firstElementChild){var t=Node.ELEMENT_NODE;Object.defineProperty(e.prototype,"firstElementChild",{get:function(){for(var e=this.childNodes,r=0;r<e.length;++r){var n=e[r];if(n.nodeType===t)return n}return null}})}}(window.Node||window.Element)}(),function(){function e(e,t){var r=Number.parseInt(e,10)||0;if(r<1)return"";var n=void 0===t?"":String(t);for(""===n&&(n=" ");n.length<r;){var a=n.length,i=r-a;n+=a>i?n.slice(0,i):n}return n.length>r&&(n=n.slice(0,r)),n}var t=function(){function e(e,n){var a=String(e);if(!a)return a;switch(n){case"start":return t.test(a)?a.replace(t,""):a;case"end":return r.test(a)?a.replace(r,""):a;default:throw new Error('_trimString called with incorrect where parameter value: "'+n+'"')}}var t=new RegExp("^"+Patterns.space+Patterns.space+"*"),r=new RegExp(""+Patterns.space+Patterns.space+"*$");return e}();Array.prototype.flat||Object.defineProperty(Array.prototype,"flat",{configurable:!0,writable:!0,value:function(){function e(){if(null==this)throw new TypeError("Array.prototype.flat called on null or undefined");var t=0===arguments.length?1:Number(arguments[0])||0;return t<1?Array.prototype.slice.call(this):Array.prototype.reduce.call(this,function(r,n){return n instanceof Array?r.push.apply(r,_toConsumableArray(e.call(n,t-1))):r.push(n),r},[])}return e}()}),Array.prototype.flatMap||Object.defineProperty(Array.prototype,"flatMap",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.flatMap called on null or undefined");return Array.prototype.map.apply(this,arguments).flat()}}),Array.prototype.includes||Object.defineProperty(Array.prototype,"includes",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.includes called on null or undefined");if(0===arguments.length)return!1;var e=this.length>>>0;if(0===e)return!1;var t=arguments[0],r=Number(arguments[1])||0;for(r<0&&(r=Math.max(0,e+r));r<e;++r){var n=this[r];if(n===t||n!==n&&t!==t)return!0}return!1}}),Object.entries||Object.defineProperty(Object,"entries",{configurable:!0,writable:!0,value:function(e){if("object"!==(void 0===e?"undefined":_typeof(e))||null===e)throw new TypeError("Object.entries object parameter must be an object");return Object.keys(e).map(function(t){return[t,e[t]]})}}),Object.fromEntries||Object.defineProperty(Object,"fromEntries",{configurable:!0,writable:!0,value:function(e){return Array.from(e).reduce(function(e,t){if(Object(t)!==t)throw new TypeError("Object.fromEntries iterable parameter must yield objects");return t[0]in e?Object.defineProperty(e,t[0],{configurable:!0,enumerable:!0,writable:!0,value:t[1]}):e[t[0]]=t[1],e},{})}}),Object.getOwnPropertyDescriptors||Object.defineProperty(Object,"getOwnPropertyDescriptors",{configurable:!0,writable:!0,value:function(e){if(null==e)throw new TypeError("Object.getOwnPropertyDescriptors object parameter is null or undefined");var t=Object(e);return Reflect.ownKeys(t).reduce(function(e,r){var n=Object.getOwnPropertyDescriptor(t,r);return void 0!==n&&(r in e?Object.defineProperty(e,r,{configurable:!0,enumerable:!0,writable:!0,value:n}):e[r]=n),e},{})}}),Object.values||Object.defineProperty(Object,"values",{configurable:!0,writable:!0,value:function(e){if("object"!==(void 0===e?"undefined":_typeof(e))||null===e)throw new TypeError("Object.values object parameter must be an object");return Object.keys(e).map(function(t){return e[t]})}}),String.prototype.padStart||Object.defineProperty(String.prototype,"padStart",{configurable:!0,writable:!0,value:function(t,r){if(null==this)throw new TypeError("String.prototype.padStart called on null or undefined");var n=String(this),a=n.length,i=Number.parseInt(t,10);return i<=a?n:e(i-a,r)+n}}),String.prototype.padEnd||Object.defineProperty(String.prototype,"padEnd",{configurable:!0,writable:!0,value:function(t,r){if(null==this)throw new TypeError("String.prototype.padEnd called on null or undefined");var n=String(this),a=n.length,i=Number.parseInt(t,10);return i<=a?n:n+e(i-a,r)}}),String.prototype.trimStart||Object.defineProperty(String.prototype,"trimStart",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.trimStart called on null or undefined");return t(this,"start")}}),String.prototype.trimLeft||Object.defineProperty(String.prototype,"trimLeft",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.trimLeft called on null or undefined");return t(this,"start")}}),String.prototype.trimEnd||Object.defineProperty(String.prototype,"trimEnd",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.trimEnd called on null or undefined");return t(this,"end")}}),String.prototype.trimRight||Object.defineProperty(String.prototype,"trimRight",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.trimRight called on null or undefined");return t(this,"end")}})}(),function(){function _random(){var e=void 0,t=void 0;switch(arguments.length){case 0:throw new Error("_random called with insufficient parameters");case 1:e=0,t=arguments[0];break;default:e=arguments[0],t=arguments[1]}if(e>t){var r=[t,e];e=r[0],t=r[1]}return Math.floor(_nativeMathRandom()*(t-e+1))+e}function _randomIndex(e,t){var r=void 0,n=void 0;switch(t.length){case 1:r=0,n=e-1;break;case 2:r=0,n=Math.trunc(t[1]);break;default:r=Math.trunc(t[1]),n=Math.trunc(t[2])}return Number.isNaN(r)?r=0:!Number.isFinite(r)||r>=e?r=e-1:r<0&&(r=e+r)<0&&(r=0),Number.isNaN(n)?n=0:!Number.isFinite(n)||n>=e?n=e-1:n<0&&(n=e+n)<0&&(n=e-1),_random(r,n)}function _getCodePointStartAndEnd(e,t){var r=e.charCodeAt(t);if(Number.isNaN(r))return{char:"",start:-1,end:-1};if(r<55296||r>57343)return{char:e.charAt(t),start:t,end:t};if(r>=55296&&r<=56319){var n=t+1;if(n>=e.length)throw new Error("high surrogate without trailing low surrogate");var a=e.charCodeAt(n);if(a<56320||a>57343)throw new Error("high surrogate without trailing low surrogate");return{char:e.charAt(t)+e.charAt(n),start:t,end:n}}if(0===t)throw new Error("low surrogate without leading high surrogate");var i=t-1,o=e.charCodeAt(i);if(o<55296||o>56319)throw new Error("low surrogate without leading high surrogate");return{char:e.charAt(i)+e.charAt(t),start:i,end:t}}var _nativeMathRandom=Math.random;Object.defineProperty(Array,"random",{configurable:!0,writable:!0,value:function(e){if("object"!==(void 0===e?"undefined":_typeof(e))||null===e||!Object.prototype.hasOwnProperty.call(e,"length"))throw new TypeError("Array.random array parameter must be an array or array-lke object");var t=e.length>>>0;if(0!==t){return e[0===arguments.length?_random(0,t-1):_randomIndex(t,Array.prototype.slice.call(arguments,1))]}}}),Object.defineProperty(Array.prototype,"concatUnique",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.concatUnique called on null or undefined");var e=Array.from(this);if(0===arguments.length)return e;var t=Array.prototype.reduce.call(arguments,function(e,t){return e.concat(t)},[]),r=t.length;if(0===r)return e;for(var n=Array.prototype.indexOf,a=Array.prototype.push,i=0;i<r;++i){var o=t[i];-1===n.call(e,o)&&a.call(e,o)}return e}}),Object.defineProperty(Array.prototype,"count",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.count called on null or undefined");for(var e=Array.prototype.indexOf,t=arguments[0],r=Number(arguments[1])||0,n=0;-1!==(r=e.call(this,t,r));)++n,++r;return n}}),Object.defineProperty(Array.prototype,"delete",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.delete called on null or undefined");if(0===arguments.length)return[];var e=this.length>>>0;if(0===e)return[];for(var t=Array.prototype.concat.apply([],arguments),r=t.length,n=[],a=0;a<e;++a)for(var i=this[a],o=0;o<r;++o){var s=t[o];if(i===s||i!==i&&s!==s){n.push(a);break}}for(var u=[],l=0,c=n.length;l<c;++l)u[l]=this[n[l]];for(var d=Array.prototype.splice,f=n.length-1;f>=0;--f)d.call(this,n[f],1);return u}}),Object.defineProperty(Array.prototype,"deleteAt",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.deleteAt called on null or undefined");if(0===arguments.length)return[];var e=this.length>>>0;if(0===e)return[];for(var t=Array.prototype.splice,r=[].concat(_toConsumableArray(new Set(Array.prototype.concat.apply([],arguments).map(function(t){return t<0?Math.max(0,e+t):t})).values())),n=[].concat(_toConsumableArray(r)).sort(function(e,t){return t-e}),a=[],i=0,o=r.length;i<o;++i)a[i]=this[r[i]];for(var s=0,u=n.length;s<u;++s)t.call(this,n[s],1);return a}}),Object.defineProperty(Array.prototype,"deleteWith",{configurable:!0,writable:!0,value:function(e,t){if(null==this)throw new TypeError("Array.prototype.deleteWith called on null or undefined");if("function"!=typeof e)throw new Error("Array.prototype.deleteWith predicate parameter must be a function");var r=this.length>>>0;if(0===r)return[];for(var n=Array.prototype.splice,a=[],i=[],o=0;o<r;++o)e.call(t,this[o],o,this)&&(i.push(this[o]),a.push(o));for(var s=a.length-1;s>=0;--s)n.call(this,a[s],1);return i}}),Object.defineProperty(Array.prototype,"first",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.first called on null or undefined");if(0!=this.length>>>0)return this[0]}}),Object.defineProperty(Array.prototype,"includesAll",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.includesAll called on null or undefined");if(1===arguments.length)return Array.isArray(arguments[0])?Array.prototype.includesAll.apply(this,arguments[0]):Array.prototype.includes.apply(this,arguments);for(var e=0,t=arguments.length;e<t;++e)if(!Array.prototype.some.call(this,function(e){return e===this.val||e!==e&&this.val!==this.val},{val:arguments[e]}))return!1;return!0}}),Object.defineProperty(Array.prototype,"includesAny",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.includesAny called on null or undefined");if(1===arguments.length)return Array.isArray(arguments[0])?Array.prototype.includesAny.apply(this,arguments[0]):Array.prototype.includes.apply(this,arguments);for(var e=0,t=arguments.length;e<t;++e)if(Array.prototype.some.call(this,function(e){return e===this.val||e!==e&&this.val!==this.val},{val:arguments[e]}))return!0;return!1}}),Object.defineProperty(Array.prototype,"last",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.last called on null or undefined");var e=this.length>>>0;if(0!==e)return this[e-1]}}),Object.defineProperty(Array.prototype,"pluck",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.pluck called on null or undefined");var e=this.length>>>0;if(0!==e){var t=0===arguments.length?_random(0,e-1):_randomIndex(e,[].concat(Array.prototype.slice.call(arguments)));return Array.prototype.splice.call(this,t,1)[0]}}}),Object.defineProperty(Array.prototype,"pluckMany",{configurable:!0,writable:!0,value:function(e){if(null==this)throw new TypeError("Array.prototype.pluckMany called on null or undefined");var t=this.length>>>0;if(0===t)return[];var r=Math.trunc(e);if(!Number.isInteger(r))throw new Error("Array.prototype.pluckMany want parameter must be an integer");if(r<1)return[];r>t&&(r=t);var n=Array.prototype.splice,a=[],i=t-1;do{a.push(n.call(this,_random(0,i--),1)[0])}while(a.length<r);return a}}),Object.defineProperty(Array.prototype,"pushUnique",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.pushUnique called on null or undefined");var e=arguments.length;if(0===e)return this.length>>>0;for(var t=Array.prototype.indexOf,r=Array.prototype.push,n=0;n<e;++n){var a=arguments[n];-1===t.call(this,a)&&r.call(this,a)}return this.length>>>0}}),Object.defineProperty(Array.prototype,"random",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.random called on null or undefined");var e=this.length>>>0;if(0!==e){return this[0===arguments.length?_random(0,e-1):_randomIndex(e,[].concat(Array.prototype.slice.call(arguments)))]}}}),Object.defineProperty(Array.prototype,"randomMany",{configurable:!0,writable:!0,value:function(e){if(null==this)throw new TypeError("Array.prototype.randomMany called on null or undefined");var t=this.length>>>0;if(0===t)return[];var r=Math.trunc(e);if(!Number.isInteger(r))throw new Error("Array.prototype.randomMany want parameter must be an integer");if(r<1)return[];r>t&&(r=t);var n=new Map,a=[],i=t-1;do{var o=void 0;do{o=_random(0,i)}while(n.has(o));n.set(o,!0),a.push(this[o])}while(a.length<r);return a}}),Object.defineProperty(Array.prototype,"shuffle",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.shuffle called on null or undefined");var e=this.length>>>0;if(0===e)return this;for(var t=e-1;t>0;--t){var r=Math.floor(_nativeMathRandom()*(t+1));if(t!==r){var n=this[t];this[t]=this[r],this[r]=n}}return this}}),Object.defineProperty(Array.prototype,"unshiftUnique",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.unshiftUnique called on null or undefined");var e=arguments.length;if(0===e)return this.length>>>0;for(var t=Array.prototype.indexOf,r=Array.prototype.unshift,n=0;n<e;++n){var a=arguments[n];-1===t.call(this,a)&&r.call(this,a)}return this.length>>>0}}),Object.defineProperty(Function.prototype,"partial",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Function.prototype.partial called on null or undefined");var e=Array.prototype.slice,t=this,r=e.call(arguments,0);return function(){for(var n=[],a=0,i=0;i<r.length;++i)n.push(r[i]===undefined?arguments[a++]:r[i]);return t.apply(this,n.concat(e.call(arguments,a)))}}}),Object.defineProperty(Math,"clamp",{configurable:!0,writable:!0,value:function(e,t,r){var n=Number(e);return Number.isNaN(n)?NaN:n.clamp(t,r)}}),Object.defineProperty(Math,"easeInOut",{configurable:!0,writable:!0,value:function(e){return 1-(Math.cos(Number(e)*Math.PI)+1)/2}}),Object.defineProperty(Number.prototype,"clamp",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Number.prototype.clamp called on null or undefined");if(2!==arguments.length)throw new Error("Number.prototype.clamp called with an incorrect number of parameters");var e=Number(arguments[0]),t=Number(arguments[1]);if(e>t){var r=[t,e];e=r[0],t=r[1]}return Math.min(Math.max(this,e),t)}}),RegExp.escape||function(){var e=/[\\^$*+?.()|[\]{}]/g,t=new RegExp(e.source);Object.defineProperty(RegExp,"escape",{configurable:!0,writable:!0,value:function(r){var n=String(r);return n&&t.test(n)?n.replace(e,"\\$&"):n}})}(),function(){var e=/{(\d+)(?:,([+-]?\d+))?}/g,t=new RegExp(e.source);Object.defineProperty(String,"format",{configurable:!0,writable:!0,value:function(r){function n(e,t,r){if(!t)return e;var n=Math.abs(t)-e.length;if(n<1)return e;var a=String(r).repeat(n);return t<0?e+a:a+e}if(arguments.length<2)return 0===arguments.length?"":r;var a=2===arguments.length&&Array.isArray(arguments[1])?[].concat(_toConsumableArray(arguments[1])):Array.prototype.slice.call(arguments,1);return 0===a.length?r:t.test(r)?(e.lastIndex=0,r.replace(e,function(e,t,r){var i=a[t];if(null==i)return"";for(;"function"==typeof i;)i=i();switch(void 0===i?"undefined":_typeof(i)){case"string":break;case"object":i=JSON.stringify(i);break;default:i=String(i)}return n(i,r?Number.parseInt(r,10):0," ")})):r}})}(),Object.defineProperty(String.prototype,"contains",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.contains called on null or undefined");return-1!==String.prototype.indexOf.apply(this,arguments)}}),Object.defineProperty(String.prototype,"count",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.count called on null or undefined");var e=String(arguments[0]||"");if(""===e)return 0;for(var t=String.prototype.indexOf,r=e.length,n=Number(arguments[1])||0,a=0;-1!==(n=t.call(this,e,n));)++a,n+=r;return a}}),Object.defineProperty(String.prototype,"first",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.first called on null or undefined");return _getCodePointStartAndEnd(String(this),0).char}}),Object.defineProperty(String.prototype,"last",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.last called on null or undefined");var e=String(this);return _getCodePointStartAndEnd(e,e.length-1).char}}),Object.defineProperty(String.prototype,"splice",{configurable:!0,writable:!0,value:function(e,t,r){if(null==this)throw new TypeError("String.prototype.splice called on null or undefined");var n=this.length>>>0;if(0===n)return"";var a=Number(e);Number.isSafeInteger(a)?a<0&&(a+=n)<0&&(a=0):a=0,a>n&&(a=n);var i=Number(t);(!Number.isSafeInteger(i)||i<0)&&(i=0);var o=this.slice(0,a);return void 0!==r&&(o+=r),a+i<n&&(o+=this.slice(a+i)),o}}),Object.defineProperty(String.prototype,"splitOrEmpty",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.splitOrEmpty called on null or undefined");return""===String(this)?[]:String.prototype.split.apply(this,arguments)}}),Object.defineProperty(String.prototype,"toLocaleUpperFirst",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.toLocaleUpperFirst called on null or undefined");var e=String(this),t=_getCodePointStartAndEnd(e,0),r=t.char,n=t.end;return-1===n?"":r.toLocaleUpperCase()+e.slice(n+1)}}),Object.defineProperty(String.prototype,"toUpperFirst",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.toUpperFirst called on null or undefined");var e=String(this),t=_getCodePointStartAndEnd(e,0),r=t.char,n=t.end;return-1===n?"":r.toUpperCase()+e.slice(n+1)}}),Object.defineProperty(Date.prototype,"toJSON",{configurable:!0,writable:!0,value:function(){return["(revive:date)",this.toISOString()]}}),Object.defineProperty(Function.prototype,"toJSON",{configurable:!0,writable:!0,value:function(){return["(revive:eval)","("+this.toString()+")"]}}),Object.defineProperty(Map.prototype,"toJSON",{configurable:!0,writable:!0,value:function(){return["(revive:map)",[].concat(_toConsumableArray(this))]}}),Object.defineProperty(RegExp.prototype,"toJSON",{configurable:!0,writable:!0,value:function(){return["(revive:eval)",this.toString()]}}),Object.defineProperty(Set.prototype,"toJSON",{configurable:!0,writable:!0,value:function(){return["(revive:set)",[].concat(_toConsumableArray(this))]}}),Object.defineProperty(JSON,"reviveWrapper",{configurable:!0,writable:!0,value:function(e,t){if("string"!=typeof e)throw new TypeError("JSON.reviveWrapper code parameter must be a string");return["(revive:eval)",[e,t]]}}),Object.defineProperty(JSON,"_real_parse",{value:JSON.parse}),Object.defineProperty(JSON,"parse",{configurable:!0,writable:!0,value:function value(text,reviver){return JSON._real_parse(text,function(key,val){var value=val;if(Array.isArray(value)&&2===value.length)switch(value[0]){case"(revive:set)":value=new Set(value[1]);break;case"(revive:map)":value=new Map(value[1]);break;case"(revive:date)":value=new Date(value[1]);break;case"(revive:eval)":try{if(Array.isArray(value[1])){var $ReviveData$=value[1][1];value=eval(value[1][0])}else value=eval(value[1])}catch(e){}}else if("string"==typeof value&&"@@revive@@"===value.slice(0,10))try{value=eval(value.slice(10))}catch(e){}if("function"==typeof reviver)try{value=reviver(key,value)}catch(e){}return value})}}),Object.defineProperty(Array.prototype,"contains",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.contains called on null or undefined");return Array.prototype.includes.apply(this,arguments)}}),Object.defineProperty(Array.prototype,"containsAll",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.containsAll called on null or undefined");return Array.prototype.includesAll.apply(this,arguments)}}),Object.defineProperty(Array.prototype,"containsAny",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.containsAny called on null or undefined");return Array.prototype.includesAny.apply(this,arguments)}}),Object.defineProperty(Array.prototype,"flatten",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.flatten called on null or undefined");return Array.prototype.flat.call(this,1/0)}}),Object.defineProperty(String.prototype,"readBracketedList",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.readBracketedList called on null or undefined");for(var e=new RegExp("(?:\\[\\[((?:\\s|\\S)*?)\\]\\])|([^\"'\\s]\\S*)","gm"),t=[],r=void 0;null!==(r=e.exec(this));)r[1]?t.push(r[1]):r[2]&&t.push(r[2]);return t}})}();var Browser=function(){var e=navigator.userAgent.toLowerCase(),t=e.includes("windows phone"),r=Object.freeze({Android:!t&&e.includes("android"),BlackBerry:/blackberry|bb10/.test(e),iOS:!t&&/ip(?:hone|ad|od)/.test(e),Opera:!t&&("object"===_typeof(window.operamini)||e.includes("opera mini")),Windows:t||/iemobile|wpdesktop/.test(e),any:function(){return r.Android||r.BlackBerry||r.iOS||r.Opera||r.Windows}}),n=!r.Windows&&!/khtml|trident|edge/.test(e)&&e.includes("gecko"),a=!e.includes("opera")&&/msie|trident/.test(e),i=a?function(){var t=/(?:msie\s+|rv:)(\d+\.\d)/.exec(e);return t?Number(t[1]):0}():null,o=e.includes("opera")||e.includes(" opr/"),s=o?function(){var t=new RegExp((/khtml|chrome/.test(e)?"opr":"version")+"\\/(\\d+\\.\\d+)"),r=t.exec(e);return r?Number(r[1]):0}():null,u=e.includes("vivaldi");return Object.freeze({userAgent:e,isMobile:r,isGecko:n,isIE:a,ieVersion:i,isOpera:o,operaVersion:s,isVivaldi:u})}(),Has=function(){var e=function(){try{return"function"==typeof document.createElement("audio").canPlayType}catch(e){}return!1}(),t=e&&function(){try{var e=document.createElement("audio").play();return e.catch(function(){}),e instanceof Promise}catch(e){}return!1}(),r=function(){try{return"Blob"in window&&"File"in window&&"FileList"in window&&"FileReader"in window&&!Browser.isMobile.any()&&(!Browser.isOpera||Browser.operaVersion>=15)}catch(e){}return!1}(),n=function(){try{return"geolocation"in navigator&&"function"==typeof navigator.geolocation.getCurrentPosition&&"function"==typeof navigator.geolocation.watchPosition}catch(e){}return!1}(),a=function(){try{return"MutationObserver"in window&&"function"==typeof window.MutationObserver}catch(e){}return!1}(),i=function(){try{return"performance"in window&&"function"==typeof window.performance.now}catch(e){}return!1}(),o=function(){try{return"ontouchstart"in window||!!window.DocumentTouch&&document instanceof window.DocumentTouch||!!navigator.maxTouchPoints||!!navigator.msMaxTouchPoints}catch(e){}return!1}(),s=function(){try{for(var e=new Map([["transition","transitionend"],["MSTransition","msTransitionEnd"],["WebkitTransition","webkitTransitionEnd"],["MozTransition","transitionend"]]),t=[].concat(_toConsumableArray(e.keys())),r=document.createElement("div"),n=0;n<t.length;++n)if(r.style[t[n]]!==undefined)return e.get(t[n])}catch(e){}return!1}();return Object.freeze({audio:e,audioPromise:t,fileAPI:r,geolocation:n,mutationObserver:a,performance:i,touch:o,transitionEndEvent:s})}(),Visibility=function(){function e(){return Boolean(r&&document[r.hiddenProperty])}function t(){return r&&document[r.stateProperty]||"visible"}var r=function(){try{return Object.freeze([{hiddenProperty:"hidden",stateProperty:"visibilityState",changeEvent:"visibilitychange"},{hiddenProperty:"webkitHidden",stateProperty:"webkitVisibilityState",changeEvent:"webkitvisibilitychange"},{hiddenProperty:"mozHidden",stateProperty:"mozVisibilityState",changeEvent:"mozvisibilitychange"},{hiddenProperty:"msHidden",stateProperty:"msVisibilityState",changeEvent:"msvisibilitychange"}].find(function(e){return e.hiddenProperty in document}))}catch(e){}return null}();return Object.freeze(Object.defineProperties({},{isHidden:{value:e},state:{value:t},hiddenProperty:{value:r.hiddenProperty},stateProperty:{value:r.stateProperty},changeEvent:{value:r.changeEvent}}))}(),_ref3=function(){function e(t){if("object"!==(void 0===t?"undefined":_typeof(t))||null===t)return t;if(t instanceof String)return String(t);if(t instanceof Number)return Number(t);if(t instanceof Boolean)return Boolean(t);if("function"==typeof t.clone)return t.clone(!0);if(t.nodeType&&"function"==typeof t.cloneNode)return t.cloneNode(!0);var r=void 0;return t instanceof Array?r=new Array(t.length):t instanceof Date?r=new Date(t.getTime()):t instanceof Map?(r=new Map,t.forEach(function(t,n){return r.set(n,e(t))})):t instanceof RegExp?r=new RegExp(t):t instanceof Set?(r=new Set,t.forEach(function(t){return r.add(e(t))})):r=Object.create(Object.getPrototypeOf(t)),Object.keys(t).forEach(function(n){return r[n]=e(t[n])}),r}function t(e){for(var t=document.createDocumentFragment(),r=document.createElement("p"),n=void 0;null!==(n=e.firstChild);){if(n.nodeType===Node.ELEMENT_NODE){switch(n.nodeName.toUpperCase()){case"BR":if(null!==n.nextSibling&&n.nextSibling.nodeType===Node.ELEMENT_NODE&&"BR"===n.nextSibling.nodeName.toUpperCase()){e.removeChild(n.nextSibling),e.removeChild(n),t.appendChild(r),r=document.createElement("p");continue}if(!r.hasChildNodes()){e.removeChild(n);continue}break;case"ADDRESS":case"ARTICLE":case"ASIDE":case"BLOCKQUOTE":case"CENTER":case"DIV":case"DL":case"FIGURE":case"FOOTER":case"FORM":case"H1":case"H2":case"H3":case"H4":case"H5":case"H6":case"HEADER":case"HR":case"MAIN":case"NAV":case"OL":case"P":case"PRE":case"SECTION":case"TABLE":case"UL":r.hasChildNodes()&&(t.appendChild(r),r=document.createElement("p")),t.appendChild(n);continue}}r.appendChild(n)}r.hasChildNodes()&&t.appendChild(r),e.appendChild(t)}function r(){try{return document.activeElement||null}catch(e){return null}}function n(e,t,r){var n="object"===(void 0===e?"undefined":_typeof(e))?e:document.getElementById(e);if(null==n)return null;var a=Array.isArray(t)?t:[t];jQuery(n).empty();for(var i=0,o=a.length;i<o;++i)if(Story.has(a[i]))return new Wikifier(n,Story.get(a[i]).processText().trim()),n;if(null!=r){var s=String(r).trim();""!==s&&new Wikifier(n,s)}return n}function a(e,t,r){var n=jQuery(document.createElement("div")),a=jQuery(document.createElement("button")),i=jQuery(document.createElement("pre")),o=L10n.get("errorTitle")+": "+(t||"unknown error");return a.addClass("error-toggle").ariaClick({label:L10n.get("errorToggle")},function(){a.hasClass("enabled")?(a.removeClass("enabled"),i.attr({"aria-hidden":!0,hidden:"hidden"})):(a.addClass("enabled"),i.removeAttr("aria-hidden hidden"))}).appendTo(n),jQuery(document.createElement("span")).addClass("error").text(o).appendTo(n),jQuery(document.createElement("code")).text(r).appendTo(i),i.addClass("error-source").attr({"aria-hidden":!0,hidden:"hidden"}).appendTo(n),n.addClass("error-view").appendTo(e),console.warn(o+"\n\t"+r.replace(/\n/g,"\n\t")),!1}function i(e,t){var r=i;switch(void 0===e?"undefined":_typeof(e)){case"number":if(Number.isNaN(e))return t;break;case"object":if(null===e)return t;if(Array.isArray(e))return e.map(function(e){return r(e,t)}).join(", ");if(e instanceof Set)return[].concat(_toConsumableArray(e)).map(function(e){return r(e,t)}).join(", ");if(e instanceof Map){return"{ "+[].concat(_toConsumableArray(e)).map(function(e){var n=_slicedToArray(e,2),a=n[0],i=n[1];return r(a,t)+" → "+r(i,t)}).join(", ")+" }"}return e instanceof Date?e.toLocaleString():"function"==typeof e.toString?e.toString():Object.prototype.toString.call(e);case"function":case"undefined":return t}return String(e)}return Object.freeze(Object.defineProperties({},{clone:{value:e},convertBreaks:{value:t},safeActiveElement:{value:r},setPageElement:{value:n},throwError:{value:a},toStringOrDefault:{value:i}}))
