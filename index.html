@@ -415,12 +415,16 @@ body.staff-room {
   background-image: url('https://confusedmatrix.github.io/e-mission-game/assets/images/backgrounds/staff-room.jpg');
 }
 body.carbon-emission-exhibit {
+  background-image: url('https://confusedmatrix.github.io/e-mission-game/assets/images/backgrounds/carbon-emission.jpg');
 }
 body.sixth-mass-extinction-exhibit {
+  background-image: url('https://confusedmatrix.github.io/e-mission-game/assets/images/backgrounds/species.jpg');
 }
 body.carbon-intensive-diet-exhibit {
+  background-image: url('https://confusedmatrix.github.io/e-mission-game/assets/images/backgrounds/food.jpg');
 }
 body.futures-exhibit {
+  background-image: url('https://confusedmatrix.github.io/e-mission-game/assets/images/backgrounds/futures.jpg');
 }
 
 #ui-bar {
@@ -460,12 +464,13 @@ body.futures-exhibit {
 }
 .plaque {
   background-color: #222222;
-  color: #FFFFFF;
+  color: #777777;
   padding: 1em;
   box-shadow: -5px 5px 10px #333;
   border: 10px groove #d7bb20;
   font-family: Lora, serif;
   text-align: center;
+  text-shadow: rgba(0,0,0,0.5) -1px 0, rgba(0,0,0,0.3) 0 -1px, rgba(255,255,255,0.5) 0 1px, rgba(0,0,0,0.3) -1px -2px;
 }
 .plaque h2 {
   color: #d7bb20;
@@ -473,6 +478,45 @@ body.futures-exhibit {
 .plaque blockquote {
   font-style: italic;
   color: #CCCCCC;
+}
+.plaque dl {
+  margin: 1em auto;
+  display: inline-block;
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+  max-width: 24em;
+}
+.plaque dt {
+  float: left;
+  clear: left;
+}
+.plaque dd {
+  float: right;
+  color: #DDDDDD;
+  margin-left: 5px;
+}
+#carbon-table tr th:first-child,
+#carbon-table tr td:first-child {
+  text-align: right;
+}
+#carbon-table td {
+  max-width: 15em;
+}
+#carbon-table td div {
+  background-color: #331a00;
+  border-radius: 0.5em;
+  text-align: center;
+  vertical-align: middle;
+  padding: 0.5em 1em;
+  text-shadow: rgba(0,0,0,0.5) -1px 0, rgba(0,0,0,0.3) 0 -1px, rgba(255,255,255,0.5) 0 1px, rgba(0,0,0,0.3) -1px -2px;
+  color: #ddc3a8;
+  font-family: Lora, serif;
+}
+#carbon-table td a {
+  font-size: 1.8em;
+  text-decoration: none;
+  position: relative;
+  top: 2px;
 }</style><script role="script" id="twine-user-script" type="text/twine-javascript">$(document).ready(function() {
 	
 	// As a boolean; always start stowed
@@ -728,7 +772,7 @@ The book was written in 2010 and includes the equivalent carbon emissions (CO2e)
 
 &lt;&lt;link &quot;Add the book to your inventory&quot; &quot;Retrieve the box with &#39;Our Future&#39; on it&quot;&gt;&gt;&lt;&lt;run $inventory.push(&quot;&#39;How Bad Are Bananas&#39; book&quot;)&gt;&gt;&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="38" name="&#39;How Bad Are Bananas&#39; book" tags="inventory" position="638,253" size="100,100">&lt;img src=&quot;https://confusedmatrix.github.io/e-mission-game/assets/images/book.jpg&quot; class=&quot;passage-image&quot; /&gt;&lt;&lt;if def $releaseBananasBook&gt;&gt;
 
-[[Open the book]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="39" name="Carbon Emissions Exhibition" tags="carbon-emission-exhibit" position="606,1371" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;&lt;if $completed.includes(passage())&gt;&gt;There is noting left to do in the &lt;&lt;= passage()&gt;&gt;.&lt;&lt;else&gt;&gt;The Carbon Emissions Exhibition is one of the older exhibitions in the museum. You remember your training with Alf when you started as a junior archivist. He told you about how the exhibition developed as the environmental crisis worsened, and events became reality and then history, rather than just projections. 
+[[Open the book]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="39" name="Carbon Emissions Exhibition" tags="carbon-emission-exhibit" position="606,1371" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;&lt;if $completed.includes(passage())&gt;&gt;There is nothing left to do in the &lt;&lt;= passage()&gt;&gt;.&lt;&lt;else&gt;&gt;The Carbon Emissions Exhibition is one of the older exhibitions in the museum. You remember your training with Alf when you started as a junior archivist. He told you about how the exhibition developed as the environmental crisis worsened, and events became reality and then history, rather than just projections. 
 
 The exhibition is laid out as a timeline, with the oldest part to the far left hand side. It was was put together in the early 2020s. This must have been the part that the researcher worked on as an intern. 
 
@@ -907,7 +951,7 @@ if (State.turns % 1 == 0) {
 
 Whilst E-Mission is a game, many of the climate challenges mentioned are very real and are faced by the world today.</tw-passagedata><tw-passagedata pid="60" name="Crush up the biscuits" tags="staff-room" position="425,1930" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;You push open the window and sprinkle the crumbs out onto the brick path outside. The birds won’t mind if the biscuits are a bit soft! 
 
-There is nothing else of interest in the staff room.</tw-passagedata><tw-passagedata pid="61" name="&#39;The Sixth Mass Extinction&#39; Exhibit" tags="sixth-mass-extinction-exhibit" position="975,536" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;&lt;if $completed.includes(passage())&gt;&gt;There is noting left to do in the &lt;&lt;= passage()&gt;&gt;.&lt;&lt;else&gt;&gt;The &lt;em&gt;Sixth Mass Extinction&lt;/em&gt; exhibition has constantly evolved over time, cataloguing the number of species that have gone extinct over time. 
+There is nothing else of interest in the staff room.</tw-passagedata><tw-passagedata pid="61" name="&#39;The Sixth Mass Extinction&#39; Exhibit" tags="sixth-mass-extinction-exhibit" position="975,536" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;&lt;if $completed.includes(passage())&gt;&gt;There is nothing left to do in the &lt;&lt;= passage()&gt;&gt;.&lt;&lt;else&gt;&gt;The &lt;em&gt;Sixth Mass Extinction&lt;/em&gt; exhibition has constantly evolved over time, cataloguing the number of species that have gone extinct over time. 
 
 This exhibit looks at a selection of umbrella species that support ecosystems, and the plants and other animals that rely on those ecosystems. A plaque talks about efforts by WWF to undertake conservation work. Many people ‘sponsored’ umbrella species as gifts or to help support conservation efforts, but it wasn’t enough or fast enough.
 
@@ -917,7 +961,7 @@ You wonder why previous generations didn’t act while they could. So many thing
 
 [[Read the fourth journal entry]]
 &lt;&lt;/if&gt;&gt;
-</tw-passagedata><tw-passagedata pid="62" name="&#39;How Carbon Intensive Is Your Diet?&#39; Exhibit" tags="carbon-intensive-diet-exhibit" position="1283,535" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;&lt;if $completed.includes(passage())&gt;&gt;There is noting left to do in the &lt;&lt;= passage()&gt;&gt;.&lt;&lt;else&gt;&gt;This exhibition is all about the carbon footprint of food, with displays and information about food production and transportation, as well as tips for making your own diet less carbon intensive. 
+</tw-passagedata><tw-passagedata pid="62" name="&#39;How Carbon Intensive Is Your Diet?&#39; Exhibit" tags="carbon-intensive-diet-exhibit" position="1283,535" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;&lt;if $completed.includes(passage())&gt;&gt;There is nothing left to do in the &lt;&lt;= passage()&gt;&gt;.&lt;&lt;else&gt;&gt;This exhibition is all about the carbon footprint of food, with displays and information about food production and transportation, as well as tips for making your own diet less carbon intensive. 
 
 You notice a colourful display with different food items including an explanation of whether bananas have a high carbon footprint.  
 
@@ -1049,11 +1093,11 @@ It was heavily exploited by whalers and other mariners in the 19th century as on
 &lt;/div&gt;</tw-passagedata><tw-passagedata pid="87" name="Animal exhibit" tags="sixth-mass-extinction-exhibit" position="1183,1738" size="100,100">&lt;&lt;include $_currentAnimal&gt;&gt;
 
 [[Step back from the animal exhibits]]</tw-passagedata><tw-passagedata pid="88" name="Sixth mass extinction minigame" tags="sixth-mass-extinction-exhibit" position="1426,1625" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;&lt;set $animals to [
+&quot;Pinta Giant Tortoise - Chelonoidis abingdonii&quot;,
 &quot;Tiger - Panthera tigris&quot;,
-&quot;Koala - Phascolarctos cinereus&quot;,
-&quot;Blue Whale - Balaenoptera musculus&quot;,
 &quot;Spix&#39;s Macaw - Cyanopsitta spixii&quot;,
-&quot;Pinta Giant Tortoise - Chelonoidis abingdonii&quot;
+&quot;Koala - Phascolarctos cinereus&quot;,
+&quot;Blue Whale - Balaenoptera musculus&quot;
 ]&gt;&gt;
 Poaching and Deforestation: &lt;&lt;cycle &quot;$animal1&quot; autoselect&gt;&gt;&lt;&lt;optionsfrom $animals&gt;&gt;&lt;&lt;/cycle&gt;&gt;
 
@@ -1189,12 +1233,12 @@ The weight scales will tell you the amount of carbon emissions, then place the i
 &lt;&lt;set $balanceItems to {
 &quot;Bananas (1kg)&quot;: 0.48,
 &quot;Strawberries (1kg, locally sourced)&quot;: 0.6,
-&quot;Tomatoes (1kg, average)&quot;: 9.1,
 &quot;Carrots (1kg)&quot;: 0.3,
+&quot;Tomatoes (1kg, average)&quot;: 9.1,
 &quot;Lamb leg joint (2kg with supermarket packaging)&quot;: 38,
 &quot;Trout (2kg, fresh)&quot;: 13.8,
-&quot;Cheese (1kg, hard cheese)&quot;: 12,
 &quot;Rice (1kg)&quot;: 4,
+&quot;Cheese (1kg, hard cheese)&quot;: 12,
 &quot;Bread (800g loaf)&quot;: 1,
 &quot;Eggs (box of 6)&quot;: 1.8,
 &quot;Cheeseburger (4oz)&quot;: 2.5,
@@ -1209,7 +1253,7 @@ Select item: &lt;&lt;cycle &quot;$itemToWeigh&quot; autoselect&gt;&gt;&lt;&lt;op
 &lt;&lt;silently&gt;&gt;
 &lt;&lt;if ndef $compareItemNames&gt;&gt;&lt;&lt;set $compareItemNames to $balanceItemNames&gt;&gt;&lt;&lt;/if&gt;&gt;
 &lt;&lt;/silently&gt;&gt;
-&lt;table&gt;
+&lt;table id=&quot;carbon-table&quot;&gt;
 &lt;thead&gt;
 &lt;tr&gt;
 &lt;th&gt;Higher&lt;/th&gt;&lt;th&gt;&lt;/th&gt;&lt;th&gt;Lower&lt;/th&gt;
@@ -1217,25 +1261,25 @@ Select item: &lt;&lt;cycle &quot;$itemToWeigh&quot; autoselect&gt;&gt;&lt;&lt;op
 &lt;/thead&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
-&lt;td&gt;&lt;&lt;= $compareItemNames[0]&gt;&gt;&lt;/td&gt;&lt;td&gt;&lt;&lt;link &quot;🔄&quot; &quot;Rearrange the items on the shelves&quot;&gt;&gt;&lt;&lt;set _tmpItem to $compareItemNames[0]&gt;&gt;&lt;&lt;set $compareItemNames[0] to $compareItemNames[1]&gt;&gt;&lt;&lt;set $compareItemNames[1] to _tmpItem&gt;&gt;&lt;&lt;unset _tmpItem&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/td&gt;&lt;td&gt;&lt;&lt;= $compareItemNames[1]&gt;&gt;&lt;/td&gt;
+&lt;td&gt;&lt;div&gt;&lt;&lt;= $compareItemNames[0]&gt;&gt;&lt;/div&gt;&lt;/td&gt;&lt;td&gt;&lt;&lt;link &quot;🔄&quot; &quot;Rearrange the items on the shelves&quot;&gt;&gt;&lt;&lt;set _tmpItem to $compareItemNames[0]&gt;&gt;&lt;&lt;set $compareItemNames[0] to $compareItemNames[1]&gt;&gt;&lt;&lt;set $compareItemNames[1] to _tmpItem&gt;&gt;&lt;&lt;unset _tmpItem&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/td&gt;&lt;td&gt;&lt;div&gt;&lt;&lt;= $compareItemNames[1]&gt;&gt;&lt;/div&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;&lt;&lt;= $compareItemNames[2]&gt;&gt;&lt;/td&gt;&lt;td&gt;&lt;&lt;link &quot;🔄&quot; &quot;Rearrange the items on the shelves&quot;&gt;&gt;&lt;&lt;set _tmpItem to $compareItemNames[2]&gt;&gt;&lt;&lt;set $compareItemNames[2] to $compareItemNames[3]&gt;&gt;&lt;&lt;set $compareItemNames[3] to _tmpItem&gt;&gt;&lt;&lt;unset _tmpItem&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/td&gt;&lt;td&gt;&lt;&lt;= $compareItemNames[3]&gt;&gt;&lt;/td&gt;
+&lt;td&gt;&lt;div&gt;&lt;&lt;= $compareItemNames[2]&gt;&gt;&lt;/div&gt;&lt;/td&gt;&lt;td&gt;&lt;&lt;link &quot;🔄&quot; &quot;Rearrange the items on the shelves&quot;&gt;&gt;&lt;&lt;set _tmpItem to $compareItemNames[2]&gt;&gt;&lt;&lt;set $compareItemNames[2] to $compareItemNames[3]&gt;&gt;&lt;&lt;set $compareItemNames[3] to _tmpItem&gt;&gt;&lt;&lt;unset _tmpItem&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/td&gt;&lt;td&gt;&lt;div&gt;&lt;&lt;= $compareItemNames[3]&gt;&gt;&lt;/div&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;&lt;&lt;= $compareItemNames[4]&gt;&gt;&lt;/td&gt;&lt;td&gt;&lt;&lt;link &quot;🔄&quot; &quot;Rearrange the items on the shelves&quot;&gt;&gt;&lt;&lt;set _tmpItem to $compareItemNames[4]&gt;&gt;&lt;&lt;set $compareItemNames[4] to $compareItemNames[5]&gt;&gt;&lt;&lt;set $compareItemNames[5] to _tmpItem&gt;&gt;&lt;&lt;unset _tmpItem&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/td&gt;&lt;td&gt;&lt;&lt;= $compareItemNames[5]&gt;&gt;&lt;/td&gt;
+&lt;td&gt;&lt;div&gt;&lt;&lt;= $compareItemNames[4]&gt;&gt;&lt;/div&gt;&lt;/td&gt;&lt;td&gt;&lt;&lt;link &quot;🔄&quot; &quot;Rearrange the items on the shelves&quot;&gt;&gt;&lt;&lt;set _tmpItem to $compareItemNames[4]&gt;&gt;&lt;&lt;set $compareItemNames[4] to $compareItemNames[5]&gt;&gt;&lt;&lt;set $compareItemNames[5] to _tmpItem&gt;&gt;&lt;&lt;unset _tmpItem&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/td&gt;&lt;td&gt;&lt;div&gt;&lt;&lt;= $compareItemNames[5]&gt;&gt;&lt;/div&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;&lt;&lt;= $compareItemNames[6]&gt;&gt;&lt;/td&gt;&lt;td&gt;&lt;&lt;link &quot;🔄&quot; &quot;Rearrange the items on the shelves&quot;&gt;&gt;&lt;&lt;set _tmpItem to $compareItemNames[6]&gt;&gt;&lt;&lt;set $compareItemNames[6] to $compareItemNames[7]&gt;&gt;&lt;&lt;set $compareItemNames[7] to _tmpItem&gt;&gt;&lt;&lt;unset _tmpItem&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/td&gt;&lt;td&gt;&lt;&lt;= $compareItemNames[7]&gt;&gt;&lt;/td&gt;
+&lt;td&gt;&lt;div&gt;&lt;&lt;= $compareItemNames[6]&gt;&gt;&lt;/div&gt;&lt;/td&gt;&lt;td&gt;&lt;&lt;link &quot;🔄&quot; &quot;Rearrange the items on the shelves&quot;&gt;&gt;&lt;&lt;set _tmpItem to $compareItemNames[6]&gt;&gt;&lt;&lt;set $compareItemNames[6] to $compareItemNames[7]&gt;&gt;&lt;&lt;set $compareItemNames[7] to _tmpItem&gt;&gt;&lt;&lt;unset _tmpItem&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/td&gt;&lt;td&gt;&lt;div&gt;&lt;&lt;= $compareItemNames[7]&gt;&gt;&lt;/div&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;&lt;&lt;= $compareItemNames[8]&gt;&gt;&lt;/td&gt;&lt;td&gt;&lt;&lt;link &quot;🔄&quot; &quot;Rearrange the items on the shelves&quot;&gt;&gt;&lt;&lt;set _tmpItem to $compareItemNames[8]&gt;&gt;&lt;&lt;set $compareItemNames[8] to $compareItemNames[9]&gt;&gt;&lt;&lt;set $compareItemNames[9] to _tmpItem&gt;&gt;&lt;&lt;unset _tmpItem&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/td&gt;&lt;td&gt;&lt;&lt;= $compareItemNames[9]&gt;&gt;&lt;/td&gt;
+&lt;td&gt;&lt;div&gt;&lt;&lt;= $compareItemNames[8]&gt;&gt;&lt;/div&gt;&lt;/td&gt;&lt;td&gt;&lt;&lt;link &quot;🔄&quot; &quot;Rearrange the items on the shelves&quot;&gt;&gt;&lt;&lt;set _tmpItem to $compareItemNames[8]&gt;&gt;&lt;&lt;set $compareItemNames[8] to $compareItemNames[9]&gt;&gt;&lt;&lt;set $compareItemNames[9] to _tmpItem&gt;&gt;&lt;&lt;unset _tmpItem&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/td&gt;&lt;td&gt;&lt;div&gt;&lt;&lt;= $compareItemNames[9]&gt;&gt;&lt;/div&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;&lt;&lt;= $compareItemNames[10]&gt;&gt;&lt;/td&gt;&lt;td&gt;&lt;&lt;link &quot;🔄&quot; &quot;Rearrange the items on the shelves&quot;&gt;&gt;&lt;&lt;set _tmpItem to $compareItemNames[10]&gt;&gt;&lt;&lt;set $compareItemNames[10] to $compareItemNames[11]&gt;&gt;&lt;&lt;set $compareItemNames[11] to _tmpItem&gt;&gt;&lt;&lt;unset _tmpItem&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/td&gt;&lt;td&gt;&lt;&lt;= $compareItemNames[11]&gt;&gt;&lt;/td&gt;
+&lt;td&gt;&lt;div&gt;&lt;&lt;= $compareItemNames[10]&gt;&gt;&lt;/div&gt;&lt;/td&gt;&lt;td&gt;&lt;&lt;link &quot;🔄&quot; &quot;Rearrange the items on the shelves&quot;&gt;&gt;&lt;&lt;set _tmpItem to $compareItemNames[10]&gt;&gt;&lt;&lt;set $compareItemNames[10] to $compareItemNames[11]&gt;&gt;&lt;&lt;set $compareItemNames[11] to _tmpItem&gt;&gt;&lt;&lt;unset _tmpItem&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/td&gt;&lt;td&gt;&lt;div&gt;&lt;&lt;= $compareItemNames[11]&gt;&gt;&lt;/div&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;&lt;&lt;= $compareItemNames[12]&gt;&gt;&lt;/td&gt;&lt;td&gt;&lt;&lt;link &quot;🔄&quot; &quot;Rearrange the items on the shelves&quot;&gt;&gt;&lt;&lt;set _tmpItem to $compareItemNames[12]&gt;&gt;&lt;&lt;set $compareItemNames[12] to $compareItemNames[13]&gt;&gt;&lt;&lt;set $compareItemNames[13] to _tmpItem&gt;&gt;&lt;&lt;unset _tmpItem&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/td&gt;&lt;td&gt;&lt;&lt;= $compareItemNames[13]&gt;&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;[[I think this right...|Check carbon intensive diet minigame]] </tw-passagedata><tw-passagedata pid="110" name="Eat the apple" tags="carbon-intensive-diet-exhibit" position="1426,740" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;The apple is made of plastic… not that appetising. You must have to do something else with it.
+&lt;td&gt;&lt;div&gt;&lt;&lt;= $compareItemNames[12]&gt;&gt;&lt;/div&gt;&lt;/td&gt;&lt;td&gt;&lt;&lt;link &quot;🔄&quot; &quot;Rearrange the items on the shelves&quot;&gt;&gt;&lt;&lt;set _tmpItem to $compareItemNames[12]&gt;&gt;&lt;&lt;set $compareItemNames[12] to $compareItemNames[13]&gt;&gt;&lt;&lt;set $compareItemNames[13] to _tmpItem&gt;&gt;&lt;&lt;unset _tmpItem&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/td&gt;&lt;td&gt;&lt;div&gt;&lt;&lt;= $compareItemNames[13]&gt;&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;[[I think this right...|Check carbon intensive diet minigame]] </tw-passagedata><tw-passagedata pid="110" name="Eat the apple" tags="carbon-intensive-diet-exhibit" position="1426,740" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;The apple is made of plastic… not that appetising. You must have to do something else with it.
 
 [[Place the apple on the scales]]</tw-passagedata><tw-passagedata pid="111" name="Move the bread" tags="carbon-intensive-diet-exhibit" position="1310,1035" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;You can now see a sign saying ‘Equivalent Carbon Dioxide Emissions’. The scales weren’t showing the weight of the food afterall!
 
@@ -1259,7 +1303,7 @@ Input required.
 
 What could the input be? 
 
-You see a cable hanging below the screen with a USB connector on the end of it. Maybe there is something in your office that you could connect to the console.&lt;&lt;run $completed.delete(&quot;Your office&quot;)&gt;&gt;</tw-passagedata><tw-passagedata pid="115" name="Your office" tags="office" position="1530,46" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;&lt;if $completed.includes(passage())&gt;&gt;There is noting left to do in your office.&lt;&lt;else&gt;&gt;Your laptop is on the desk.
+You see a cable hanging below the screen with a USB connector on the end of it. Maybe there is something in your office that you could connect to the console.&lt;&lt;run $completed.delete(&quot;Your office&quot;)&gt;&gt;</tw-passagedata><tw-passagedata pid="115" name="Your office" tags="office" position="1530,46" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;&lt;if $completed.includes(passage())&gt;&gt;There is nothing left to do in your office.&lt;&lt;else&gt;&gt;Your laptop is on the desk.
 
 [[Turn on the laptop]]
 &lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="116" name="Turn on the laptop" tags="office" position="1530,166" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;There is a folder on the desktop with Alf’s old files inside. 
@@ -1389,9 +1433,9 @@ State.setVar(&quot;$recommendationOptions[&#39;carbon emissions&#39;]&quot;, ran
 &lt;&lt;/for&gt;&gt;
 
 [[Select first choice]]
-</tw-passagedata><tw-passagedata pid="132" name="Fuse" tags="inventory" position="749,591" size="100,100">TODO image of fuse...</tw-passagedata><tw-passagedata pid="133" name="WWF report" tags="inventory" position="749,706" size="100,100">TODO image of WWF 2018 Living Planet Report...</tw-passagedata><tw-passagedata pid="134" name="Bag of buttons" tags="inventory" position="748,821" size="100,100">TODO image of bag of buttons?...</tw-passagedata><tw-passagedata pid="135" name="Weigh the tomatoes" tags="carbon-intensive-diet-exhibit" position="1426,984" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;You see the reading for the tomatoes and compare it to the carrots. You swap the food items so the food with the highest embedded carbon is on the left-hand side. You then continue to check and sort the rest of the food items.
+</tw-passagedata><tw-passagedata pid="132" name="Fuse" tags="inventory" position="749,591" size="100,100">&lt;img src=&quot;https://confusedmatrix.github.io/e-mission-game/assets/images/fuse.jpg&quot; class=&quot;passage-image&quot; /&gt;</tw-passagedata><tw-passagedata pid="133" name="WWF report" tags="inventory" position="749,706" size="100,100">TODO image of WWF 2018 Living Planet Report...</tw-passagedata><tw-passagedata pid="134" name="Bag of buttons" tags="inventory" position="748,821" size="100,100">TODO image of bag of buttons?...</tw-passagedata><tw-passagedata pid="135" name="Weigh the tomatoes" tags="carbon-intensive-diet-exhibit" position="1426,984" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;You see the reading for the tomatoes and compare it to the carrots. You swap the food items so the food with the highest embedded carbon is on the left-hand side. You then continue to check and sort the rest of the food items.
 
-[[Rearrange the items on the shelves]]</tw-passagedata><tw-passagedata pid="136" name="Show report" tags="" position="2708.3333333333335,409.66666666666674" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;&lt;if $recommendationReasons[&#39;carbon emissions&#39;][1] == &quot;&quot;&gt;&gt;Oops, you didn&#39;t give a reason for your choice.
+[[Rearrange the items on the shelves]]</tw-passagedata><tw-passagedata pid="136" name="Show report" tags="office" position="2708.3333333333335,409.66666666666674" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;&lt;if $recommendationReasons[&#39;carbon emissions&#39;][1] == &quot;&quot;&gt;&gt;Oops, you didn&#39;t give a reason for your choice.
 
 [[Go back and select a recommendation|Select second choice]]&lt;&lt;else&gt;&gt;&lt;div id=&quot;letter&quot; class=&quot;typewriting&quot;&gt;
 &lt;h2&gt;Recommendations report&lt;/h2&gt;
@@ -1400,7 +1444,7 @@ State.setVar(&quot;$recommendationOptions[&#39;carbon emissions&#39;]&quot;, ran
 &lt;/div&gt;
 
 [[Make your recommendations for diets and food]]
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="137" name="Make your recommendations for diets and food" tags="" position="2226.333333333333,527.3333333333334" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;Select your first recommendation for diets and foods:
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="137" name="Make your recommendations for diets and food" tags="office" position="2226.333333333333,527.3333333333334" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;Select your first recommendation for diets and foods:
 &lt;&lt;silently&gt;&gt;
 &lt;&lt;set $recommendations[&#39;diets and foods&#39;] to []&gt;&gt;
 &lt;&lt;set $recommendationReasons[&#39;diets and foods&#39;] to []&gt;&gt;
@@ -1480,7 +1524,7 @@ With a flash of realisation, it comes to you! You’ve been reading this writing
 
 Things have changed and you did make a difference. Opening up your web browser, you search Professor Emyra-Fossey’s name. The professor has had an extremely distinguished career and made a number of breakthroughs in tackling climate change. 
 
-[[End]]</tw-passagedata><tw-passagedata pid="142" name="Select first choice" tags="" position="2347.9999999999995,410" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;&lt;if ndef $recommendations[&#39;carbon emissions&#39;][0]&gt;&gt;Oops, you didn&#39;t select your first recommendation.
+[[End]]</tw-passagedata><tw-passagedata pid="142" name="Select first choice" tags="office" position="2347.9999999999995,410" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;&lt;if ndef $recommendations[&#39;carbon emissions&#39;][0]&gt;&gt;Oops, you didn&#39;t select your first recommendation.
 
 [[Go back and select a recommendation|Continue scrolling through the document]]&lt;&lt;else&gt;&gt;You selected &quot;&lt;&lt;= $recommendations[&#39;carbon emissions&#39;][0]&gt;&gt;&quot;
 
@@ -1488,7 +1532,7 @@ Why did you choose this option?
 &lt;&lt;textarea &quot;$recommendationReasons[&#39;carbon emissions&#39;][0]&quot; &quot;&quot;&gt;&gt;
 
 [[Continue|Show second options]]
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="143" name="Show second options" tags="" position="2468.333333333333,409.00000000000006" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;&lt;if $recommendationReasons[&#39;carbon emissions&#39;][0] == &quot;&quot;&gt;&gt;Oops, you didn&#39;t give a reason for your choice.
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="143" name="Show second options" tags="office" position="2468.333333333333,409.00000000000006" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;&lt;if $recommendationReasons[&#39;carbon emissions&#39;][0] == &quot;&quot;&gt;&gt;Oops, you didn&#39;t give a reason for your choice.
 
 [[Go back|Select first choice]]&lt;&lt;else&gt;&gt;Choose your second recommendation to reduce carbon emissions
 &lt;&lt;silently&gt;&gt;
@@ -1505,7 +1549,7 @@ State.setVar(&quot;$recommendationOptions[&#39;carbon emissions&#39;]&quot;, fil
 &lt;&lt;/for&gt;&gt;
 
 [[Select second choice]]
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="144" name="Select second choice" tags="" position="2588.333333333333,415.66666666666663" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;&lt;if ndef $recommendations[&#39;carbon emissions&#39;][1]&gt;&gt;Oops, you didn&#39;t select your second recommendation.
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="144" name="Select second choice" tags="office" position="2588.333333333333,415.66666666666663" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;&lt;if ndef $recommendations[&#39;carbon emissions&#39;][1]&gt;&gt;Oops, you didn&#39;t select your second recommendation.
 
 [[Go back and select a recommendation|Show second options]]&lt;&lt;else&gt;&gt;You selected &quot;&lt;&lt;= $recommendations[&#39;carbon emissions&#39;][1]&gt;&gt;&quot;
 
@@ -1513,7 +1557,7 @@ Why did you choose this option?
 &lt;&lt;textarea &quot;$recommendationReasons[&#39;carbon emissions&#39;][1]&quot; &quot;&quot;&gt;&gt;
 
 [[Continue|Show report]]
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="145" name="Select third choice" tags="" position="2347.9999999999995,529" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;&lt;if ndef $recommendations[&#39;diets and foods&#39;][0]&gt;&gt;Oops, you didn&#39;t select your first recommendation.
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="145" name="Select third choice" tags="office" position="2347.9999999999995,529" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;&lt;if ndef $recommendations[&#39;diets and foods&#39;][0]&gt;&gt;Oops, you didn&#39;t select your first recommendation.
 
 [[Go back and select a recommendation|Make your recommendations for diets and food]]&lt;&lt;else&gt;&gt;You selected &quot;&lt;&lt;= $recommendations[&#39;diets and foods&#39;][0]&gt;&gt;&quot;
 
@@ -1521,7 +1565,7 @@ Why did you choose this option?
 &lt;&lt;textarea &quot;$recommendationReasons[&#39;diets and foods&#39;][0]&quot; &quot;&quot;&gt;&gt;
 
 [[Continue|Show fourth options]]
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="146" name="Show fourth options" tags="" position="2466.333333333333,530.6666666666666" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;&lt;if $recommendationReasons[&#39;diets and foods&#39;][0] == &quot;&quot;&gt;&gt;Oops, you didn&#39;t give a reason for your choice.
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="146" name="Show fourth options" tags="office" position="2466.333333333333,530.6666666666666" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;&lt;if $recommendationReasons[&#39;diets and foods&#39;][0] == &quot;&quot;&gt;&gt;Oops, you didn&#39;t give a reason for your choice.
 
 [[Go back|Select third choice]]&lt;&lt;else&gt;&gt;Choose your second recommendation for diets and foods:
 &lt;&lt;silently&gt;&gt;
@@ -1538,7 +1582,7 @@ State.setVar(&quot;$recommendationOptions[&#39;diets and foods&#39;]&quot;, filt
 &lt;&lt;/for&gt;&gt;
 
 [[Select second choice|Select fourth choice]]
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="147" name="Select fourth choice" tags="" position="2589.6666666666665,534" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;&lt;if ndef $recommendations[&#39;diets and foods&#39;][1]&gt;&gt;Oops, you didn&#39;t select your second recommendation.
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="147" name="Select fourth choice" tags="office" position="2589.6666666666665,534" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;&lt;if ndef $recommendations[&#39;diets and foods&#39;][1]&gt;&gt;Oops, you didn&#39;t select your second recommendation.
 
 [[Go back and select a recommendation|Show fourth options]]&lt;&lt;else&gt;&gt;You selected &quot;&lt;&lt;= $recommendations[&#39;diets and foods&#39;][1]&gt;&gt;&quot;
 
@@ -1546,7 +1590,7 @@ Why did you choose this option?
 &lt;&lt;textarea &quot;$recommendationReasons[&#39;diets and foods&#39;][1]&quot; &quot;&quot;&gt;&gt;
 
 [[Continue|Show report again]]
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="148" name="Show report again" tags="" position="2708,537.3333333333333" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;&lt;if $recommendationReasons[&#39;diets and foods&#39;][1] == &quot;&quot;&gt;&gt;Oops, you didn&#39;t give a reason for your choice.
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="148" name="Show report again" tags="office" position="2708,537.3333333333333" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;&lt;if $recommendationReasons[&#39;diets and foods&#39;][1] == &quot;&quot;&gt;&gt;Oops, you didn&#39;t give a reason for your choice.
 
 [[Go back and select a recommendation|Select fourth choice]]&lt;&lt;else&gt;&gt;&lt;div id=&quot;letter&quot; class=&quot;typewriting&quot;&gt;
 &lt;h2&gt;Recommendations report&lt;/h2&gt;
@@ -1557,7 +1601,7 @@ Why did you choose this option?
 &lt;/div&gt;
 
 [[Make your recommendations for avoiding species extinciton]]
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="149" name="Make your recommendations for avoiding species extinciton" tags="" position="2221.3333333333335,643.9999999999999" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;Select your first recommendation for avoiding species extinction:
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="149" name="Make your recommendations for avoiding species extinciton" tags="office" position="2221.3333333333335,643.9999999999999" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;Select your first recommendation for avoiding species extinction:
 &lt;&lt;silently&gt;&gt;
 &lt;&lt;set $recommendations[&#39;species extinction&#39;] to []&gt;&gt;
 &lt;&lt;set $recommendationReasons[&#39;species extinction&#39;] to []&gt;&gt;
@@ -1600,7 +1644,7 @@ State.setVar(&quot;$recommendationOptions[&#39;species extinction&#39;]&quot;, r
 &lt;&lt;/for&gt;&gt;
 
 [[Select first choice|Select fifth choice]]
-</tw-passagedata><tw-passagedata pid="150" name="Select fifth choice" tags="" position="2344.666666666667,643.9999999999999" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;&lt;if ndef $recommendations[&#39;species extinction&#39;][0]&gt;&gt;Oops, you didn&#39;t select your first recommendation.
+</tw-passagedata><tw-passagedata pid="150" name="Select fifth choice" tags="office" position="2344.666666666667,643.9999999999999" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;&lt;if ndef $recommendations[&#39;species extinction&#39;][0]&gt;&gt;Oops, you didn&#39;t select your first recommendation.
 
 [[Go back and select a recommendation|Make your recommendations for avoiding species extinciton]]&lt;&lt;else&gt;&gt;You selected &quot;&lt;&lt;= $recommendations[&#39;species extinction&#39;][0]&gt;&gt;&quot;
 
@@ -1608,7 +1652,7 @@ Why did you choose this option?
 &lt;&lt;textarea &quot;$recommendationReasons[&#39;species extinction&#39;][0]&quot; &quot;&quot;&gt;&gt;
 
 [[Continue|Show sixth options]]
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="151" name="Show sixth options" tags="" position="2464.666666666667,647.3333333333333" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;&lt;if $recommendationReasons[&#39;species extinction&#39;][0] == &quot;&quot;&gt;&gt;Oops, you didn&#39;t give a reason for your choice.
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="151" name="Show sixth options" tags="office" position="2464.666666666667,647.3333333333333" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;&lt;if $recommendationReasons[&#39;species extinction&#39;][0] == &quot;&quot;&gt;&gt;Oops, you didn&#39;t give a reason for your choice.
 
 [[Go back|Select fifth choice]]&lt;&lt;else&gt;&gt;Choose your second recommendation for avoiding species extinction:
 &lt;&lt;silently&gt;&gt;
@@ -1625,7 +1669,7 @@ State.setVar(&quot;$recommendationOptions[&#39;species extinction&#39;]&quot;, f
 &lt;&lt;/for&gt;&gt;
 
 [[Select second choice|Select sixth choice]]
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="152" name="Select sixth choice" tags="" position="2589.666666666667,652.3333333333333" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;&lt;if ndef $recommendations[&#39;species extinction&#39;][1]&gt;&gt;Oops, you didn&#39;t select your second recommendation.
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="152" name="Select sixth choice" tags="office" position="2589.666666666667,652.3333333333333" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;&lt;if ndef $recommendations[&#39;species extinction&#39;][1]&gt;&gt;Oops, you didn&#39;t select your second recommendation.
 
 [[Go back and select a recommendation|Show sixth options]]&lt;&lt;else&gt;&gt;You selected &quot;&lt;&lt;= $recommendations[&#39;species extinction&#39;][1]&gt;&gt;&quot;
 
@@ -1633,7 +1677,7 @@ Why did you choose this option?
 &lt;&lt;textarea &quot;$recommendationReasons[&#39;species extinction&#39;][1]&quot; &quot;&quot;&gt;&gt;
 
 [[Continue|Show final report]]
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="153" name="Show final report" tags="" position="2709.666666666667,653.9999999999999" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;&lt;if $recommendationReasons[&#39;species extinction&#39;][1] == &quot;&quot;&gt;&gt;Oops, you didn&#39;t give a reason for your choice.
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="153" name="Show final report" tags="office" position="2709.666666666667,653.9999999999999" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;&lt;if $recommendationReasons[&#39;species extinction&#39;][1] == &quot;&quot;&gt;&gt;Oops, you didn&#39;t give a reason for your choice.
 
 [[Go back and select a recommendation|Select sixth choice]]&lt;&lt;else&gt;&gt;&lt;div id=&quot;letter&quot; class=&quot;typewriting&quot;&gt;
 &lt;h2&gt;Recommendations report&lt;/h2&gt;
