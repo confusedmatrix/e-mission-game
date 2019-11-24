@@ -398,10 +398,15 @@ input[type="radio"] {
 }
 #header-icons .ui-icons {
   float: right;
+  transform: scale(0.8);
 }
-  
 
-
+body.inventory {
+  background-image: url('https://confusedmatrix.github.io/e-mission-game/assets/images/backgrounds/inventory.jpg');
+}
+body.journal {
+  background-image: url('https://confusedmatrix.github.io/e-mission-game/assets/images/backgrounds/journal.jpg');
+}
 body.notebook {
   background-image: url('https://confusedmatrix.github.io/e-mission-game/assets/images/backgrounds/notebook.jpg');
 }
@@ -528,7 +533,7 @@ body.futures-exhibit {
 
 As you move through this game, you’ll need to solve puzzles to unlock clues and discover evidence. 
 
-As you progress you’ll discover that every action we make as individuals and societies has an associated impact on the planet through the amount of carbon emissions (CO2e) produced. 
+As you progress you’ll discover that every action we make as individuals and societies has an associated impact on the planet through the amount of carbon emissions (CO&lt;sub&gt;2&lt;/sub&gt;e) produced. 
 
 As you uncover information about our impact on the environment, you’ll receive puzzle pieces and learn how the actions we take can contribute to solving these environmental and social problems. As you move through the game, you may even be able to change the environmental catastrophes of the past… So explore the museum and discover as many clues as you can to solve all the puzzles!&lt;/div&gt;
 
@@ -571,6 +576,7 @@ You look on your desk. It is a bit of a mess.
 &lt;&lt;else&gt;&gt;Enter the correct 5-digit combination to unlock the journal:
 
 &lt;&lt;textbox &quot;$journalCode&quot; &quot;XXXXX&quot; [[Check journal lock combination]]&gt;&gt; ⬅ Type in the combination and hit Enter.
+&lt;&lt;if ndef $attempts[&#39;journal&#39;]&gt;&gt;&lt;&lt;set $attempts[&#39;journal&#39;] to 0&gt;&gt;&lt;&lt;/if&gt;&gt;
 &lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="6" name="Researcher&#39;s letter" tags="inventory" position="401,430" size="100,100">&lt;div id=&quot;letter&quot; class=&quot;handwriting&quot;&gt;27th February 2042
 
 Dear Alf
@@ -618,15 +624,14 @@ Dialog.open()
 &lt;&lt;/for&gt;&gt;
 &lt;&lt;/if&gt;&gt;
 
-&lt;&lt;link &quot;Return to story&quot;&gt;&gt;&lt;&lt;goto $progress&gt;&gt;&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="10" name="Check journal lock combination" tags="office" position="26,968" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;&lt;if $journalCode isnot &quot;71112&quot;&gt;&gt;Hmmm...that doesn’t seem to have worked. 
+&lt;&lt;link &quot;Return to story&quot;&gt;&gt;&lt;&lt;goto $progress&gt;&gt;&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="10" name="Check journal lock combination" tags="office" position="26,968" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;&lt;set $attempts[&#39;journal&#39;] += 1&gt;&gt;&lt;&lt;if $journalCode isnot &quot;71112&quot;&gt;&gt;Hmmm...that doesn’t seem to have worked. 
 
 &lt;&lt;include [[Help 3]]&gt;&gt;
 &lt;&lt;include [[Help 4]]&gt;&gt;
 [[Try again|Look at the journal]]&lt;&lt;else&gt;&gt;
 &lt;&lt;set $journal to []&gt;&gt;
 &lt;&lt;goto [[Open the journal]]&gt;&gt;
-&lt;&lt;/if&gt;&gt;
-</tw-passagedata><tw-passagedata pid="11" name="Read the first journal entry" tags="office" position="151,1110" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;&lt;if lastVisited(&quot;Photograph in journal&quot;) is 1&gt;&gt;&lt;div class=&quot;notice&quot;&gt;The photograph has been added to your inventory&lt;/div&gt;
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="11" name="Read the first journal entry" tags="office" position="151,1110" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;&lt;if lastVisited(&quot;Photograph in journal&quot;) is 1&gt;&gt;&lt;div class=&quot;notice&quot;&gt;The photograph has been added to your inventory&lt;/div&gt;
 &lt;&lt;/if&gt;&gt;&lt;&lt;include &quot;Journal entry 1&quot;&gt;&gt;&lt;&lt;run $journal.pushUnique(&quot;Journal entry 1&quot;)&gt;&gt;&lt;&lt;if not $inventory.includes(&quot;Photograph&quot;)&gt;&gt;
 Paperclipped to the entry is a [[photograph|Photograph in journal]].
 &lt;&lt;else&gt;&gt;
@@ -678,11 +683,12 @@ Some pages are filled with charts and statistics. Others contain pasted newspape
 &lt;&lt;textarea &quot;$note&quot; &quot;&quot;&gt;&gt;
 &lt;&lt;link &quot;Add note&quot; &quot;Notebook&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
 
-&lt;&lt;link &quot;Return to story&quot;&gt;&gt;&lt;&lt;goto $progress&gt;&gt;&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="20" name="Map" tags="lobby" position="645,139" size="100,100">TODO Map...
+&lt;&lt;link &quot;Return to story&quot;&gt;&gt;&lt;&lt;goto $progress&gt;&gt;&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="20" name="Map" tags="lobby" position="645,139" size="100,100">&lt;&lt;for _i, _location range $map&gt;&gt;&lt;&lt;if _i neq 0&gt;&gt; | &lt;&lt;/if&gt;&gt;&lt;&lt;link _location _location&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;&lt;/for&gt;&gt;
 
-&lt;&lt;for _i, _location range $map&gt;&gt;
-&lt;&lt;= _i + 1&gt;&gt;. &lt;&lt;link _location _location&gt;&gt;&lt;&lt;/link&gt;&gt;
-&lt;&lt;/for&gt;&gt;
+&lt;&lt;if $map.includes(&quot;&#39;The Sixth Mass Extinction&#39; Exhibit&quot;, &quot;&#39;How Carbon Intensive Is Your Diet?&#39; Exhibit&quot;)&gt;&gt;&lt;img src=&quot;https://confusedmatrix.github.io/e-mission-game/assets/images/map/4.png&quot; class=&quot;passage-image&quot; /&gt;
+&lt;&lt;elseif $map.includes(&quot;&#39;Futures Exhibit. Inner Hallway. Exhibit 12&#39;&quot;)&gt;&gt;&lt;img src=&quot;https://confusedmatrix.github.io/e-mission-game/assets/images/map/3.png&quot; class=&quot;passage-image&quot; /&gt;
+&lt;&lt;elseif $map.includes(&quot;Carbon Emissions Exhibition&quot;)&gt;&gt;&lt;img src=&quot;https://confusedmatrix.github.io/e-mission-game/assets/images/map/2.png&quot; class=&quot;passage-image&quot; /&gt;
+&lt;&lt;else&gt;&gt;&lt;img src=&quot;https://confusedmatrix.github.io/e-mission-game/assets/images/map/1.png&quot; class=&quot;passage-image&quot; /&gt;&lt;&lt;/if&gt;&gt;
 
 &lt;&lt;link &quot;Return to story&quot;&gt;&gt;&lt;&lt;goto $progress&gt;&gt;&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="21" name="Help 1" tags="" position="510,536" size="100,100">&lt;div class=&quot;help&quot;&gt;As you interact with items and explore the museum, you will find information, documents and images to help solve puzzles. You can pick up these items. These will be stored in your &lt;img src=&quot;https://confusedmatrix.github.io/e-mission-game/assets/images/icons/archive.png&quot; class=&quot;inline-icon&quot; /&gt;&lt;&lt;link &quot;Inventory&quot; &quot;Inventory&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;. The Inventory icon has now been added to your navigation bar. Look out for more items appearing here as you discover them.
 
@@ -720,7 +726,9 @@ Which locker number do you want to try?
 
 What is the code for this locker?
 &lt;&lt;textbox &quot;$doorCode&quot; &quot;XXXX&quot; [[Check door number and code]]&gt;&gt;
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="30" name="Read the third journal entry" tags="staff-room" position="286,1656" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;&lt;include &quot;Journal entry 3&quot;&gt;&gt;&lt;&lt;run $journal.pushUnique(&quot;Journal entry 3&quot;)&gt;&gt;&lt;&lt;run $map.pushUnique(&#39;Carbon Emissions Exhibition&#39;)&gt;&gt;
+&lt;&lt;if ndef $attempts[&#39;locker&#39;]&gt;&gt;&lt;&lt;set $attempts[&#39;locker&#39;] to 0&gt;&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;/if&gt;&gt;
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="30" name="Read the third journal entry" tags="staff-room" position="286,1656" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;&lt;include &quot;Journal entry 3&quot;&gt;&gt;&lt;&lt;run $journal.pushUnique(&quot;Journal entry 3&quot;)&gt;&gt;
 
 You pull out your map. There is a Carbon Emissions Exhibition marked on it. 
 
@@ -792,7 +800,7 @@ The exhibition&#39;s central focus is a Special Climate Change report produced i
 
 The report highlighted the significant increase in carbon emissions over the latter half of the twentieth century. It was produced to advise governments on the scenarios that could result from failure to take action to limit carbon emissions, and the costs of adaptation and mitigation against climate change impacts.
 
-[[Look at Exhibit 1]]</tw-passagedata><tw-passagedata pid="41" name="Open the locker doors" tags="staff-room" position="306,1525" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;Many of the doors swing open, some creak with age. Locker 265 is stuck but you tug the door and it opens. It&#39;s empty apart from an old shoe. 
+[[Look at Exhibit 1]]</tw-passagedata><tw-passagedata pid="41" name="Open the locker doors" tags="staff-room" position="306,1525" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;&lt;run $map.pushUnique(&#39;Carbon Emissions Exhibition&#39;)&gt;&gt;Many of the doors swing open, some creak with age. Locker 265 is stuck but you tug the door and it opens. It&#39;s empty apart from an old shoe. 
 
 The doors on lockers 200, 300 and 400 won’t move - they must be locked. Maybe one of these belonged to the researcher when they were an intern? There are digital keypads on the doors. What could the code be?
 
@@ -800,7 +808,7 @@ Maybe the researcher’s journal will tell you the code?
 
 [[Pick up the shoe]]
 
-[[Read the third journal entry]]</tw-passagedata><tw-passagedata pid="42" name="Check door number and code" tags="staff-room" position="420,1555" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;&lt;if $doorNumber is &quot;300&quot; and $doorCode is &quot;1950&quot;&gt;&gt;&lt;&lt;run $completed.pushUnique(&quot;Staff room&quot;, &quot;Carbon Emissions Exhibition&quot;)&gt;&gt;The locker bleeps as you input the code, and the door swings open. Inside is a strange looking cog, with an exhibit label attached.
+[[Read the third journal entry]]</tw-passagedata><tw-passagedata pid="42" name="Check door number and code" tags="staff-room" position="420,1555" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;&lt;set $attempts[&#39;locker&#39;] += 1&gt;&gt;&lt;&lt;if $doorNumber is &quot;300&quot; and $doorCode is &quot;1950&quot;&gt;&gt;&lt;&lt;run $completed.pushUnique(&quot;Staff room&quot;, &quot;Carbon Emissions Exhibition&quot;)&gt;&gt;The locker bleeps as you input the code, and the door swings open. Inside is a strange looking cog, with an exhibit label attached.
 
 &lt;&lt;include &quot;Cog&quot;&gt;&gt;
 
@@ -889,6 +897,7 @@ The answer to unlocking the digital keypad on the researcher’s locker in the s
 &lt;&lt;set $fullscreen to false&gt;&gt;
 &lt;&lt;set $sdgs to []&gt;&gt;
 &lt;&lt;set $completed to []&gt;&gt;
+&lt;&lt;set $attempts to []&gt;&gt;
 &lt;&lt;script&gt;&gt;
 var elem = document.documentElement;
 if (document.exitFullscreen) {
@@ -1135,7 +1144,10 @@ Poaching and Drought: &lt;strong&gt;Northern White Rhino - Ceratotherium simum s
 
 Species Introduction and Exploitation: &lt;&lt;cycle &quot;$animal5&quot; autoselect&gt;&gt;&lt;&lt;optionsfrom $animals&gt;&gt;&lt;&lt;/cycle&gt;&gt;
 
-[[&quot;I&#39;m done&quot;|Check Sixth mass extinction minigame]]</tw-passagedata><tw-passagedata pid="89" name="Check Sixth mass extinction minigame" tags="sixth-mass-extinction-exhibit" position="1429,1745" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;&lt;if $animal1 == &quot;Tiger - Panthera tigris&quot; and $animal2 == &quot;Koala - Phascolarctos cinereus&quot; and $animal3 == &quot;Blue Whale - Balaenoptera musculus&quot; and $animal4 == &quot;Spix&#39;s Macaw - Cyanopsitta spixii&quot; and $animal5 == &quot;Pinta Giant Tortoise - Chelonoidis abingdonii&quot;&gt;&gt;As you put the last model into its correct position in the display, you hear a loud click. 
+[[&quot;I&#39;m done&quot;|Check Sixth mass extinction minigame]]
+
+&lt;&lt;if ndef $attempts[&#39;extinction&#39;]&gt;&gt;&lt;&lt;set $attempts[&#39;extinction&#39;] to 0&gt;&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="89" name="Check Sixth mass extinction minigame" tags="sixth-mass-extinction-exhibit" position="1429,1745" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;&lt;set $attempts[&#39;extinction&#39;] += 1&gt;&gt;&lt;&lt;if $animal1 == &quot;Tiger - Panthera tigris&quot; and $animal2 == &quot;Koala - Phascolarctos cinereus&quot; and $animal3 == &quot;Blue Whale - Balaenoptera musculus&quot; and $animal4 == &quot;Spix&#39;s Macaw - Cyanopsitta spixii&quot; and $animal5 == &quot;Pinta Giant Tortoise - Chelonoidis abingdonii&quot;&gt;&gt;As you put the last model into its correct position in the display, you hear a loud click. 
 
 The models all lock into place and appear to drop down. A hidden panel beneath the display slides to one side, revealing a hollow space inside the display table!
 
@@ -1207,7 +1219,7 @@ In the center of the room there is a set of weighing scales with a digital displ
 
 [[Remove the apple from the scales]]</tw-passagedata><tw-passagedata pid="101" name="Remove the apple from the scales" tags="carbon-intensive-diet-exhibit" position="1470.0000000000002,1171.3333333333333" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;You notice a model loaf of bread is obscuring a sign on the front of the exhibit.
 
-[[Move the bread]]</tw-passagedata><tw-passagedata pid="102" name="Check carbon intensive diet minigame" tags="carbon-intensive-diet-exhibit" position="1781.6666666666667,1339.3333333333333" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;&lt;if $compareItemNames[0] is &quot;Strawberries (1kg, locally sourced)&quot; and $compareItemNames[2] is &quot;Tomatoes (1kg, average)&quot; and $compareItemNames[4] is &quot;Lamb leg joint (2kg with supermarket packaging)&quot; and $compareItemNames[6] is &quot;Cheese (1kg, hard cheese)&quot; and $compareItemNames[8] is &quot;Eggs (box of 6)&quot; and $compareItemNames[10] is &quot;Cheeseburger (4oz)&quot; and $compareItemNames[12] is &quot;Bottled wine (1ltr)&quot;&gt;&gt;A green light appears above the wooden slots. A small door opens to the side of the wooden slots and a shiny item drops to the floor.
+[[Move the bread]]</tw-passagedata><tw-passagedata pid="102" name="Check carbon intensive diet minigame" tags="carbon-intensive-diet-exhibit" position="1781.6666666666667,1339.3333333333333" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;&lt;set $attempts[&#39;diet&#39;] += 1&gt;&gt;&lt;&lt;if $compareItemNames[0] is &quot;Strawberries (1kg, locally sourced)&quot; and $compareItemNames[2] is &quot;Tomatoes (1kg, average)&quot; and $compareItemNames[4] is &quot;Lamb leg joint (2kg with supermarket packaging)&quot; and $compareItemNames[6] is &quot;Cheese (1kg, hard cheese)&quot; and $compareItemNames[8] is &quot;Eggs (box of 6)&quot; and $compareItemNames[10] is &quot;Cheeseburger (4oz)&quot; and $compareItemNames[12] is &quot;Bottled wine (1ltr)&quot;&gt;&gt;A green light appears above the wooden slots. A small door opens to the side of the wooden slots and a shiny item drops to the floor.
 
 [[Pick up the item]]
 &lt;&lt;else&gt;&gt;A red light shows above the wooden slots. At least one of the foods must be in the wrong place.
@@ -1294,7 +1306,9 @@ Select item: &lt;&lt;cycle &quot;$itemToWeigh&quot; autoselect&gt;&gt;&lt;&lt;op
 &lt;td&gt;&lt;div&gt;&lt;&lt;= $compareItemNames[10]&gt;&gt;&lt;/div&gt;&lt;/td&gt;&lt;td&gt;&lt;&lt;link &quot;🔄&quot; &quot;Rearrange the items on the shelves&quot;&gt;&gt;&lt;&lt;set _tmpItem to $compareItemNames[10]&gt;&gt;&lt;&lt;set $compareItemNames[10] to $compareItemNames[11]&gt;&gt;&lt;&lt;set $compareItemNames[11] to _tmpItem&gt;&gt;&lt;&lt;unset _tmpItem&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/td&gt;&lt;td&gt;&lt;div&gt;&lt;&lt;= $compareItemNames[11]&gt;&gt;&lt;/div&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-&lt;td&gt;&lt;div&gt;&lt;&lt;= $compareItemNames[12]&gt;&gt;&lt;/div&gt;&lt;/td&gt;&lt;td&gt;&lt;&lt;link &quot;🔄&quot; &quot;Rearrange the items on the shelves&quot;&gt;&gt;&lt;&lt;set _tmpItem to $compareItemNames[12]&gt;&gt;&lt;&lt;set $compareItemNames[12] to $compareItemNames[13]&gt;&gt;&lt;&lt;set $compareItemNames[13] to _tmpItem&gt;&gt;&lt;&lt;unset _tmpItem&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/td&gt;&lt;td&gt;&lt;div&gt;&lt;&lt;= $compareItemNames[13]&gt;&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;[[I think this right...|Check carbon intensive diet minigame]] </tw-passagedata><tw-passagedata pid="110" name="Eat the apple" tags="carbon-intensive-diet-exhibit" position="1619.3333333333335,1073.3333333333335" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;The apple is made of plastic… not that appetising. You must have to do something else with it.
+&lt;td&gt;&lt;div&gt;&lt;&lt;= $compareItemNames[12]&gt;&gt;&lt;/div&gt;&lt;/td&gt;&lt;td&gt;&lt;&lt;link &quot;🔄&quot; &quot;Rearrange the items on the shelves&quot;&gt;&gt;&lt;&lt;set _tmpItem to $compareItemNames[12]&gt;&gt;&lt;&lt;set $compareItemNames[12] to $compareItemNames[13]&gt;&gt;&lt;&lt;set $compareItemNames[13] to _tmpItem&gt;&gt;&lt;&lt;unset _tmpItem&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;/td&gt;&lt;td&gt;&lt;div&gt;&lt;&lt;= $compareItemNames[13]&gt;&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;[[I think this right...|Check carbon intensive diet minigame]]
+&lt;&lt;if ndef $attempts[&#39;diet&#39;]&gt;&gt;&lt;&lt;set $attempts[&#39;diet&#39;] to 0&gt;&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="110" name="Eat the apple" tags="carbon-intensive-diet-exhibit" position="1619.3333333333335,1073.3333333333335" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;The apple is made of plastic… not that appetising. You must have to do something else with it.
 
 [[Place the apple on the scales]]</tw-passagedata><tw-passagedata pid="111" name="Move the bread" tags="carbon-intensive-diet-exhibit" position="1505.0000000000002,1293.3333333333333" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;You can now see a sign saying ‘Equivalent Carbon Dioxide Emissions’. The scales weren’t showing the weight of the food afterall!
 
@@ -1377,26 +1391,26 @@ Late one night, you decide it’s time to start tackling the mountain of documen
 
 A single banana equates to 80g carbon dioxide emissions or 480g per kilo (0.48kg of CO2e).
 
-&lt;&lt;link &quot;Return to story&quot;&gt;&gt;&lt;&lt;goto $progress&gt;&gt;&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="126" name="Open the Notepad file" tags="office" position="1998,164" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;TODO fix formatting so it looks like a notebook
-
-I’ve figured out how to get the time machine working. I think I was right to keep it safe as most people are still just too concerned with economic goals and not thinking about the impacts on people and nature from continuing to exploit resources and focus on profit. Or only make changes because they’re profitable. 
+&lt;&lt;link &quot;Return to story&quot;&gt;&gt;&lt;&lt;goto $progress&gt;&gt;&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="126" name="Open the Notepad file" tags="office" position="1998,164" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;div id=&quot;letter&quot; class=&quot;typewriting&quot;&gt;I’ve figured out how to get the time machine working. I think I was right to keep it safe as most people are still just too concerned with economic goals and not thinking about the impacts on people and nature from continuing to exploit resources and focus on profit. Or only make changes because they’re profitable. 
 
 I’m glad the protesters continued in their fight. I always kept the photo of the big pink ship to remind me of the moto we, corporations and our governments should live by...
 
-To get the machine working
-- Replace the fuse
-- Put the cogs and buttons back in place
-- Check USB cable
-- Connect up laptop
-- Run protocol
-- Email report to a.r.mitchell@ehm.org
+To get the machine working:
+&lt;ul&gt;&lt;li&gt;Replace the fuse&lt;/li&gt;
+&lt;li&gt;Put the cogs and buttons back in place&lt;/li&gt;
+&lt;li&gt;Check USB cable&lt;/li&gt;
+&lt;li&gt;Connect up laptop&lt;/li&gt;
+&lt;li&gt;Run protocol&lt;/li&gt;
+&lt;li&gt;Email report to a.r.mitchell@ehm.org&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;
 
 [[Read the &#39;COP30 Report&#39; document]]</tw-passagedata><tw-passagedata pid="127" name="Read the &#39;COP30 Report&#39; document" tags="office" position="2116,168" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;It is password protected. What could the password be?
 
 Is there anything in your inventory you haven&#39;t yet used that could be a clue?
 
 &lt;&lt;include [[Help 13]]&gt;&gt;
-Type in the password: &lt;&lt;textbox &quot;$copPassword&quot; &quot;XXXXX&quot; [[Check COP password]]&gt;&gt;</tw-passagedata><tw-passagedata pid="128" name="Help 13" tags="" position="2118.3333333333335,273" size="100,100">&lt;div class=&quot;help&quot;&gt;HINT: The password is a five letter word&lt;/div&gt;</tw-passagedata><tw-passagedata pid="129" name="Check COP password" tags="office" position="2239,169" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;&lt;if $copPassword is &quot;TRUTH&quot; or $copPassword is &quot;Truth&quot; or $copPassword is &quot;truth&quot;&gt;&gt;You cracked Alf’s password! The document opens. It’s the report that Alf presented at the COP30 event in 2024. This must be the report that Alf wished he’d had more evidence for. He said he didn’t have time to collate everything. Maybe you could share what you’ve learned from the exhibits and reports and help Alf to convince the world leaders that stronger action is (was?) needed!
+Type in the password: &lt;&lt;textbox &quot;$copPassword&quot; &quot;XXXXX&quot; [[Check COP password]]&gt;&gt;
+&lt;&lt;if ndef $attempts[&#39;cop&#39;]&gt;&gt;&lt;&lt;set $attempts[&#39;cop&#39;] to 0&gt;&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="128" name="Help 13" tags="" position="2118.3333333333335,273" size="100,100">&lt;div class=&quot;help&quot;&gt;HINT: The password is a five letter word&lt;/div&gt;</tw-passagedata><tw-passagedata pid="129" name="Check COP password" tags="office" position="2239,169" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;&lt;set $attempts[&#39;cop&#39;] += 1&gt;&gt;&lt;&lt;if $copPassword is &quot;TRUTH&quot; or $copPassword is &quot;Truth&quot; or $copPassword is &quot;truth&quot;&gt;&gt;You cracked Alf’s password! The document opens. It’s the report that Alf presented at the COP30 event in 2024. This must be the report that Alf wished he’d had more evidence for. He said he didn’t have time to collate everything. Maybe you could share what you’ve learned from the exhibits and reports and help Alf to convince the world leaders that stronger action is (was?) needed!
 
 [[Scroll down the page]]&lt;&lt;else&gt;&gt;The password is incorrect.
 
@@ -1453,7 +1467,7 @@ State.setVar(&quot;$recommendationOptions[&#39;carbon emissions&#39;]&quot;, ran
 &lt;&lt;/for&gt;&gt;
 
 [[Select first choice]]
-</tw-passagedata><tw-passagedata pid="132" name="Fuse" tags="inventory" position="749,591" size="100,100">&lt;img src=&quot;https://confusedmatrix.github.io/e-mission-game/assets/images/fuse.jpg&quot; class=&quot;passage-image&quot; /&gt;</tw-passagedata><tw-passagedata pid="133" name="WWF Wildlife in a Warming World report" tags="inventory" position="749,706" size="100,100">&lt;img src=&quot;https://confusedmatrix.github.io/e-mission-game/assets/images/reports/species.png&quot; class=&quot;passage-image&quot; /&gt;</tw-passagedata><tw-passagedata pid="134" name="Bag of buttons" tags="inventory" position="748,821" size="100,100">TODO image of bag of buttons?...</tw-passagedata><tw-passagedata pid="135" name="Weigh the tomatoes" tags="carbon-intensive-diet-exhibit" position="1619.3333333333335,1317.3333333333333" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;You see the reading for the tomatoes and compare it to the carrots. You swap the food items so the food with the highest embedded carbon is on the left-hand side. You then continue to check and sort the rest of the food items.
+</tw-passagedata><tw-passagedata pid="132" name="Fuse" tags="inventory" position="749,591" size="100,100">&lt;img src=&quot;https://confusedmatrix.github.io/e-mission-game/assets/images/fuse.jpg&quot; class=&quot;passage-image&quot; /&gt;</tw-passagedata><tw-passagedata pid="133" name="WWF Wildlife in a Warming World report" tags="inventory" position="749,706" size="100,100">&lt;img src=&quot;https://confusedmatrix.github.io/e-mission-game/assets/images/reports/species.png&quot; class=&quot;passage-image&quot; /&gt;</tw-passagedata><tw-passagedata pid="134" name="Bag of buttons" tags="inventory" position="748,821" size="100,100">&lt;img src=&quot;https://confusedmatrix.github.io/e-mission-game/assets/images/bag.jpg&quot; class=&quot;passage-image&quot; /&gt;</tw-passagedata><tw-passagedata pid="135" name="Weigh the tomatoes" tags="carbon-intensive-diet-exhibit" position="1619.3333333333335,1317.3333333333333" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;You see the reading for the tomatoes and compare it to the carrots. You swap the food items so the food with the highest embedded carbon is on the left-hand side. You then continue to check and sort the rest of the food items.
 
 [[Rearrange the items on the shelves]]</tw-passagedata><tw-passagedata pid="136" name="Show report" tags="office" position="2955,169.66666666666674" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;&lt;if $recommendationReasons[&#39;carbon emissions&#39;][1] == &quot;&quot;&gt;&gt;Oops, you didn&#39;t give a reason for your choice.
 
@@ -1799,11 +1813,13 @@ Maybe I can [[do something with the fuse|&#39;Futures Exhibit. Inner Hallway. Ex
 [[Pick up laptop]]
 </tw-passagedata><tw-passagedata pid="168" name="Pick up laptop" tags="office" position="2768.666666666666,568.9999999999998" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;The power cable is tangled but you free it and unplug the laptop. Where do you want to go?
 
-&lt;&lt;run $inventory.pushUnique(&quot;Laptop&quot;)&gt;&gt;&lt;&lt;run $completed.pushUnique(&quot;Your office&quot;)&gt;&gt;</tw-passagedata><tw-passagedata pid="169" name="Laptop" tags="" position="747.6666666666666,932.5" size="100,100">TODO image of laptop...</tw-passagedata><tw-passagedata pid="170" name="Plug laptop into the console" tags="futures-exhibit" position="1973,390.66666666666663" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;Hopefully this old machine doesn’t have any viruses! IT would not be impressed!
+&lt;&lt;run $inventory.pushUnique(&quot;Laptop&quot;)&gt;&gt;&lt;&lt;run $completed.pushUnique(&quot;Your office&quot;)&gt;&gt;</tw-passagedata><tw-passagedata pid="169" name="Laptop" tags="" position="747.6666666666666,932.5" size="100,100">&lt;img src=&quot;https://confusedmatrix.github.io/e-mission-game/assets/images/laptop.png&quot; class=&quot;passage-image&quot; /&gt;</tw-passagedata><tw-passagedata pid="170" name="Plug laptop into the console" tags="futures-exhibit" position="1973,390.66666666666663" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;Hopefully this old machine doesn’t have any viruses! IT would not be impressed!
 
 The dialogue box cursor is flashing.
 
-&lt;&lt;textbox &quot;$laptopPassword&quot; &quot;XXXXXX&quot; [[Check laptop password]]&gt;&gt;</tw-passagedata><tw-passagedata pid="171" name="Check laptop password" tags="futures-exhibit" position="2091.3333333333335,420.66666666666663" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;&lt;if $laptopPassword is &quot;ALFRED&quot; or $laptopPassword is &quot;Alfred&quot; or $laptopPassword is &quot;alfred&quot;&gt;&gt;The dialogue box disappears and is replaced by an egg timer. The email program on your laptop has restarted, but the background colour has changed to grey. A new email template opens.
+&lt;&lt;textbox &quot;$laptopPassword&quot; &quot;XXXXXX&quot; [[Check laptop password]]&gt;&gt;
+&lt;&lt;if ndef $attempts[&#39;laptop&#39;]&gt;&gt;&lt;&lt;set $attempts[&#39;laptop&#39;] to 0&gt;&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="171" name="Check laptop password" tags="futures-exhibit" position="2091.3333333333335,420.66666666666663" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;&lt;set $attempts[&#39;laptop&#39;] +=1 &gt;&gt;&lt;&lt;if $laptopPassword is &quot;ALFRED&quot; or $laptopPassword is &quot;Alfred&quot; or $laptopPassword is &quot;alfred&quot;&gt;&gt;The dialogue box disappears and is replaced by an egg timer. The email program on your laptop has restarted, but the background colour has changed to grey. A new email template opens.
 
 &lt;&lt;linkreplace &quot;Enter email address&quot;&gt;&gt;To: a.r.mitchell@ehm.org
 &lt;&lt;linkreplace &quot;Attach report&quot;&gt;&gt;📎 &quot;Recommendations Report.pdf&quot; attached
