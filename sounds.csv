@@ -1,91 +1,90 @@
-﻿sound,filename,passage,recorded?,Notes
-opening letter,,Look at appointment letter,yes,
-,,Look at letter from Professor Mitchell,,
-,,Look at the letter,,
-,,Read the letter,,
-,,Check the map,,
-,,Look at the species letter,,
-,,Look at the food letter,,
-pick up paper,,Look at the document,yes,
-,,Pick up the report,,
-,,Look at the report,,
-,,Read the first page,,
-,,Read the second page,,
-drawer closing,,File the appointment letter away,yes,
-,,Put Professor Mitchell's letter in your drawer,,
-Box falling,,Sort through the boxes,yes,Sound of box falling followed by papers going everywhere
-paper sorting,,Reorganise the pages,yes,
-,,Move some papers,,
-box dragging,,Retrieve the box with 'Our Future' on it,yes,
-flick through book,,Look the book,yes,flick through the pages
-,,mini game 1 correct,,
-,,You skip ahead a few pages,,
-,,Read the third journal entry,,
-,,Read the fourth journal entry,,
-,,Flick through the journal,,
-,,Read the sixth journal entry,,
-,,Open the book,,
-,,Read the 'COP30 Report' document,,
-,,Read the report,,
-locked lock,,Look at the journal,,Sound of lock being tried but not opening
-,,mini game 1 incorrect,,
-incorrect answer,,Incorrect answer passages,,bummer
-Correct answer,,correct answer passages,,ding
-lock opening,,mini game 1 correct,,
-unpaperclip,,photograph,yes,
-footsteps,,Moving between rooms,,
-,,Walk back to your office,,
-,,Your ofice (end phase),,
-opening metal door,,Open locker doors,,rusty hinge sound
-pick up,,Pick up the shoe,yes,generic pick up sound
-,,Pick up the model,,
-,,Pick up the bag,,
-,,Remove the apple from the scales,,
-,,Move the bread,,
-,,Pick up the item,,
-,,Pick up laptop,,
-echoey footstaps,,Look at the exhbition,,
-,,Step back from the exhibits,,
-locked locker,,mini game 2 incorrect,,with negative digitial bleep
-locker opening,,mini game 2 correct,,with positive digital bleep
-congratulations,,finding SDGs,,clapping?
-pick up heavy,,pick up the cog,yes,pick up heavy object sound
-crumbling biscuits,,Crush up the biscuits,,crinking packet
-insert item,,Put in the cog,yes,into the time machine
-,,Put in the fuse,,
-writing,,Update your map,yes,scribbling sound
-TV static,,Watch the documentary,,
-,,Watch the video,,
-loud click,,mini game 3 correct,,
-whirring noise,,Future's exhibit (once 1st piece is in place),,
-clikcing noise,,Put the buttons in place,,
-eating plastic,,Eat the apple,,maybe some sound of disgust
-put down,,Place the apple on the scales,,
-,,Weigh the tomatoes,,
-slide and drop,,mini game 4 correct,yes,wooden sliding drawer + item falling to the ground
-louder whirring noise,,Put in the fuse,,
-press buttons,,Press buttons,,
-machine working,,Press the big green button,,
-key press,,Press enter,yes,Enter key on laptop
-,,Open the recycling bin,,
-,,Open the folder,,
-,,Open the notepad file,,
-,,Filling in the report,,
-,,Open new email,,
-,,Click 'Send',,
-,,Open email,,
-,,Send email,,
-,,Check sent items,,
-typing,,Try password,yes,
-,,Check COP password,,
-,,Check laptop password,,
-,,Enter date,,
-boot up,,Turn on the laptop,,
-mouse sroll,,Scroll down the page,,
-,,Continue scrolling,,
-connection,,Plug in laptop into the console,,ethernet cable click?
-sit down,,Sit down at your desk,,
-open drawer,,Open your drawer,,
-,,,,
-,,,,
-40,,,,
+﻿sound,filename,passage,recorded?,done in story?,Notes
+opening letter,,Look at appointment letter,y,y,
+,,Look at letter from Professor Mitchell,,y,
+,,Look at the letter,,y,
+,,Read 'Carbon emissions' letter,,y,
+,,Check the map,,y,
+,,Look at the species letter,,y,
+,,Look at the food letter,,y,
+pick up letter,,Look at the document,y,y,
+,,Pick up 'carbon emissions' report,,y,
+,,Look at the report,,y,
+,,Read the first page,,y,
+,,Read the second page,,y,
+drawer closing,,File the appointment letter away,y,y,
+,,Put Professor Mitchell's letter in your drawer,,y,
+Box falling,,Sort through the boxes,y,y,Sound of box falling followed by papers going everywhere
+paper sorting,,Reorganise the pages,y,y,
+,,Move some papers,,y,
+box dragging,,Retrieve the box with 'Our Future' on it,y,y,
+flick through book,,Look the book,n,,flick through the pages
+,,mini game 1 correct,,,
+,,You skip ahead a few pages,,,
+,,Read the third journal entry,,,
+,,Read the fourth journal entry,,,
+,,Flick through the journal,,,
+,,Read the sixth journal entry,,,
+,,Open the book,,,
+,,Read the 'COP30 Report' document,,,
+,,Read the report,,,
+locked lock,,Look at the journal,n,,Sound of lock being tried but not opening
+,,mini game 1 incorrect,,,
+incorrect answer,,Incorrect answer passages,n,,bummer
+Correct answer,,correct answer passages,n,,ding
+lock opening,,mini game 1 correct,n,,
+unpaperclip,,photograph,y,y,
+footsteps,,Moving between rooms,n,,
+,,Walk back to your office,,,
+,,Your ofice (end phase),,,
+opening metal door,,Open locker doors,n,,rusty hinge sound
+pick up,,Pick up the shoe,y,y,generic pick up sound
+,,Pick up the model,,y,
+,,Pick up the bag,,y,
+,,Remove the apple from the scales,,y,
+,,Move the bread,,y,
+,,Pick up the item,,y,
+,,Pick up laptop,,y,
+echoey footstaps,,Look at the exhbition,n,,
+,,Step back from the exhibits,,,
+locked locker,,mini game 2 incorrect,n,,with negative digitial bleep
+locker opening,,mini game 2 correct,n,,with positive digital bleep
+congratulations,,finding SDGs,n,,clapping?
+pick up heavy,,pick up the cog,n,,pick up heavy object sound
+crumbling biscuits,,Crush up the biscuits,n,,crinking packet
+insert item,,Put in the cog,n,,into the time machine
+,,Put in the fuse,,,
+writing,,Update your map,y,y,scribbling sound
+TV static,,Watch the documentary,n,,
+,,Watch the video,,,
+loud click,,mini game 3 correct,n,,
+whirring noise,,Future's exhibit (once 1st piece is in place),n,,
+clikcing noise,,Put the buttons in place,n,,
+eating plastic,,Eat the apple,n,,maybe some sound of disgust
+put down,,Place the apple on the scales,n,,
+,,Weigh the tomatoes,,,
+slide and drop,,mini game 4 correct,y,y,wooden sliding drawer + item falling to the ground
+louder whirring noise,,Put in the fuse,n,,
+press buttons,,Press buttons,n,,
+machine working,,Press the big green button,n,,
+key press,,Press enter,y,y,Enter key on laptop
+,,Open the recycling bin,,y,
+,,Open the folder,,y,
+,,Open the notepad file,,y,
+,,Filling in the report,,y,
+,,Open new email,,y,
+,,Click 'Send',,y,
+,,Open email,,y,
+,,Send email,,y,
+,,Check sent items,,y,
+typing,,Try password,y,y,
+,,Enter date,,y,
+boot up,,Turn on the laptop,n,,
+mouse scroll,,Scroll down the page,n,,
+,,Continue scrolling,,,
+connection,,Plug in laptop into the console,n,,ethernet cable click?
+sit down,,Sit down at your desk,n,,
+open drawer,,Open your drawer,y,y,
+,,,,,
+,,,,,
+40,0,85,13,41,
+,,,27,,

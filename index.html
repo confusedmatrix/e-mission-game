@@ -548,8 +548,8 @@ Dialog.open()
 
 You think you found all the pages, but they’re out of order.
 
-[[Reorganise the pages]]
-</tw-passagedata><tw-passagedata pid="3" name="Look at the letter" tags="office" position="59,643" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;&lt;include [[Researcher&#39;s letter]]&gt;&gt;
+&lt;&lt;link [[Reorganise the pages]]&gt;&gt;&lt;&lt;audio &quot;paper-sorting&quot; play&gt;&gt;&lt;&lt;/link&gt;&gt;
+</tw-passagedata><tw-passagedata pid="3" name="Look at the letter" tags="office" position="24,611.3333333333334" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;&lt;include [[Researcher&#39;s letter]]&gt;&gt;
 
 There is a signature at the bottom of the letter, although you cannot make out the name.
 
@@ -574,7 +574,7 @@ You turn the document over. A note in the same handwriting as the letter says:
 
 You look on your desk. It is a bit of a mess.
 
-[[Move some papers]]
+&lt;&lt;link [[Move some papers]]&gt;&gt;&lt;&lt;audio &quot;paper-sorting&quot; play&gt;&gt;&lt;&lt;/link&gt;&gt;
 &lt;&lt;else&gt;&gt;Enter the correct 5-digit combination to unlock the journal:
 
 &lt;&lt;textbox &quot;$journalCode&quot; &quot;XXXXX&quot; [[Check journal lock combination]]&gt;&gt; ⬅ Type in the combination and hit Enter.
@@ -591,7 +591,7 @@ Sadly, mine has only been a short life but it has, I think, been an interesting 
 
 I do miss our chats and hope your latest intern is enjoying  being part of the museum team as much as I did! I hope the items I left in my locker inspired them as much as they inspired me!
 
-&lt;img src=&quot;https://confusedmatrix.github.io/e-mission-game/assets/images/sdgs/icon-only/07.png&quot; class=&quot;sdg-icon&quot; /&gt; &lt;img src=&quot;https://confusedmatrix.github.io/e-mission-game/assets/images/sdgs/icon-only/11.png&quot; class=&quot;sdg-icon&quot; /&gt; &lt;img src=&quot;https://confusedmatrix.github.io/e-mission-game/assets/images/sdgs/icon-only/12.png&quot; class=&quot;sdg-icon&quot; /&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="7" name="&#39;United Nations Sustainable Development Goals&#39; document" tags="" position="399,575" size="100,100">&lt;img src=&quot;https://confusedmatrix.github.io/e-mission-game/assets/images/sdg-document.png&quot; class=&quot;passage-image&quot; /&gt;</tw-passagedata><tw-passagedata pid="8" name="PassageHeader" tags="" position="699,28" size="200,100">&lt;div id=&quot;header-icons&quot;&gt;&lt;&lt;if def $inventory&gt;&gt;[img[Inventory|https://confusedmatrix.github.io/e-mission-game/assets/images/icons/archive.png][Inventory]]&lt;&lt;/if&gt;&gt; &lt;&lt;if def $map&gt;&gt;[img[Map|https://confusedmatrix.github.io/e-mission-game/assets/images/icons/map.png][Map]]&lt;&lt;/if&gt;&gt; &lt;&lt;if def $journal&gt;&gt;[img[Journal|https://confusedmatrix.github.io/e-mission-game/assets/images/icons/book.png][Researcher&#39;s journal]]&lt;&lt;/if&gt;&gt; &lt;&lt;if def $notebook&gt;&gt;[img[Your notes|https://confusedmatrix.github.io/e-mission-game/assets/images/icons/notebook.png][Notebook]]&lt;&lt;/if&gt;&gt;&lt;div class=&quot;ui-icons&quot;&gt;&lt;&lt;if $fullscreen is false&gt;&gt;&lt;&lt;link [img[Full screen mode|https://confusedmatrix.github.io/e-mission-game/assets/images/icons/full-screen.png]]&gt;&gt;&lt;&lt;set $fullscreen to true&gt;&gt;&lt;&lt;script&gt;&gt;
+&lt;img src=&quot;https://confusedmatrix.github.io/e-mission-game/assets/images/sdgs/icon-only/07.png&quot; class=&quot;sdg-icon&quot; /&gt; &lt;img src=&quot;https://confusedmatrix.github.io/e-mission-game/assets/images/sdgs/icon-only/11.png&quot; class=&quot;sdg-icon&quot; /&gt; &lt;img src=&quot;https://confusedmatrix.github.io/e-mission-game/assets/images/sdgs/icon-only/12.png&quot; class=&quot;sdg-icon&quot; /&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="7" name="&#39;United Nations Sustainable Development Goals&#39; document" tags="" position="399,575" size="100,100">&lt;img src=&quot;https://confusedmatrix.github.io/e-mission-game/assets/images/sdg-document.png&quot; class=&quot;passage-image&quot; /&gt;</tw-passagedata><tw-passagedata pid="8" name="PassageHeader" tags="" position="699,28" size="200,100">&lt;div id=&quot;header-icons&quot;&gt;&lt;&lt;if def $inventory&gt;&gt;[img[Inventory|https://confusedmatrix.github.io/e-mission-game/assets/images/icons/archive.png][Inventory]]&lt;&lt;/if&gt;&gt; &lt;&lt;if def $map&gt;&gt;&lt;&lt;link [img[Map|https://confusedmatrix.github.io/e-mission-game/assets/images/icons/map.png][Map]]&gt;&gt;&lt;&lt;audio &quot;opening-letter&quot; play&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;&lt;/if&gt;&gt; &lt;&lt;if def $journal&gt;&gt;[img[Journal|https://confusedmatrix.github.io/e-mission-game/assets/images/icons/book.png][Researcher&#39;s journal]]&lt;&lt;/if&gt;&gt; &lt;&lt;if def $notebook&gt;&gt;[img[Your notes|https://confusedmatrix.github.io/e-mission-game/assets/images/icons/notebook.png][Notebook]]&lt;&lt;/if&gt;&gt;&lt;div class=&quot;ui-icons&quot;&gt;&lt;&lt;if $fullscreen is false&gt;&gt;&lt;&lt;link [img[Full screen mode|https://confusedmatrix.github.io/e-mission-game/assets/images/icons/full-screen.png]]&gt;&gt;&lt;&lt;set $fullscreen to true&gt;&gt;&lt;&lt;script&gt;&gt;
 var elem = document.documentElement;
 if (elem.requestFullscreen) {
 	elem.requestFullscreen();
@@ -635,7 +635,7 @@ Dialog.open()
 &lt;&lt;goto [[Open the journal]]&gt;&gt;
 &lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="11" name="Read the first journal entry" tags="office" position="151,1110" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;&lt;if lastVisited(&quot;Photograph in journal&quot;) is 1&gt;&gt;&lt;div class=&quot;notice&quot;&gt;The photograph has been added to your inventory&lt;/div&gt;
 &lt;&lt;/if&gt;&gt;&lt;&lt;include &quot;Journal entry 1&quot;&gt;&gt;&lt;&lt;run $journal.pushUnique(&quot;Journal entry 1&quot;)&gt;&gt;&lt;&lt;if not $inventory.includes(&quot;Photograph&quot;)&gt;&gt;
-Paperclipped to the entry is a [[photograph|Photograph in journal]].
+Paperclipped to the entry is a &lt;&lt;link [[photograph|Photograph in journal]]&gt;&gt;&lt;&lt;audio &quot;unpaperclip&quot; play&gt;&gt;&lt;&lt;/link&gt;&gt;.
 &lt;&lt;else&gt;&gt;
 The next few pages are largely filled with details of day-to-day university life. Meetings with friends, attending an environmental talk, plans for another climate march in London.
 
@@ -683,7 +683,7 @@ Some pages are filled with charts and statistics. Others contain pasted newspape
 &lt;&lt;/for&gt;&gt;
 &lt;&lt;/if&gt;&gt;
 &lt;&lt;textarea &quot;$note&quot; &quot;&quot;&gt;&gt;
-&lt;&lt;link &quot;Add note&quot; &quot;Notebook&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
+&lt;&lt;link &quot;Add note&quot; &quot;Notebook&quot;&gt;&gt;&lt;&lt;audio &quot;writing&quot; play&gt;&gt;&lt;&lt;/link&gt;&gt;
 
 &lt;&lt;link &quot;Return to story&quot;&gt;&gt;&lt;&lt;goto $progress&gt;&gt;&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="20" name="Map" tags="lobby" position="645,139" size="100,100">&lt;&lt;for _i, _location range $map&gt;&gt;&lt;&lt;if _i neq 0&gt;&gt; | &lt;&lt;/if&gt;&gt;&lt;&lt;link _location _location&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;&lt;/for&gt;&gt;
 
@@ -696,14 +696,14 @@ Some pages are filled with charts and statistics. Others contain pasted newspape
 
 You can look at items in your Inventory to see if there are any clues to complete puzzles.&lt;/div&gt;</tw-passagedata><tw-passagedata pid="22" name="Help 2" tags="" position="511,646" size="100,100">&lt;div class=&quot;help&quot;&gt;When you find a puzzle, look through your &lt;img src=&quot;https://confusedmatrix.github.io/e-mission-game/assets/images/icons/archive.png&quot; class=&quot;inline-icon&quot; /&gt;&lt;&lt;link &quot;Inventory&quot; &quot;Inventory&quot;&gt;&gt;&lt;&lt;/link&gt;&gt; to see if you have the information to solve it, or explore to see if you missed something.
 
-When you look at items, it can be useful to make notes of information that could be used to unlock the puzzles. What could you use to write this down?&lt;/div&gt;</tw-passagedata><tw-passagedata pid="23" name="Move some papers" tags="office" position="111,850" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;&lt;if ndef $notebook&gt;&gt;You find your &lt;img src=&quot;https://confusedmatrix.github.io/e-mission-game/assets/images/icons/notebook.png&quot; class=&quot;inline-icon&quot; /&gt;&lt;&lt;link &quot;Notebook&quot; &quot;Move some papers&quot;&gt;&gt;&lt;&lt;set $notebook to []&gt;&gt;&lt;&lt;/link&gt;&gt; buried beneath the papers.
+When you look at items, it can be useful to make notes of information that could be used to unlock the puzzles. What could you use to write this down?&lt;/div&gt;</tw-passagedata><tw-passagedata pid="23" name="Move some papers" tags="office" position="136,846.6666666666666" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;&lt;if ndef $notebook&gt;&gt;You find your &lt;img src=&quot;https://confusedmatrix.github.io/e-mission-game/assets/images/icons/notebook.png&quot; class=&quot;inline-icon&quot; /&gt;&lt;&lt;link &quot;Notebook&quot; &quot;Move some papers&quot;&gt;&gt;&lt;&lt;set $notebook to []&gt;&gt;&lt;&lt;/link&gt;&gt; buried beneath the papers.
 
 Now you need to figure out the code to unlock the journal.
 &lt;&lt;else&gt;&gt;&lt;&lt;goto [[Look at the journal]]&gt;&gt;&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="24" name="Help 3" tags="" position="511,758" size="100,100">&lt;div class=&quot;help&quot;&gt;Take a look at the letter again. Do those symbols at the bottom appear anywhere in the document you have picked up?&lt;/div&gt;</tw-passagedata><tw-passagedata pid="25" name="Help 4" tags="" position="511,873" size="100,100">&lt;div class=&quot;help&quot;&gt;HINT: You could use your notebook to write down the numbers.&lt;/div&gt;</tw-passagedata><tw-passagedata pid="26" name="Stay in your office" tags="office" position="76,1410" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;There is nothing else to do in your office.
 
 You sit in your chair and stare at the clutter for a few minutes then decide to go to the &lt;&lt;link [[staff room|Go to the staff room]]&gt;&gt;&lt;&lt;run $completed.pushUnique(&quot;Your office&quot;)&gt;&gt;&lt;&lt;set $map to [&quot;Your office&quot;]&gt;&gt;&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="27" name="Go to the staff room" tags="lobby" position="226,1410" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;&lt;run $map.pushUnique(&quot;Staff room&quot;)&gt;&gt;You  check your map to find your way to the staff room.
 
-&lt;&lt;include [[Help 6]]&gt;&gt;</tw-passagedata><tw-passagedata pid="28" name="Help 6" tags="" position="511,1096" size="100,100">&lt;div class=&quot;help&quot;&gt;To move around the museum, click on the &lt;img src=&quot;https://confusedmatrix.github.io/e-mission-game/assets/images/icons/map.png&quot; class=&quot;inline-icon&quot; /&gt;&lt;&lt;link &quot;Map&quot; &quot;Map&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;, then click on the room you want to go to.&lt;/div&gt;</tw-passagedata><tw-passagedata pid="29" name="Staff room" tags="staff-room" position="370,1406" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;&lt;if $completed.includes(&quot;Staff room&quot;)&gt;&gt;
+&lt;&lt;include [[Help 6]]&gt;&gt;</tw-passagedata><tw-passagedata pid="28" name="Help 6" tags="" position="511,1096" size="100,100">&lt;div class=&quot;help&quot;&gt;To move around the museum, click on the &lt;img src=&quot;https://confusedmatrix.github.io/e-mission-game/assets/images/icons/map.png&quot; class=&quot;inline-icon&quot; /&gt;&lt;&lt;link &quot;Map&quot; &quot;Map&quot;&gt;&gt;&lt;&lt;audio &quot;opening-letter&quot; play&gt;&gt;&lt;&lt;/link&gt;&gt;, then click on the room you want to go to.&lt;/div&gt;</tw-passagedata><tw-passagedata pid="29" name="Staff room" tags="staff-room" position="370,1406" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;&lt;if $completed.includes(&quot;Staff room&quot;)&gt;&gt;
 There is nothing left to do in the staff room.&lt;&lt;elseif hasVisited(&quot;Check sent items&quot;)&gt;&gt;As you walk down the corridor, you notice a poster on the wall opposite that you&#39;re fairly sure wasn’t there before.
 
 The poster is advertising the &#39;Inaugural Alfred Mitchell Lecture&#39;. Apparently eminent climate researcher and governmental policy advisor Prof. Naomi Emyra-Fossey will be speaking on the subject of &#39;The Continuing Climate Challenge: Moving past the Climate Crisis in a Carbon Neutral age&#39;. The lecture is due to take place to coincide with the grand re-opening of the Museum in a few week’s time. 
@@ -748,7 +748,7 @@ I’m going to miss working with Alf but he’s said to keep in touch once I’m
 
 You can’t believe you’ve been there a month already. You can still remember getting the letter...
 
-[[Look at appointment letter]]</tw-passagedata><tw-passagedata pid="33" name="Help 5" tags="" position="511,983" size="100,100">&lt;div class=&quot;help&quot;&gt;The &lt;img src=&quot;https://confusedmatrix.github.io/e-mission-game/assets/images/icons/book.png&quot; class=&quot;inline-icon&quot; /&gt;&lt;&lt;link &quot;Researcher&#39;s journal&quot; &quot;Researcher&#39;s journal&quot;&gt;&gt;&lt;&lt;/link&gt;&gt; will provide you with information about the environmental and social problems that happened during the researcher’s life. Use the contents of the journal entries as clues to solve puzzles and work out where to explore next.
+&lt;&lt;link [[Look at appointment letter]]&gt;&gt;&lt;&lt;audio &quot;opening-letter&quot; play&gt;&gt;&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="33" name="Help 5" tags="" position="511,983" size="100,100">&lt;div class=&quot;help&quot;&gt;The &lt;img src=&quot;https://confusedmatrix.github.io/e-mission-game/assets/images/icons/book.png&quot; class=&quot;inline-icon&quot; /&gt;&lt;&lt;link &quot;Researcher&#39;s journal&quot; &quot;Researcher&#39;s journal&quot;&gt;&gt;&lt;&lt;/link&gt;&gt; will provide you with information about the environmental and social problems that happened during the researcher’s life. Use the contents of the journal entries as clues to solve puzzles and work out where to explore next.
 
 You will unlock new journal entries as you progress through the game. 
 
@@ -766,16 +766,16 @@ The contents belonged to a researcher who had donated their life’s work to the
 &lt;&lt;include [[Help 1]]&gt;&gt;&lt;&lt;/if&gt;&gt;
 What do you want to look at?
 
-&lt;&lt;if not hasVisited(&quot;Look at the letter&quot;)&gt;&gt;[[Look at the letter]]
+&lt;&lt;if not hasVisited(&quot;Look at the letter&quot;)&gt;&gt;&lt;&lt;link [[Look at the letter]]&gt;&gt;&lt;&lt;audio &quot;opening-letter&quot; play&gt;&gt;&lt;&lt;/link&gt;&gt;
 &lt;&lt;/if&gt;&gt;
-&lt;&lt;if not hasVisited(&quot;Look at the document&quot;)&gt;&gt;[[Look at the document]]
+&lt;&lt;if not hasVisited(&quot;Look at the document&quot;)&gt;&gt;&lt;&lt;link [[Look at the document]]&gt;&gt;&lt;&lt;audio &quot;pick-up-letter&quot; play&gt;&gt;&lt;&lt;/link&gt;&gt;
 &lt;&lt;/if&gt;&gt;
 &lt;&lt;if not hasVisited(&quot;Look at the book&quot;)&gt;&gt;[[Look at the book]]
 &lt;&lt;/if&gt;&gt;&lt;&lt;if $inventory.includesAll(&quot;Researcher&#39;s letter&quot;, &quot;&#39;United Nations Sustainable Development Goals&#39; document&quot;, &quot;&#39;How Bad Are Bananas&#39; book&quot;)&gt;&gt;[[Look at the journal]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="35" name="Reorganise the pages" tags="office" position="11,397" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;Reorganising the pages could take hours. 
 
 You’re too curious about what’s in the ‘Our future?’ box and will need to refer to some other documents to make sure the box contents are organised correctly. You decide the sorting can wait until morning.
 
-&lt;&lt;link [[Retrieve the box with &#39;Our Future&#39; on it]]&gt;&gt;&lt;&lt;set $inventory to []&gt;&gt;&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="36" name="Help 7" tags="" position="278,1784" size="100,100">&lt;div class=&quot;help&quot;&gt;Click on the Carbon Emissions Exhibition on the map to move there.&lt;/div&gt;</tw-passagedata><tw-passagedata pid="37" name="Look at the book" tags="office" position="160,692" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;The book is a copy of &#39;How Bad Are Bananas&#39; by Mike Berners Lee.
+&lt;&lt;link [[Retrieve the box with &#39;Our Future&#39; on it]]&gt;&gt;&lt;&lt;set $inventory to []&gt;&gt;&lt;&lt;audio &quot;box-dragging&quot; play&gt;&gt;&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="36" name="Help 7" tags="" position="278,1784" size="100,100">&lt;div class=&quot;help&quot;&gt;Click on the Carbon Emissions Exhibition on the map to move there.&lt;/div&gt;</tw-passagedata><tw-passagedata pid="37" name="Look at the book" tags="office" position="160,692" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;The book is a copy of &#39;How Bad Are Bananas&#39; by Mike Berners Lee.
 
 &lt;&lt;include &quot;&#39;How Bad Are Bananas&#39; book&quot;&gt;&gt;
 
@@ -807,7 +807,7 @@ The doors on lockers 200, 300 and 400 won’t move - they must be locked. Maybe 
 
 Maybe the researcher’s journal will tell you the code?
 
-[[Pick up the shoe]]
+&lt;&lt;link [[Pick up the shoe]]&gt;&gt;&lt;&lt;audio &quot;pick-up&quot; play&gt;&gt;&lt;&lt;/link&gt;&gt;
 
 [[Read the third journal entry]]</tw-passagedata><tw-passagedata pid="42" name="Check door number and code" tags="staff-room" position="420,1555" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;&lt;set $attempts[&#39;locker&#39;] += 1&gt;&gt;&lt;&lt;if $doorNumber is &quot;300&quot; and $doorCode is &quot;1950&quot;&gt;&gt;&lt;&lt;run $completed.pushUnique(&quot;Staff room&quot;, &quot;Carbon Emissions Exhibition&quot;)&gt;&gt;The locker bleeps as you input the code, and the door swings open. Inside is a strange looking cog, with an exhibit label attached.
 
@@ -817,7 +817,7 @@ Beneath the cog is a report with a letter paperclipped to it. There is also a gr
 
 &lt;&lt;if not $sdgs.includes(&quot;SDG 13 - climate action&quot;)&gt;&gt;&lt;&lt;linkreplace &quot;Collect the block&quot;&gt;&gt;&lt;&lt;run $sdgs.pushUnique(&quot;SDG 13 - climate action&quot;)&gt;&gt;&lt;div class=&quot;notice&quot;&gt;Congratulations! You’ve found your first SDG! As you explore the museum and complete the minigames, you’ll discover more SDGs. Collect them all and uncover the links between environmental and social challenges and these 17 global goals for a sustainable future.&lt;/div&gt;&lt;&lt;/linkreplace&gt;&gt;&lt;&lt;/if&gt;&gt;
 
-[[Pick up the report|Pick up &#39;carbon emissions&#39; report]]&lt;&lt;else&gt;&gt;Hmmm...that doesn’t seem to have worked.
+&lt;&lt;link [[Pick up the report|Pick up &#39;carbon emissions&#39; report]]&gt;&gt;&lt;&lt;audio &quot;pick-up-letter&quot; play&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;&lt;else&gt;&gt;Hmmm...that doesn’t seem to have worked.
 
 &lt;&lt;include [[Help 8]]&gt;&gt;
 [[Try again?|Staff room]]
@@ -831,7 +831,7 @@ And don’t forget that you can check any reports and documents you have already
 
 Could that be the exhibit along the corridor from your office? It might be worth taking a look at it. 
 
-&lt;&lt;link &quot;Check the map&quot; &quot;Map&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
+&lt;&lt;link &quot;Check the map&quot; &quot;Map&quot;&gt;&gt;&lt;&lt;audio &quot;opening-letter&quot; play&gt;&gt;&lt;&lt;/link&gt;&gt;
 
 [[Stay in the staff room]]</tw-passagedata><tw-passagedata pid="46" name="&#39;Futures Exhibit. Inner Hallway. Exhibit 12&#39;" tags="futures-exhibit" position="1791,394" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;&lt;if $inventory.includes(&quot;Cog&quot;)&gt;&gt;You have walked past the inner hallway many times on the way to your office but haven’t stopped to really look at the Futures Exhibition before.
 
@@ -865,7 +865,7 @@ As you move into the machine’s seat to take a closer look, you see a scrap of 
 
 It is a copy of the museum map. Four of the exhibits have been circled.
 
-[[Update your map]]</tw-passagedata><tw-passagedata pid="49" name="Look at Exhibit 1" tags="carbon-emission-exhibit" position="767,1268" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;div class=&quot;plaque&quot;&gt;&lt;h2&gt;Intergovernmental Panel on Climate Change Special Report (2018)&lt;/h2&gt;
+&lt;&lt;link [[Update your map]]&gt;&gt;&lt;&lt;audio &quot;writing&quot; play&gt;&gt;&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="49" name="Look at Exhibit 1" tags="carbon-emission-exhibit" position="767,1268" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;div class=&quot;plaque&quot;&gt;&lt;h2&gt;Intergovernmental Panel on Climate Change Special Report (2018)&lt;/h2&gt;
 The IPCC reports continued to warn of projected impacts from failure to make significant reductions in carbon emissions and to decarbonise global economies. The following quotes are from the IPCC Special Report issued in 2018.
 &lt;blockquote&gt;“Human activities are estimated to have caused approximately 1.0°C of global warming above pre-industrial levels, with a likely range of 0.8°C to 1.2°C. Global warming is likely to reach 1.5°C between 2030 and 2052 if it continues to increase at the current rate.“&lt;/blockquote&gt;&lt;blockquote&gt;“Warming from anthropogenic emissions from the pre-industrial period to the present will persist for centuries to millennia and will continue to cause further long-term changes in the climate system, such as sea level rise, with associated impacts, but these emissions alone are unlikely to cause global warming of 1.5°C.”&lt;/blockquote&gt;&lt;/div&gt;
 
@@ -949,7 +949,21 @@ importScripts(
   window.database = firebase.database();
   
 })
-&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="56" name="Update your map" tags="futures-exhibit" position="1576,582" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;&lt;run $map.pushUnique(&quot;&#39;The Sixth Mass Extinction&#39; Exhibit&quot;, &quot;&#39;How Carbon Intensive Is Your Diet?&#39; Exhibit&quot;)&gt;&gt;Maybe these circled exhibits are where you will find the missing parts of the machine?
+&lt;&lt;/script&gt;&gt;
+
+&lt;&lt;cacheaudio &quot;opening-letter&quot; &quot;mp3|https://confusedmatrix.github.io/e-mission-game/assets/sounds/Opening letter.mp3&quot;&gt;&gt;
+&lt;&lt;cacheaudio &quot;pick-up-letter&quot; &quot;mp3|https://confusedmatrix.github.io/e-mission-game/assets/sounds/Pick up letter.mp3&quot;&gt;&gt;
+&lt;&lt;cacheaudio &quot;drawer-closing&quot; &quot;mp3|https://confusedmatrix.github.io/e-mission-game/assets/sounds/Drawer closing.mp3&quot;&gt;&gt;
+&lt;&lt;cacheaudio &quot;box-falling&quot; &quot;mp3|https://confusedmatrix.github.io/e-mission-game/assets/sounds/Box falling.mp3&quot;&gt;&gt;
+&lt;&lt;cacheaudio &quot;paper-sorting&quot; &quot;mp3|https://confusedmatrix.github.io/e-mission-game/assets/sounds/Paper sorting.mp3&quot;&gt;&gt;
+&lt;&lt;cacheaudio &quot;box-dragging&quot; &quot;mp3|https://confusedmatrix.github.io/e-mission-game/assets/sounds/Box dragging.mp3&quot;&gt;&gt;
+&lt;&lt;cacheaudio &quot;unpaperclip&quot; &quot;mp3|https://confusedmatrix.github.io/e-mission-game/assets/sounds/Unpaperclip.mp3&quot;&gt;&gt;
+&lt;&lt;cacheaudio &quot;pick-up&quot; &quot;mp3|https://confusedmatrix.github.io/e-mission-game/assets/sounds/Pick up.mp3&quot;&gt;&gt;
+&lt;&lt;cacheaudio &quot;writing&quot; &quot;mp3|https://confusedmatrix.github.io/e-mission-game/assets/sounds/Writing.mp3&quot;&gt;&gt;
+&lt;&lt;cacheaudio &quot;slide-and-drop&quot; &quot;mp3|https://confusedmatrix.github.io/e-mission-game/assets/sounds/Slide and drop.mp3&quot;&gt;&gt;
+&lt;&lt;cacheaudio &quot;key-press&quot; &quot;mp3|https://confusedmatrix.github.io/e-mission-game/assets/sounds/Key press.mp3&quot;&gt;&gt;
+&lt;&lt;cacheaudio &quot;typing&quot; &quot;mp3|https://confusedmatrix.github.io/e-mission-game/assets/sounds/Typing.mp3&quot;&gt;&gt;
+&lt;&lt;cacheaudio &quot;open-drawer&quot; &quot;mp3|https://confusedmatrix.github.io/e-mission-game/assets/sounds/Open drawer.mp3&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="56" name="Update your map" tags="futures-exhibit" position="1576,582" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;&lt;run $map.pushUnique(&quot;&#39;The Sixth Mass Extinction&#39; Exhibit&quot;, &quot;&#39;How Carbon Intensive Is Your Diet?&#39; Exhibit&quot;)&gt;&gt;Maybe these circled exhibits are where you will find the missing parts of the machine?
 
 Where do you want to go first?
 
@@ -969,7 +983,7 @@ if (State.turns % 1 == 0) {
 &lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="59" name="End" tags="lobby" position="3087,42" size="200,200">&lt;&lt;set $progress to passage()&gt;&gt;&lt;h2&gt;Credits&lt;/h2&gt;
 &lt;strong&gt;Game Design Team&lt;/strong&gt;
 Project Manager - Sarah Briggs, Keele University, UK
-Narrative Design - Amy Blaney and Alana Wheat, Keele University, UK
+Narrative Design - Amy Louise Blaney and Alana Wheat, Keele University, UK
 Game Development - Chris Briggs, Keele University, UK
 
 &lt;strong&gt;Project Team&lt;/strong&gt;
@@ -1023,7 +1037,7 @@ Around the room there is footage of different animals and plant species that are
 
 &lt;&lt;if not hasVisited(&quot;Look at the models&quot;)&gt;&gt;[[Look at the models]]
 &lt;&lt;/if&gt;&gt;
-&lt;&lt;if not hasVisited(&quot;Pick up the bear&quot;)&gt;&gt;[[Pick up the bear]]
+&lt;&lt;if not hasVisited(&quot;Pick up the bear&quot;)&gt;&gt;&lt;&lt;link [[Pick up the bear]]&gt;&gt;&lt;&lt;audio &quot;pick-up&quot; play&gt;&gt;&lt;&lt;/link&gt;&gt;
 &lt;&lt;/if&gt;&gt;
 &lt;&lt;if not hasVisited(&quot;Pick up the rat&quot;)&gt;&gt;[[Pick up the rat]]
 &lt;&lt;/if&gt;&gt;
@@ -1057,7 +1071,7 @@ The 2019 WWF Australia report on ‘Climate Change and Australia’s wildlife: I
 
 One of the models seems to have been knocked over. 
 
-[[Pick up the model]]</tw-passagedata><tw-passagedata pid="76" name="Pick up the model" tags="sixth-mass-extinction-exhibit" position="1305,1396" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;You pick up the model that was knocked over. It is a Spix’s Macaw. As you place it back on the display you hear a quiet click, as if a lever has shifted somewhere.
+&lt;&lt;link [[Pick up the model]]&gt;&gt;&lt;&lt;audio &quot;pick-up&quot; play&gt;&gt;&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="76" name="Pick up the model" tags="sixth-mass-extinction-exhibit" position="1305,1396" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;You pick up the model that was knocked over. It is a Spix’s Macaw. As you place it back on the display you hear a quiet click, as if a lever has shifted somewhere.
 
 [[Look at the Spix&#39;s Macaw exhibit]]</tw-passagedata><tw-passagedata pid="77" name="Look at the Spix&#39;s Macaw exhibit" tags="sixth-mass-extinction-exhibit" position="1190,1396" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;&lt;include &quot;Spix&#39;s macaw&quot;&gt;&gt;
 
@@ -1153,7 +1167,7 @@ The models all lock into place and appear to drop down. A hidden panel beneath t
 
 You reach into the dark space. You expect to find dust and cobwebs but the space is clean. Inside you find a small bag containing three round items with numbers on. There is also a glossy report with a note clipped to it, and two wooden blocks with coloured squares on them, a number and some text.
 
-[[Look at the report]]
+&lt;&lt;link [[Look at the report]]&gt;&gt;&lt;&lt;audio &quot;pick-up-letter&quot; play&gt;&gt;&lt;&lt;/link&gt;&gt;
 &lt;&lt;else&gt;&gt;
 Hmmm...that doesn’t seem to have worked. 
 
@@ -1169,12 +1183,12 @@ If you’re not sure what the causes are, perhaps the exhibits could enable you 
 </tw-passagedata><tw-passagedata pid="91" name="Look at the report" tags="sixth-mass-extinction-exhibit" position="1428,1865" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;It is a copy of the WWF Wildlife in a Warming World report. The note attached to the front cover is another letter in the familiar handwriting of the researcher.
 
 &lt;&lt;include &quot;WWF Wildlife in a Warming World report&quot;&gt;&gt;
-&lt;&lt;link [[Store the report and look at the letter|Look at the species letter]]&gt;&gt;&lt;&lt;run $inventory.pushUnique(&quot;WWF Wildlife in a Warming World report&quot;)&gt;&gt;&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="92" name="Look at the species wooden blocks" tags="sixth-mass-extinction-exhibit" position="1429,1988" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;div class=&quot;notice&quot;&gt;The letter has been added to your inventory&lt;/div&gt;
+&lt;&lt;link [[Store the report and look at the letter|Look at the species letter]]&gt;&gt;&lt;&lt;run $inventory.pushUnique(&quot;WWF Wildlife in a Warming World report&quot;)&gt;&gt;&lt;&lt;audio &quot;opening-letter&quot; play&gt;&gt;&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="92" name="Look at the species wooden blocks" tags="sixth-mass-extinction-exhibit" position="1429,1988" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;div class=&quot;notice&quot;&gt;The letter has been added to your inventory&lt;/div&gt;
 One says ‘15 Life on Land’ on a green background, and the other says ‘14 Life Below Water’ on a blue background.
 
 &lt;&lt;if not $sdgs.includes(&quot;SDG 14 - life below water&quot;, &quot;SDG 15 - life on land&quot;)&gt;&gt;&lt;&lt;linkreplace &quot;Collect the blocks&quot;&gt;&gt;&lt;&lt;run $sdgs.pushUnique(&quot;SDG 14 - life below water&quot;, &quot;SDG 15 - life on land&quot;)&gt;&gt;&lt;div class=&quot;notice&quot;&gt;Great work! You found some more SDGs!&lt;/div&gt;&lt;&lt;/linkreplace&gt;&gt;&lt;&lt;/if&gt;&gt;
 
-[[Pick up the bag]]</tw-passagedata><tw-passagedata pid="93" name="Pick up the bag" tags="sixth-mass-extinction-exhibit" position="1428,2111" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;&lt;run $inventory.pushUnique(&quot;Bag of buttons&quot;)&gt;&gt;The items look like buttons. Curious! What they could be for?
+&lt;&lt;link [[Pick up the bag]]&gt;&gt;&lt;&lt;audio &quot;pick-up&quot; play&gt;&gt;&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="93" name="Pick up the bag" tags="sixth-mass-extinction-exhibit" position="1428,2111" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;&lt;run $inventory.pushUnique(&quot;Bag of buttons&quot;)&gt;&gt;The items look like buttons. Curious! What they could be for?
 
 &lt;&lt;include &quot;Bag of buttons&quot;&gt;&gt;
 
@@ -1217,11 +1231,13 @@ In the center of the room there is a set of weighing scales with a digital displ
 
 [[Place the apple on the scales]]</tw-passagedata><tw-passagedata pid="100" name="Place the apple on the scales" tags="carbon-intensive-diet-exhibit" position="1621,1198" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;The weight shows &#39;80g&#39;... Odd, you don’t remember an apple ever weighing that much!
 
-[[Remove the apple from the scales]]</tw-passagedata><tw-passagedata pid="101" name="Remove the apple from the scales" tags="carbon-intensive-diet-exhibit" position="1470,1171" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;You notice a model loaf of bread is obscuring a sign on the front of the exhibit.
+&lt;&lt;link [[Remove the apple from the scales]]&gt;&gt;&lt;&lt;audio &quot;pick-up&quot; play&gt;&gt;&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="101" name="Remove the apple from the scales" tags="carbon-intensive-diet-exhibit" position="1470,1171" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;You notice a model loaf of bread is obscuring a sign on the front of the exhibit.
 
-[[Move the bread]]</tw-passagedata><tw-passagedata pid="102" name="Check carbon intensive diet minigame" tags="carbon-intensive-diet-exhibit" position="1781,1339" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;&lt;set $attempts[&#39;diet&#39;] += 1&gt;&gt;&lt;&lt;if $compareItemNames[0] is &quot;Strawberries (1kg, locally sourced)&quot; and $compareItemNames[2] is &quot;Tomatoes (1kg, average)&quot; and $compareItemNames[4] is &quot;Lamb leg joint (2kg with supermarket packaging)&quot; and $compareItemNames[6] is &quot;Cheese (1kg, hard cheese)&quot; and $compareItemNames[8] is &quot;Eggs (box of 6)&quot; and $compareItemNames[10] is &quot;Cheeseburger (4oz)&quot; and $compareItemNames[12] is &quot;Bottled wine (1ltr)&quot;&gt;&gt;A green light appears above the wooden slots. A small door opens to the side of the wooden slots and a shiny item drops to the floor.
+&lt;&lt;link [[Move the bread]]&gt;&gt;&lt;&lt;audio &quot;pick-up&quot; play&gt;&gt;&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="102" name="Check carbon intensive diet minigame" tags="carbon-intensive-diet-exhibit" position="1781,1339" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;&lt;set $attempts[&#39;diet&#39;] += 1&gt;&gt;&lt;&lt;if $compareItemNames[0] is &quot;Strawberries (1kg, locally sourced)&quot; and $compareItemNames[2] is &quot;Tomatoes (1kg, average)&quot; and $compareItemNames[4] is &quot;Lamb leg joint (2kg with supermarket packaging)&quot; and $compareItemNames[6] is &quot;Cheese (1kg, hard cheese)&quot; and $compareItemNames[8] is &quot;Eggs (box of 6)&quot; and $compareItemNames[10] is &quot;Cheeseburger (4oz)&quot; and $compareItemNames[12] is &quot;Bottled wine (1ltr)&quot;&gt;&gt;A green light appears above the wooden slots.
 
-[[Pick up the item]]
+&lt;&lt;linkreplace &quot;Press the light&quot;&gt;&gt;&lt;&lt;audio &quot;slide-and-drop&quot; play&gt;&gt;A small door opens to the side of the wooden slots and a shiny item drops to the floor.
+
+&lt;&lt;link [[Pick up the item]]&gt;&gt;&lt;&lt;audio &quot;pick-up&quot; play&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;&lt;/linkreplace&gt;&gt;
 &lt;&lt;else&gt;&gt;A red light shows above the wooden slots. At least one of the foods must be in the wrong place.
 
 [[Try again?|Rearrange the items on the shelves]]
@@ -1230,7 +1246,7 @@ In the center of the room there is a set of weighing scales with a digital displ
 [[Press buttons]]</tw-passagedata><tw-passagedata pid="104" name="Read the first page" tags="futures-exhibit" position="1963,637" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;&lt;include &quot;Journal entry 7&quot;&gt;&gt;&lt;&lt;run $journal.pushUnique(&quot;Journal entry 7&quot;)&gt;&gt;
 The second page is written in another familiar hand - you&#39;d recognise Alf’s scrawl anywhere. And, strangely, the letter is addressed to you...
 
-[[Read the second page]]</tw-passagedata><tw-passagedata pid="105" name="Read the second page" tags="futures-exhibit" position="1962,762" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;&lt;include &quot;Alf&#39;s letter&quot;&gt;&gt;&lt;&lt;run $inventory.pushUnique(&quot;Alf&#39;s letter&quot;)&gt;&gt;
+&lt;&lt;link [[Read the second page]]&gt;&gt;&lt;&lt;audio &quot;pick-up-letter&quot; play&gt;&gt;&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="105" name="Read the second page" tags="futures-exhibit" position="1962,762" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;&lt;include &quot;Alf&#39;s letter&quot;&gt;&gt;&lt;&lt;run $inventory.pushUnique(&quot;Alf&#39;s letter&quot;)&gt;&gt;
 Your rational mind says that this is like something from science fiction. Time travel isn’t possible.
 
 But clearly Alf felt that this machine might just work. And he was a rational person with a distinguished scientific career. Why else would he have hidden the parts around the museum? Left you this researcher&#39;s journal? And all the reports?
@@ -1251,7 +1267,7 @@ So I hid the parts for you to find. Hopefully you’ve learnt enough about the c
 
 Good Luck.&lt;/div&gt;</tw-passagedata><tw-passagedata pid="107" name="Press the big green button" tags="futures-exhibit" position="1959,880" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;The screen in the centre of the console lights up and a dialogue box opens. The cursor is flashing.
 
-[[Press enter]]</tw-passagedata><tw-passagedata pid="108" name="Place item on the scales" tags="carbon-intensive-diet-exhibit" position="1784,1226" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;&lt;if $itemToWeigh is &quot;Bananas (1kg)&quot;&gt;&gt;&lt;&lt;set $releaseBananasBook to true&gt;&gt;An error appeared when weighing the bananas. Strange. Maybe something in your inventory can help?&lt;&lt;else&gt;&gt;The &lt;&lt;= $itemToWeigh&gt;&gt; takes &lt;&lt;= $balanceItems[$itemToWeigh]&gt;&gt;kg of CO&lt;sub&gt;2&lt;/sub&gt;e to produce.&lt;&lt;/if&gt;&gt;
+&lt;&lt;link [[Press enter]]&gt;&gt;&lt;&lt;audio &quot;key-press&quot; play&gt;&gt;&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="108" name="Place item on the scales" tags="carbon-intensive-diet-exhibit" position="1784,1226" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;&lt;if $itemToWeigh is &quot;Bananas (1kg)&quot;&gt;&gt;&lt;&lt;set $releaseBananasBook to true&gt;&gt;An error appeared when weighing the bananas. Strange. Maybe something in your inventory can help?&lt;&lt;else&gt;&gt;The &lt;&lt;= $itemToWeigh&gt;&gt; takes &lt;&lt;= $balanceItems[$itemToWeigh]&gt;&gt;kg of CO&lt;sub&gt;2&lt;/sub&gt;e to produce.&lt;&lt;/if&gt;&gt;
 
 [[Back to the shelves|Rearrange the items on the shelves]]</tw-passagedata><tw-passagedata pid="109" name="Rearrange the items on the shelves" tags="carbon-intensive-diet-exhibit" position="1624,1441" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;Place some of the food onto the higher or lower shelves and see if you can figure out which ones are higher or lower.
 
@@ -1325,7 +1341,7 @@ Something else seems to have caught in the opening.
 
 [[Inspect the opening in the display]]</tw-passagedata><tw-passagedata pid="113" name="Press enter" tags="futures-exhibit" position="1956,1000" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;Nothing happens. Maybe it needs a password... There are six dots in the dialogue box - Alf wouldn’t have changed it to his own name would he? 
 
-[[Type in &#39;ALFRED&#39;|Try password]]</tw-passagedata><tw-passagedata pid="114" name="Try password" tags="futures-exhibit" position="1956,1125" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;The screen changes and shows a new message: 
+&lt;&lt;link [[Type in &#39;ALFRED&#39;|Try password]]&gt;&gt;&lt;&lt;audio &quot;typing&quot; play&gt;&gt;&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="114" name="Try password" tags="futures-exhibit" position="1956,1125" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;The screen changes and shows a new message: 
 
 Error. No connection.
 Input required.
@@ -1341,9 +1357,9 @@ You see a cable hanging below the screen with a USB connector on the end of it. 
 [[Turn on the laptop]]
 &lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="116" name="Turn on the laptop" tags="office" position="1530,166" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;There is a folder on the desktop with Alf’s old files inside. 
 
-[[Open the Recycling Bin]]</tw-passagedata><tw-passagedata pid="117" name="Open the Recycling Bin" tags="office" position="1646,166" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;It’s full of old documents and files. If only people used their recycling bins as much as this one has been used!
+&lt;&lt;link [[Open the Recycling Bin]]&gt;&gt;&lt;&lt;audio &quot;key-press&quot; play&gt;&gt;&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="117" name="Open the Recycling Bin" tags="office" position="1646,166" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;It’s full of old documents and files. If only people used their recycling bins as much as this one has been used!
 
-[[Open the folder]]</tw-passagedata><tw-passagedata pid="118" name="Open the folder" tags="office" position="1765,165" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;You see a subfolder called &#39;COP&#39; and open it. Inside contains a video, a document called &#39;COP Report&#39; and a notepad file.
+&lt;&lt;link [[Open the folder]]&gt;&gt;&lt;&lt;audio &quot;key-press&quot; play&gt;&gt;&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="118" name="Open the folder" tags="office" position="1765,165" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;You see a subfolder called &#39;COP&#39; and open it. Inside contains a video, a document called &#39;COP Report&#39; and a notepad file.
 
 [[Watch the video]]</tw-passagedata><tw-passagedata pid="119" name="Watch the video" tags="office" position="1883,166" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;The video was filmed on Alf’s webcam. He looks tired.
 
@@ -1359,7 +1375,7 @@ Hopefully you’ve discovered this video because you’ve found the reports and 
 
 Oh... was that an email arriving...?”
 
-[[Open the Notepad file]]</tw-passagedata><tw-passagedata pid="120" name="Look at appointment letter" tags="office" position="133,144" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;div id=&quot;letter&quot; class=&quot;handwriting&quot;&gt;It was a pleasure to meet you the other day. Following your interview and discussion with the Board of Trustees, I am delighted to offer you the position of Head Archivist.
+&lt;&lt;link [[Open the Notepad file]]&gt;&gt;&lt;&lt;audio &quot;key-press&quot; play&gt;&gt;&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="120" name="Look at appointment letter" tags="office" position="133,144" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;div id=&quot;letter&quot; class=&quot;handwriting&quot;&gt;It was a pleasure to meet you the other day. Following your interview and discussion with the Board of Trustees, I am delighted to offer you the position of Head Archivist.
 
 The interviewing panel felt that you had both considerable experience necessary to take on the role from Prof. Mitchell and the innovation needed to take his considerable work and personal dedication forward.
 
@@ -1367,9 +1383,9 @@ Prof. Mitchell has already vacated the post. We would therefore like to offer yo
 
 I wish you luck with reviewing the extensive collections Prof. Mitchell curated in time for the relaunch of the museum.&lt;/div&gt;
 
-[[File the appointment  letter in your drawer]]</tw-passagedata><tw-passagedata pid="121" name="File the appointment  letter in your drawer" tags="office" position="252,142" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;On your first day, a letter from Professor Mitchell was resting on top of your laptop. You met Professor Mitchell, the former Head Archivist, at the interview, and had been a little starstruck. You remember reading his papers back at university and followed his career after he left academia to help establish the Museum of Environmental History.
+&lt;&lt;link [[File the appointment  letter in your drawer]]&gt;&gt;&lt;&lt;audio &quot;drawer-closing&quot; play&gt;&gt;&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="121" name="File the appointment  letter in your drawer" tags="office" position="252,142" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;On your first day, a letter from Professor Mitchell was resting on top of your laptop. You met Professor Mitchell, the former Head Archivist, at the interview, and had been a little starstruck. You remember reading his papers back at university and followed his career after he left academia to help establish the Museum of Environmental History.
 
-[[Look at letter from Professor Mitchell]]</tw-passagedata><tw-passagedata pid="122" name="Look at letter from Professor Mitchell" tags="office" position="246,258" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;div id=&quot;letter&quot; class=&quot;handwriting&quot;&gt;I wanted to leave you a note to say how impressed I was by your interview. You were the first candidate that I felt really understood what I was trying to do when I helped establish the Museum.
+&lt;&lt;link [[Look at letter from Professor Mitchell]]&gt;&gt;&lt;&lt;audio &quot;opening-letter&quot; play&gt;&gt;&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="122" name="Look at letter from Professor Mitchell" tags="office" position="246,258" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;div id=&quot;letter&quot; class=&quot;handwriting&quot;&gt;I wanted to leave you a note to say how impressed I was by your interview. You were the first candidate that I felt really understood what I was trying to do when I helped establish the Museum.
 
 I&#39;ve had a long career in Environmental Science - some might say too long - and I know I’m running out of ideas to get people to listen to this message. I&#39;m getting old and tired and it’s time for you to continue this work, and take it in the direction you feel is right. 
 
@@ -1377,13 +1393,13 @@ All the research in the world is no good if people can’t understand it and app
 
 I&#39;m sorry I won’t get the chance to work alongside you. There are so many documents I never got a chance to finish sorting through - I&#39;m sure they’ll keep you busy. There’s also a journal that I think you might find interesting...&lt;/div&gt;
 
-[[Put Professor Mitchell&#39;s letter in your drawer]]</tw-passagedata><tw-passagedata pid="123" name="Put Professor Mitchell&#39;s letter in your drawer" tags="office" position="121,264" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;Sure enough, when you moved into your new office, you find a pile of boxes containing research notes, documents, reports, books, photographs and more.  
+&lt;&lt;link [[Put Professor Mitchell&#39;s letter in your drawer]]&gt;&gt;&lt;&lt;audio &quot;drawer-closing&quot; play&gt;&gt;&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="123" name="Put Professor Mitchell&#39;s letter in your drawer" tags="office" position="121,264" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;Sure enough, when you moved into your new office, you find a pile of boxes containing research notes, documents, reports, books, photographs and more.  
 
 Late one night, you decide it’s time to start tackling the mountain of documents. A box near the bottom catches your eye. It has ‘Our future?’ written on the side.
 
-[[Sort through the pile of boxes|Sort through the boxes]]
+&lt;&lt;link [[Sort through the pile of boxes|Sort through the boxes]]&gt;&gt;&lt;&lt;audio &quot;box-falling&quot; play&gt;&gt;&lt;&lt;/link&gt;&gt;
 
-&lt;&lt;link [[Retrieve the box with &#39;Our Future&#39; on it]]&gt;&gt;&lt;&lt;set $inventory to []&gt;&gt;&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="124" name="Pick up the shoe" tags="staff-room" position="149,1653" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;Perhaps it belonged to Alf. You always wanted to walk in his shoes but not literally!
+&lt;&lt;link [[Retrieve the box with &#39;Our Future&#39; on it]]&gt;&gt;&lt;&lt;set $inventory to []&gt;&gt;&lt;&lt;audio &quot;box-dragging&quot; play&gt;&gt;&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="124" name="Pick up the shoe" tags="staff-room" position="149,1653" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;Perhaps it belonged to Alf. You always wanted to walk in his shoes but not literally!
 
 [[Read the third journal entry]]</tw-passagedata><tw-passagedata pid="125" name="Open the book" tags="inventory" position="631,377" size="100,100">You flick through the pages. There are carbon emissions of lots of items, from plastic carrier bags to coffee. You find the page with the description of bananas. 
 
@@ -1463,8 +1479,7 @@ State.setVar(&quot;$recommendationOptions[&#39;carbon emissions&#39;]&quot;, ran
 &lt;&lt;radiobutton &quot;$recommendations[&#39;carbon emissions&#39;][0]&quot; _recOpt[1]&gt;&gt; &lt;&lt;= _recOpt[1]&gt;&gt;
 &lt;&lt;/for&gt;&gt;
 
-[[Select first choice]]
-</tw-passagedata><tw-passagedata pid="132" name="Fuse" tags="inventory" position="749,591" size="100,100">&lt;img src=&quot;https://confusedmatrix.github.io/e-mission-game/assets/images/fuse.jpg&quot; class=&quot;passage-image&quot; /&gt;</tw-passagedata><tw-passagedata pid="133" name="WWF Wildlife in a Warming World report" tags="inventory" position="749,706" size="100,100">&lt;img src=&quot;https://confusedmatrix.github.io/e-mission-game/assets/images/reports/species.png&quot; class=&quot;passage-image&quot; /&gt;</tw-passagedata><tw-passagedata pid="134" name="Bag of buttons" tags="inventory" position="748,821" size="100,100">&lt;img src=&quot;https://confusedmatrix.github.io/e-mission-game/assets/images/bag.jpg&quot; class=&quot;passage-image&quot; /&gt;</tw-passagedata><tw-passagedata pid="135" name="Weigh the tomatoes" tags="carbon-intensive-diet-exhibit" position="1619,1317" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;You see the reading for the tomatoes and compare it to the carrots. You swap the food items so the food with the highest embedded carbon is on the left-hand side. You then continue to check and sort the rest of the food items.
+&lt;&lt;link [[Select first choice]]&gt;&gt;&lt;&lt;audio &quot;key-press&quot; play&gt;&gt;&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="132" name="Fuse" tags="inventory" position="749,591" size="100,100">&lt;img src=&quot;https://confusedmatrix.github.io/e-mission-game/assets/images/fuse.jpg&quot; class=&quot;passage-image&quot; /&gt;</tw-passagedata><tw-passagedata pid="133" name="WWF Wildlife in a Warming World report" tags="inventory" position="749,706" size="100,100">&lt;img src=&quot;https://confusedmatrix.github.io/e-mission-game/assets/images/reports/species.png&quot; class=&quot;passage-image&quot; /&gt;</tw-passagedata><tw-passagedata pid="134" name="Bag of buttons" tags="inventory" position="748,821" size="100,100">&lt;img src=&quot;https://confusedmatrix.github.io/e-mission-game/assets/images/bag.jpg&quot; class=&quot;passage-image&quot; /&gt;</tw-passagedata><tw-passagedata pid="135" name="Weigh the tomatoes" tags="carbon-intensive-diet-exhibit" position="1619,1317" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;You see the reading for the tomatoes and compare it to the carrots. You swap the food items so the food with the highest embedded carbon is on the left-hand side. You then continue to check and sort the rest of the food items.
 
 [[Rearrange the items on the shelves]]</tw-passagedata><tw-passagedata pid="136" name="Show report" tags="office" position="2955,169" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;&lt;if $recommendationReasons[&#39;carbon emissions&#39;][1] == &quot;&quot;&gt;&gt;Oops, you didn&#39;t give a reason for your choice.
 
@@ -1474,7 +1489,7 @@ State.setVar(&quot;$recommendationOptions[&#39;carbon emissions&#39;]&quot;, ran
 &lt;ul&gt;&lt;li&gt;&lt;&lt;= $recommendations[&#39;carbon emissions&#39;][0]&gt;&gt;&lt;/li&gt;&lt;li&gt;&lt;&lt;= $recommendations[&#39;carbon emissions&#39;][1]&gt;&gt;&lt;/li&gt;&lt;/ul&gt;
 &lt;/div&gt;
 
-[[Make your recommendations for diets and food]]
+&lt;&lt;link [[Make your recommendations for diets and food]]&gt;&gt;&lt;&lt;audio &quot;key-press&quot; play&gt;&gt;&lt;&lt;/link&gt;&gt;
 &lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="137" name="Make your recommendations for diets and food" tags="office" position="2472,287" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;Select your first recommendation for diets and foods:
 &lt;&lt;silently&gt;&gt;
 &lt;&lt;set $recommendations[&#39;diets and foods&#39;] to []&gt;&gt;
@@ -1517,15 +1532,14 @@ State.setVar(&quot;$recommendationOptions[&#39;diets and foods&#39;]&quot;, rand
 &lt;&lt;radiobutton &quot;$recommendations[&#39;diets and foods&#39;][0]&quot; _recOpt[1]&gt;&gt; &lt;&lt;= _recOpt[1]&gt;&gt;
 &lt;&lt;/for&gt;&gt;
 
-[[Select first choice|Select third choice]]
-</tw-passagedata><tw-passagedata pid="138" name="Select first choice" tags="office" position="2594,170" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;&lt;if ndef $recommendations[&#39;carbon emissions&#39;][0]&gt;&gt;Oops, you didn&#39;t select your first recommendation.
+&lt;&lt;link [[Select first choice|Select third choice]]&gt;&gt;&lt;&lt;audio &quot;key-press&quot; play&gt;&gt;&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="138" name="Select first choice" tags="office" position="2594,170" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;&lt;if ndef $recommendations[&#39;carbon emissions&#39;][0]&gt;&gt;Oops, you didn&#39;t select your first recommendation.
 
 [[Go back and select a recommendation|Continue scrolling through the document]]&lt;&lt;else&gt;&gt;You selected &quot;&lt;&lt;= $recommendations[&#39;carbon emissions&#39;][0]&gt;&gt;&quot;
 
 Why did you choose this option?
 &lt;&lt;textarea &quot;$recommendationReasons[&#39;carbon emissions&#39;][0]&quot; &quot;&quot;&gt;&gt;
 
-[[Continue|Show second options]]
+&lt;&lt;link [[Continue|Show second options]]&gt;&gt;&lt;&lt;audio &quot;key-press&quot; play&gt;&gt;&lt;&lt;/link&gt;&gt;
 &lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="139" name="Show second options" tags="office" position="2714,169" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;&lt;if $recommendationReasons[&#39;carbon emissions&#39;][0] == &quot;&quot;&gt;&gt;Oops, you didn&#39;t give a reason for your choice.
 
 [[Go back|Select first choice]]&lt;&lt;else&gt;&gt;Choose your second recommendation to reduce carbon emissions
@@ -1542,7 +1556,7 @@ State.setVar(&quot;$recommendationOptions[&#39;carbon emissions&#39;]&quot;, fil
 &lt;&lt;radiobutton &quot;$recommendations[&#39;carbon emissions&#39;][1]&quot; _recOpt[1]&gt;&gt; &lt;&lt;= _recOpt[1]&gt;&gt;
 &lt;&lt;/for&gt;&gt;
 
-[[Select second choice]]
+&lt;&lt;link [[Select second choice]]&gt;&gt;&lt;&lt;audio &quot;key-press&quot; play&gt;&gt;&lt;&lt;/link&gt;&gt;
 &lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="140" name="Select second choice" tags="office" position="2834,175" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;&lt;if ndef $recommendations[&#39;carbon emissions&#39;][1]&gt;&gt;Oops, you didn&#39;t select your second recommendation.
 
 [[Go back and select a recommendation|Show second options]]&lt;&lt;else&gt;&gt;You selected &quot;&lt;&lt;= $recommendations[&#39;carbon emissions&#39;][1]&gt;&gt;&quot;
@@ -1550,7 +1564,7 @@ State.setVar(&quot;$recommendationOptions[&#39;carbon emissions&#39;]&quot;, fil
 Why did you choose this option?
 &lt;&lt;textarea &quot;$recommendationReasons[&#39;carbon emissions&#39;][1]&quot; &quot;&quot;&gt;&gt;
 
-[[Continue|Show report]]
+&lt;&lt;link [[Continue|Show report]]&gt;&gt;&lt;&lt;audio &quot;key-press&quot; play&gt;&gt;&lt;&lt;/link&gt;&gt;
 &lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="141" name="Select third choice" tags="office" position="2594,289" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;&lt;if ndef $recommendations[&#39;diets and foods&#39;][0]&gt;&gt;Oops, you didn&#39;t select your first recommendation.
 
 [[Go back and select a recommendation|Make your recommendations for diets and food]]&lt;&lt;else&gt;&gt;You selected &quot;&lt;&lt;= $recommendations[&#39;diets and foods&#39;][0]&gt;&gt;&quot;
@@ -1558,7 +1572,7 @@ Why did you choose this option?
 Why did you choose this option?
 &lt;&lt;textarea &quot;$recommendationReasons[&#39;diets and foods&#39;][0]&quot; &quot;&quot;&gt;&gt;
 
-[[Continue|Show fourth options]]
+&lt;&lt;link [[Continue|Show fourth options]]&gt;&gt;&lt;&lt;audio &quot;key-press&quot; play&gt;&gt;&lt;&lt;/link&gt;&gt;
 &lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="142" name="Show fourth options" tags="office" position="2712,290" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;&lt;if $recommendationReasons[&#39;diets and foods&#39;][0] == &quot;&quot;&gt;&gt;Oops, you didn&#39;t give a reason for your choice.
 
 [[Go back|Select third choice]]&lt;&lt;else&gt;&gt;Choose your second recommendation for diets and foods:
@@ -1575,7 +1589,7 @@ State.setVar(&quot;$recommendationOptions[&#39;diets and foods&#39;]&quot;, filt
 &lt;&lt;radiobutton &quot;$recommendations[&#39;diets and foods&#39;][1]&quot; _recOpt[1]&gt;&gt; &lt;&lt;= _recOpt[1]&gt;&gt;
 &lt;&lt;/for&gt;&gt;
 
-[[Select second choice|Select fourth choice]]
+&lt;&lt;link [[Select second choice|Select fourth choice]]&gt;&gt;&lt;&lt;audio &quot;key-press&quot; play&gt;&gt;&lt;&lt;/link&gt;&gt;
 &lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="143" name="Select fourth choice" tags="office" position="2836,294" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;&lt;if ndef $recommendations[&#39;diets and foods&#39;][1]&gt;&gt;Oops, you didn&#39;t select your second recommendation.
 
 [[Go back and select a recommendation|Show fourth options]]&lt;&lt;else&gt;&gt;You selected &quot;&lt;&lt;= $recommendations[&#39;diets and foods&#39;][1]&gt;&gt;&quot;
@@ -1583,7 +1597,7 @@ State.setVar(&quot;$recommendationOptions[&#39;diets and foods&#39;]&quot;, filt
 Why did you choose this option?
 &lt;&lt;textarea &quot;$recommendationReasons[&#39;diets and foods&#39;][1]&quot; &quot;&quot;&gt;&gt;
 
-[[Continue|Show report again]]
+&lt;&lt;link [[Continue|Show report again]]&gt;&gt;&lt;&lt;audio &quot;key-press&quot; play&gt;&gt;&lt;&lt;/link&gt;&gt;
 &lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="144" name="Show report again" tags="office" position="2954,297" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;&lt;if $recommendationReasons[&#39;diets and foods&#39;][1] == &quot;&quot;&gt;&gt;Oops, you didn&#39;t give a reason for your choice.
 
 [[Go back and select a recommendation|Select fourth choice]]&lt;&lt;else&gt;&gt;&lt;div id=&quot;letter&quot; class=&quot;typewriting&quot;&gt;
@@ -1594,7 +1608,7 @@ Why did you choose this option?
 &lt;ul&gt;&lt;li&gt;&lt;&lt;= $recommendations[&#39;diets and foods&#39;][0]&gt;&gt;&lt;/li&gt;&lt;li&gt;&lt;&lt;= $recommendations[&#39;diets and foods&#39;][1]&gt;&gt;&lt;/li&gt;&lt;/ul&gt;
 &lt;/div&gt;
 
-[[Make your recommendations for avoiding species extinciton]]
+&lt;&lt;link [[Make your recommendations for avoiding species extinciton]]&gt;&gt;&lt;&lt;audio &quot;key-press&quot; play&gt;&gt;&lt;&lt;/link&gt;&gt;
 &lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="145" name="Make your recommendations for avoiding species extinciton" tags="office" position="2468,403" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;Select your first recommendation for avoiding species extinction:
 &lt;&lt;silently&gt;&gt;
 &lt;&lt;set $recommendations[&#39;species extinction&#39;] to []&gt;&gt;
@@ -1637,15 +1651,14 @@ State.setVar(&quot;$recommendationOptions[&#39;species extinction&#39;]&quot;, r
 &lt;&lt;radiobutton &quot;$recommendations[&#39;species extinction&#39;][0]&quot; _recOpt[1]&gt;&gt; &lt;&lt;= _recOpt[1]&gt;&gt;
 &lt;&lt;/for&gt;&gt;
 
-[[Select first choice|Select fifth choice]]
-</tw-passagedata><tw-passagedata pid="146" name="Select fifth choice" tags="office" position="2591,403" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;&lt;if ndef $recommendations[&#39;species extinction&#39;][0]&gt;&gt;Oops, you didn&#39;t select your first recommendation.
+&lt;&lt;link [[Select first choice|Select fifth choice]]&gt;&gt;&lt;&lt;audio &quot;key-press&quot; play&gt;&gt;&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="146" name="Select fifth choice" tags="office" position="2591,403" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;&lt;if ndef $recommendations[&#39;species extinction&#39;][0]&gt;&gt;Oops, you didn&#39;t select your first recommendation.
 
 [[Go back and select a recommendation|Make your recommendations for avoiding species extinciton]]&lt;&lt;else&gt;&gt;You selected &quot;&lt;&lt;= $recommendations[&#39;species extinction&#39;][0]&gt;&gt;&quot;
 
 Why did you choose this option?
 &lt;&lt;textarea &quot;$recommendationReasons[&#39;species extinction&#39;][0]&quot; &quot;&quot;&gt;&gt;
 
-[[Continue|Show sixth options]]
+&lt;&lt;link [[Continue|Show sixth options]]&gt;&gt;&lt;&lt;audio &quot;key-press&quot; play&gt;&gt;&lt;&lt;/link&gt;&gt;
 &lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="147" name="Show sixth options" tags="office" position="2711,407" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;&lt;if $recommendationReasons[&#39;species extinction&#39;][0] == &quot;&quot;&gt;&gt;Oops, you didn&#39;t give a reason for your choice.
 
 [[Go back|Select fifth choice]]&lt;&lt;else&gt;&gt;Choose your second recommendation for avoiding species extinction:
@@ -1662,7 +1675,7 @@ State.setVar(&quot;$recommendationOptions[&#39;species extinction&#39;]&quot;, f
 &lt;&lt;radiobutton &quot;$recommendations[&#39;species extinction&#39;][1]&quot; _recOpt[1]&gt;&gt; &lt;&lt;= _recOpt[1]&gt;&gt;
 &lt;&lt;/for&gt;&gt;
 
-[[Select second choice|Select sixth choice]]
+&lt;&lt;link [[Select second choice|Select sixth choice]]&gt;&gt;&lt;&lt;audio &quot;key-press&quot; play&gt;&gt;&lt;&lt;/link&gt;&gt;
 &lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="148" name="Select sixth choice" tags="office" position="2836,412" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;&lt;if ndef $recommendations[&#39;species extinction&#39;][1]&gt;&gt;Oops, you didn&#39;t select your second recommendation.
 
 [[Go back and select a recommendation|Show sixth options]]&lt;&lt;else&gt;&gt;You selected &quot;&lt;&lt;= $recommendations[&#39;species extinction&#39;][1]&gt;&gt;&quot;
@@ -1670,7 +1683,7 @@ State.setVar(&quot;$recommendationOptions[&#39;species extinction&#39;]&quot;, f
 Why did you choose this option?
 &lt;&lt;textarea &quot;$recommendationReasons[&#39;species extinction&#39;][1]&quot; &quot;&quot;&gt;&gt;
 
-[[Continue|Show final report]]
+&lt;&lt;link [[Continue|Show final report]]&gt;&gt;&lt;&lt;audio &quot;key-press&quot; play&gt;&gt;&lt;&lt;/link&gt;&gt;
 &lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="149" name="Show final report" tags="office" position="2956,413" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;&lt;if $recommendationReasons[&#39;species extinction&#39;][1] == &quot;&quot;&gt;&gt;Oops, you didn&#39;t give a reason for your choice.
 
 [[Go back and select a recommendation|Select sixth choice]]&lt;&lt;else&gt;&gt;&lt;div id=&quot;letter&quot; class=&quot;typewriting&quot;&gt;
@@ -1685,14 +1698,14 @@ Why did you choose this option?
 
 The report template is now complete. If what Alf said in the video was correct, you should be able to send the report back in time so he can share your findings and recommendations...
 
-[[Open new email]]
+&lt;&lt;link [[Open new email]]&gt;&gt;&lt;&lt;audio &quot;key-press&quot; play&gt;&gt;&lt;&lt;/link&gt;&gt;
 
-[[Pick up laptop]]
+&lt;&lt;link [[Pick up laptop]]&gt;&gt;&lt;&lt;audio &quot;pick-up&quot; play&gt;&gt;&lt;&lt;/link&gt;&gt;
 &lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="150" name="Pick up &#39;carbon emissions&#39; report" tags="staff-room" position="546,1570" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;The report is by the IPCC. It’s a copy of their &#39;Special Report on Global Warming of 1.5&amp;deg;C&#39; that was issued in October 2018.
 
 &lt;&lt;include &quot;IPCC &#39;Special Report on Global Warming of 1.5&amp;deg;C&#39; report&quot;&gt;&gt;
 
-&lt;&lt;link [[Store the report in your inventory|Read &#39;carbon emissions&#39; letter]]&gt;&gt;&lt;&lt;run $inventory.pushUnique(&quot;IPCC &#39;Special Report on Global Warming of 1.5&amp;deg;C&#39; report&quot;)&gt;&gt;&lt;&lt;/link&gt;&gt;
+&lt;&lt;link [[Store the report in your inventory|Read &#39;carbon emissions&#39; letter]]&gt;&gt;&lt;&lt;run $inventory.pushUnique(&quot;IPCC &#39;Special Report on Global Warming of 1.5&amp;deg;C&#39; report&quot;)&gt;&gt;&lt;&lt;audio &quot;opening-letter&quot; play&gt;&gt;&lt;&lt;/link&gt;&gt;
 
 </tw-passagedata><tw-passagedata pid="151" name="Read &#39;carbon emissions&#39; letter" tags="staff-room" position="548,1695" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;div class=&quot;notice&quot;&gt;The report has been added to your inventory&lt;/div&gt;
 A letter is paperclipped to the front cover.
@@ -1746,7 +1759,7 @@ Other resources you may be interested in
 This report is titled ‘How Low Can We Go?’ It was written by research scientists from the UK and Germany in partnership with the Food Climate Research Network and WWF.
 
 &lt;&lt;include &quot;WWF ‘How Low Can We Go?’ report&quot;&gt;&gt;
-&lt;&lt;link [[Store the report and look at the letter|Look at the food letter]]&gt;&gt;&lt;&lt;run $inventory.pushUnique(&quot;WWF ‘How Low Can We Go?’ report&quot;)&gt;&gt;&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="158" name="Look at the food letter" tags="carbon-intensive-diet-exhibit" position="1744,1739" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;div class=&quot;notice&quot;&gt;The report has been added to your inventory&lt;/div&gt;
+&lt;&lt;link [[Store the report and look at the letter|Look at the food letter]]&gt;&gt;&lt;&lt;run $inventory.pushUnique(&quot;WWF ‘How Low Can We Go?’ report&quot;)&gt;&gt;&lt;&lt;audio &quot;opening-letter&quot; play&gt;&gt;&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="158" name="Look at the food letter" tags="carbon-intensive-diet-exhibit" position="1744,1739" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;div class=&quot;notice&quot;&gt;The report has been added to your inventory&lt;/div&gt;
 &lt;&lt;include &quot;&#39;Diets and food&#39; letter&quot;&gt;&gt;
 
 &lt;&lt;link [[Store the letter and look at the blocks|Look at the food wooden blocks]]&gt;&gt;&lt;&lt;run $inventory.pushUnique(&quot;&#39;Species extinction&#39; letter&quot;)&gt;&gt;&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="159" name="&#39;Diets and food&#39; letter" tags="" position="1288,110" size="100,100">&lt;div id=&quot;letter&quot; class=&quot;typewriting&quot;&gt;Hi Alf
@@ -1789,7 +1802,7 @@ Almost as if the machine is ready...
 
 As you stare at the green light, a small click opens a compartment at the side of the console. Inside are some pages, written in a familiar hand...
 
-[[Read the first page]]&lt;&lt;/if&gt;&gt;&lt;&lt;else&gt;&gt;Although the machine seems to have more power now, there must still be too many parts missing for it to work. If it can work...
+&lt;&lt;link [[Read the first page]]&gt;&gt;&lt;&lt;audio &quot;pick-up-letter&quot; play&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;else&gt;&gt;Although the machine seems to have more power now, there must still be too many parts missing for it to work. If it can work...
 
 Maybe I can [[do something with the fuse|&#39;Futures Exhibit. Inner Hallway. Exhibit 12&#39;]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="164" name="Help 12" tags="" position="1869,1876" size="100,100">&lt;div class=&quot;help&quot;&gt;The fuse is in your hand. Maybe it’s another missing piece of the machine?&lt;/div&gt;</tw-passagedata><tw-passagedata pid="165" name="Open new email" tags="office" position="2953,535" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;A new window opens with the cursor flashing in the ‘to’ field. You can feel your heart beating a little faster and harder than normal. What is this is all just a practical joke that Alf has played on you?
 
@@ -1797,17 +1810,17 @@ Maybe I can [[do something with the fuse|&#39;Futures Exhibit. Inner Hallway. Ex
 
 &lt;&lt;linkreplace &quot;Attach report&quot;&gt;&gt;📎 &quot;Recommendations Report.pdf&quot; attached
 
-[[Click &#39;Send&#39;]]&lt;&lt;/linkreplace&gt;&gt;&lt;&lt;/linkreplace&gt;&gt;
+&lt;&lt;link [[Click &#39;Send&#39;]]&gt;&gt;&lt;&lt;audio &quot;key-press&quot; play&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;&lt;/linkreplace&gt;&gt;&lt;&lt;/linkreplace&gt;&gt;
 
 </tw-passagedata><tw-passagedata pid="166" name="Click &#39;Send&#39;" tags="office" position="2946,665" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;The email leaves your outbox. Almost immediately, an alert flashes up on the screen. &#39;1 New Email&#39;
 
-[[Open email]]</tw-passagedata><tw-passagedata pid="167" name="Open email" tags="office" position="2816,695" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;Your email has bounced back from Alf&#39;s email account. 
+&lt;&lt;link [[Open email]]&gt;&gt;&lt;&lt;audio &quot;key-press&quot; play&gt;&gt;&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="167" name="Open email" tags="office" position="2816,695" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;Your email has bounced back from Alf&#39;s email account. 
 
 &quot;Webmaster at ehm.org. This user account is no longer available.&quot;
 
-[[Open new email]]
+&lt;&lt;link [[Open new email]]&gt;&gt;&lt;&lt;audio &quot;key-press&quot; play&gt;&gt;&lt;&lt;/link&gt;&gt;
 
-[[Pick up laptop]]
+&lt;&lt;link [[Pick up laptop]]&gt;&gt;&lt;&lt;audio &quot;pick-up&quot; play&gt;&gt;&lt;&lt;/link&gt;&gt;
 </tw-passagedata><tw-passagedata pid="168" name="Pick up laptop" tags="office" position="2768,568" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;The power cable is tangled but you free it and unplug the laptop. Where do you want to go?
 
 &lt;&lt;run $inventory.pushUnique(&quot;Laptop&quot;)&gt;&gt;&lt;&lt;run $completed.pushUnique(&quot;Your office&quot;)&gt;&gt;</tw-passagedata><tw-passagedata pid="169" name="Laptop" tags="" position="747,932" size="100,100">&lt;img src=&quot;https://confusedmatrix.github.io/e-mission-game/assets/images/laptop.png&quot; class=&quot;passage-image&quot; /&gt;</tw-passagedata><tw-passagedata pid="170" name="Plug laptop into the console" tags="futures-exhibit" position="1973,390" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;Hopefully this old machine doesn’t have any viruses! IT would not be impressed!
@@ -1823,7 +1836,7 @@ The dialogue box cursor is flashing.
 The report shows as an attachment to the email. Maybe you should add something to the body of the email...
 
 &lt;&lt;textarea &quot;$emailBody&quot; &quot;Email body...&quot;&gt;&gt;
-[[Click &#39;Send&#39;|Send email]]&lt;&lt;/linkreplace&gt;&gt;&lt;&lt;/linkreplace&gt;&gt;
+&lt;&lt;link [[Click &#39;Send&#39;|Send email]]&gt;&gt;&lt;&lt;audio &quot;key-press&quot; play&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;&lt;/linkreplace&gt;&gt;&lt;&lt;/linkreplace&gt;&gt;
 &lt;&lt;else&gt;&gt;&quot;Incorrect password&quot;
 
 What did Alf change the password to? You remember it was 6 letters long
@@ -1836,10 +1849,10 @@ What did Alf change the password to? You remember it was 6 letters long
 
 Of course... you need to select a date to send the email back to Alf.
 
-[[Enter date]]
+&lt;&lt;link [[Enter date]]&gt;&gt;&lt;&lt;audio &quot;typing&quot; play&gt;&gt;&lt;&lt;/link&gt;&gt;
 </tw-passagedata><tw-passagedata pid="173" name="Enter date" tags="futures-exhibit" position="2323,528" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;The cursor flashes once then the screen returns to the original prompt window. Did your email send? 
 
-[[Check sent items]]</tw-passagedata><tw-passagedata pid="174" name="Check sent items" tags="futures-exibit" position="2324,645" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;The email is showing in your outbox. There’s no rejected email from Alf’s inbox. Everything feels like normal - wouldn’t something feel different if something had changed? The only thing that definitely has changed is the time. It’s past midnight! And hours since you last had a drink. Maybe it’s time for a cup of tea!
+&lt;&lt;link [[Check sent items]]&gt;&gt;&lt;&lt;audio &quot;key-press&quot; play&gt;&gt;&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="174" name="Check sent items" tags="futures-exibit" position="2324,645" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;The email is showing in your outbox. There’s no rejected email from Alf’s inbox. Everything feels like normal - wouldn’t something feel different if something had changed? The only thing that definitely has changed is the time. It’s past midnight! And hours since you last had a drink. Maybe it’s time for a cup of tea!
 
 &lt;&lt;run $inventory.delete(&quot;Laptop&quot;)&gt;&gt;
 &lt;&lt;run $completed.delete(&quot;Staff room&quot;)&gt;&gt;</tw-passagedata><tw-passagedata pid="175" name="Walk back to your office" tags="lobby" position="816,1681" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;You return to your office with a hot drink in an EHM branded mug. You don’t remember having one of those before... the last coffee you had was in an old chipped mug you found in the back of the staff room cupboard! 
@@ -1885,7 +1898,7 @@ State.setVar(&quot;$outcomes&quot;, outcomes)
 
 It’s time this report was filed away safely.
 
-[[Open your drawer]]</tw-passagedata><tw-passagedata pid="180" name="Open your drawer" tags="office" position="2031,44" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;A letter catches your eye. The writing is very familiar but you don’t recognise the name. The letter is dated a month ago.
+&lt;&lt;link [[Open your drawer]]&gt;&gt;&lt;&lt;audio &quot;open-drawer&quot; play&gt;&gt;&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="180" name="Open your drawer" tags="office" position="2031,44" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;A letter catches your eye. The writing is very familiar but you don’t recognise the name. The letter is dated a month ago.
 
 &lt;div id=&quot;letter&quot; class=&quot;handwriting&quot;&gt;Thank you for your kind invitation. 
 
