@@ -529,7 +529,8 @@ body.futures-exhibit {
 
 })
 
-</script><tw-passagedata pid="1" name="Start" tags="lobby" position="119,19" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;div class=&quot;help&quot;&gt;Welcome to E-Mission, a game about environmental challenges and creating a sustainable future.  
+</script><tw-passagedata pid="1" name="Start" tags="lobby" position="119,19" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;div class=&quot;help&quot;&gt;If you are helping to test the game and filling out a pre-game questionnaire, please copy your game ID into the questionnaire form: &lt;strong&gt;&lt;&lt;= shortGameId &gt;&gt;&lt;/strong&gt; &lt;/div&gt;
+&lt;div class=&quot;help&quot;&gt;Welcome to E-Mission, a game about environmental challenges and creating a sustainable future.  
 
 You’ll need to solve puzzles to unlock clues and discover evidence as you move through the game. 
 
@@ -923,6 +924,7 @@ function generateId(len = 40) {
 }
 
 window.gameId = generateId()
+window.shortGameId = window.gameId.substr(0,8)
 window.passageHistory = []
 window.database = null
 
@@ -977,7 +979,8 @@ if (State.turns % 1 == 0) {
 }
 
 &lt;&lt;/script&gt;&gt;
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="58" name="End" tags="lobby" position="3087,42" size="200,200">&lt;&lt;set $progress to passage()&gt;&gt;&lt;h2&gt;Credits&lt;/h2&gt;
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="58" name="End" tags="lobby" position="3087,42" size="200,200">&lt;&lt;set $progress to passage()&gt;&gt;&lt;div class=&quot;help&quot;&gt;If you are helping to test the game and filling out a post-game questionnaire, please copy your game ID into the questionnaire form: &lt;strong&gt;&lt;&lt;= shortGameId &gt;&gt;&lt;/strong&gt; &lt;/div&gt;
+&lt;h2&gt;Credits&lt;/h2&gt;
 &lt;strong&gt;Game Design Team&lt;/strong&gt;
 Project Manager - Sarah Briggs, Keele University, UK
 Narrative Design - Amy Louise Blaney and Alana Wheat, Keele University, UK
@@ -1414,14 +1417,14 @@ To get the machine working:
 
 [[Read the &#39;COP30 Report&#39; document]]</tw-passagedata><tw-passagedata pid="126" name="Read the &#39;COP30 Report&#39; document" tags="office" position="2116,168" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;It is password protected. What could the password be?
 
-&lt;&lt;include [[Help 14]]&gt;&gt;
 Type in the password: &lt;&lt;textbox &quot;$copPassword&quot; &quot;XXXXX&quot; [[Check COP password]]&gt;&gt;
-&lt;&lt;if ndef $attempts[&#39;cop&#39;]&gt;&gt;&lt;&lt;set $attempts[&#39;cop&#39;] to 0&gt;&gt;&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="127" name="Help 14" tags="" position="2114.6666666666665,284.6666666666667" size="100,100">&lt;&lt;if ndef $copHintSeen&gt;&gt;&lt;&lt;set $copHintSeen to 0&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;set $copHintSeen += 1&gt;&gt;&lt;&lt;if $copHintSeen gte 1&gt;&gt;&lt;div class=&quot;help&quot;&gt;HINT: Maybe you should look over the documents in your inventory again. Is there anything you haven’t used yet?&lt;/div&gt;&lt;&lt;/if&gt;&gt;
-&lt;&lt;if $copHintSeen gte 2&gt;&gt;&lt;div class=&quot;help&quot;&gt;HINT: You;re looking for a five letter word. Is there anything in your inventory that has one of those on it prominently?&lt;/div&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if ndef $attempts[&#39;cop&#39;]&gt;&gt;&lt;&lt;set $attempts[&#39;cop&#39;] to 0&gt;&gt;&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="127" name="Help 14" tags="" position="2114,284" size="100,100">&lt;&lt;if ndef $copHintSeen&gt;&gt;&lt;&lt;set $copHintSeen to 0&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;set $copHintSeen += 1&gt;&gt;&lt;&lt;if $copHintSeen gte 1&gt;&gt;&lt;div class=&quot;help&quot;&gt;HINT: Maybe you should look over the documents in your inventory again. Is there anything you haven’t used yet?&lt;/div&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $copHintSeen gte 2&gt;&gt;&lt;div class=&quot;help&quot;&gt;HINT: You&#39;re looking for a five letter word. Is there anything in your inventory that has one of those on it prominently?&lt;/div&gt;&lt;&lt;/if&gt;&gt;
 &lt;&lt;if $copHintSeen gte 3&gt;&gt;&lt;div class=&quot;help&quot;&gt;HINT: You seem to remember something being written on the side of the boat in the photograph you picked up earlier.&lt;/div&gt;&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="128" name="Check COP password" tags="office" position="2239,169" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;&lt;&lt;set $attempts[&#39;cop&#39;] += 1&gt;&gt;&lt;&lt;if $copPassword is &quot;TRUTH&quot; or $copPassword is &quot;Truth&quot; or $copPassword is &quot;truth&quot;&gt;&gt;You cracked Alf’s password! The document opens. It’s the report that Alf presented at the COP30 event in 2024. This must be the report that Alf wished he’d had more evidence for. He said he didn’t have time to collate everything. Maybe you could share what you’ve learned from the exhibits and reports and help Alf to convince the world leaders that stronger action is (was?) needed!
 
 [[Scroll down the page]]&lt;&lt;else&gt;&gt;The password is incorrect.
 
+&lt;&lt;include [[Help 14]]&gt;&gt;
 [[Try again?|Read the &#39;COP30 Report&#39; document]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="129" name="Scroll down the page" tags="office" position="2354,168" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;The screen moves past the cover of the report and find the contents page. The report is split into sections covering key sustainability challenges and aspects of human life/activity. The sections match the exhibits around the museum. This must have been Alf’s inspiration for the layout of the museum and the story he was telling.
 
 [[Continue scrolling through the document]]</tw-passagedata><tw-passagedata pid="130" name="Continue scrolling through the document" tags="office" position="2475,169" size="100,100">&lt;&lt;set $progress to passage()&gt;&gt;You reach the first section which outlines Carbon Emissions. The page has a summary with a comment annotated in the margin. It says &#39;add key recommendation for policy makers&#39;. 
@@ -1921,7 +1924,7 @@ Whilst E-Mission is a game, many of the climate challenges mentioned are very re
 
 To learn more about how we can overcome these challenges, you may find the resources in the game useful to refer to. You could also calculate your personal carbon footprint and consider ways to reduce your annual carbon emissions at: https://footprint.wwf.org.uk
 
-[[End]]&lt;&lt;run $completed.pushUnique(&quot;Your office&quot;)&gt;&gt;</tw-passagedata><tw-passagedata pid="181" name="Help 12" tags="" position="1906.6666666666667,1336" size="100,100">&lt;&lt;if ndef $dietHintSeen&gt;&gt;&lt;&lt;set $dietHintSeen to 0&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;set $dietHintSeen += 1&gt;&gt;&lt;&lt;if $dietHintSeen gte 1&gt;&gt;&lt;div class=&quot;help&quot;&gt;HINT: The scales do not seem to be balanced.&lt;/div&gt;&lt;&lt;/if&gt;&gt;
+[[End]]&lt;&lt;run $completed.pushUnique(&quot;Your office&quot;)&gt;&gt;</tw-passagedata><tw-passagedata pid="181" name="Help 12" tags="" position="1906,1336" size="100,100">&lt;&lt;if ndef $dietHintSeen&gt;&gt;&lt;&lt;set $dietHintSeen to 0&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;set $dietHintSeen += 1&gt;&gt;&lt;&lt;if $dietHintSeen gte 1&gt;&gt;&lt;div class=&quot;help&quot;&gt;HINT: The scales do not seem to be balanced.&lt;/div&gt;&lt;&lt;/if&gt;&gt;
 &lt;&lt;if $dietHintSeen gte 2&gt;&gt;&lt;div class=&quot;help&quot;&gt;HINT: If the scales are not balanced, at least one of the foods is in the wrong place.&lt;/div&gt;&lt;&lt;/if&gt;&gt;
 &lt;&lt;if $dietHintSeen gte 3&gt;&gt;&lt;div class=&quot;help&quot;&gt;HINT: You need to use the amount of CO&lt;sub&gt;2&lt;/sub&gt;e produced by each food item to match food pairs and balance the scales. Use the Weighing tool to weigh the foods to see what produces more carbon.&lt;/div&gt;&lt;&lt;/if&gt;&gt;</tw-passagedata></tw-storydata>
 	<script id="script-sugarcube" type="text/javascript">
